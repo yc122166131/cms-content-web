@@ -26,9 +26,55 @@
 	<a href="${basePath }/t1/t4.action?num=23&price=123.89">测试RequestParam</a>  &nbsp;
 	<input type="button"  id="btn2" value="测试pathVariable"  />
 	
+	<br/>
+	<br/>
+	
+	<form action="/t1/submitUserList" method="post" id="form1">
+        ID:<input type="text" name="id"><br/>
+        Username:<input type="text" name="name"><br/>
+        Password:<input type="text" name="pwd"><br/><br/>
+        sports:  <input type="checkbox" name="fav" value="1">
+        music:  <input type="checkbox" name="fav" value="2">
+        history： <input type="checkbox" name="fav" value="3">
+    </form>
+    <input type="button" value="测试表单提交" id="btnForm"/>
+	<br/>
+	<br/>
+	
+	
 	<script type="text/javascript" src="${pageContext.request.contextPath }/js/jquery-1.8.2.min.js"></script>
+	<script type="text/javascript" src="${pageContext.request.contextPath }/js/jquery.form.js"></script>
 	<script type="text/javascript">
-		
+			
+	
+			$("#btnForm").click(function(){
+						
+				    var options = {
+		                url: '/t1/submitUserList.action',
+		                type: 'post',
+		                dataType: 'json',
+		                data: $("#form1").serialize(),
+		                success: function (data) {
+		                   alert($("#form1").serialize());  // id=1212&name=http%3A%2F%2Flocalhost%3A8909&pwd=a123%4012212&fav=2&fav=3  这里的 http:// 这些字符也会被转义后传到后台再进行就自动的解析
+		                   console.log(data);
+		                },
+		                error:function(msg){
+		                	alert(msg);
+		                }
+		            };
+				    
+					$("#form1").ajaxSubmit(options);
+				
+				
+			});
+	
+	
+	
+	
+	
+	
+	
+	
 			$("#btn1").click(function(){
 				var params  = {};
 				params.param1 = "传值1";
@@ -47,9 +93,7 @@
 			});
 			
 			$("#btn2").click(function(){
-				
 				window.location.href = "${basePath }/t1/t3/jack/23";
-				
 			});
 			
 			

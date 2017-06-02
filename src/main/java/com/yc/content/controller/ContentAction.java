@@ -1,5 +1,7 @@
 package com.yc.content.controller;
 
+import java.util.ArrayList;
+import java.util.List;
 import java.util.Map;
 
 import javax.servlet.http.HttpServletRequest;
@@ -115,6 +117,17 @@ public class ContentAction {
 	public String testentityParamTest(Person p1){
 		System.out.println(p1);
 		return null;
+	}
+	
+	
+	@RequestMapping(value="/submitUserList",method=RequestMethod.POST,produces=MediaType.APPLICATION_JSON_UTF8_VALUE)
+	@ResponseBody
+	public List<String> submitUserList(Long[] fav,String id,String name, String pwd){
+		System.out.println(name);
+		String retVal = "姓名:"+name+"密码:"+pwd;
+		List<String> li = new ArrayList<String>();
+		li.add(retVal);
+		return li;
 	}
 	
 }
