@@ -1,0 +1,120 @@
+
+
+[INFO ] 2017-06-02 10:13:16,324 method:org.springframework.web.servlet.FrameworkServlet.initServletBean(FrameworkServlet.java:488)
+FrameworkServlet 'ycCms-content-web': initialization started
+
+
+[INFO ] 2017-06-02 10:13:16,357 method:org.springframework.context.support.AbstractApplicationContext.prepareRefresh(AbstractApplicationContext.java:578)
+Refreshing WebApplicationContext for namespace 'ycCms-content-web-servlet': startup date [Fri Jun 02 10:13:16 CST 2017]; root of context hierarchy
+
+
+[INFO ] 2017-06-02 10:13:16,420 method:org.springframework.beans.factory.xml.XmlBeanDefinitionReader.loadBeanDefinitions(XmlBeanDefinitionReader.java:317)
+Loading XML bean definitions from file [C:\Users\IBM_ADMIN\git\cms-content-web\target\classes\spring\springmvc.xml]
+
+
+[INFO ] 2017-06-02 10:13:17,168 method:org.springframework.core.io.support.PropertiesLoaderSupport.loadProperties(PropertiesLoaderSupport.java:172)
+Loading properties file from class path resource [resource/resource.properties]
+
+
+[INFO ] 2017-06-02 10:13:17,178 method:org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor.<init>(AutowiredAnnotationBeanPostProcessor.java:153)
+JSR-330 'javax.inject.Inject' annotation found and supported for autowiring
+
+
+[INFO ] 2017-06-02 10:13:17,482 method:org.springframework.web.servlet.handler.AbstractHandlerMethodMapping$MappingRegistry.register(AbstractHandlerMethodMapping.java:534)
+Mapped "{[/t1/t2]}" onto public org.springframework.web.servlet.ModelAndView com.yc.content.controller.ContentAction.test(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse,org.springframework.ui.Model)
+
+
+[INFO ] 2017-06-02 10:13:17,484 method:org.springframework.web.servlet.handler.AbstractHandlerMethodMapping$MappingRegistry.register(AbstractHandlerMethodMapping.java:534)
+Mapped "{[/t1/t3/{name}/{age}]}" onto public java.lang.String com.yc.content.controller.ContentAction.testPathVariable(java.lang.String,int,java.util.Map<java.lang.String, java.lang.Object>)
+
+
+[INFO ] 2017-06-02 10:13:17,485 method:org.springframework.web.servlet.handler.AbstractHandlerMethodMapping$MappingRegistry.register(AbstractHandlerMethodMapping.java:534)
+Mapped "{[/t1/t4]}" onto public java.lang.String com.yc.content.controller.ContentAction.testRequestParam(java.lang.Integer,float,org.springframework.ui.Model)
+
+
+[INFO ] 2017-06-02 10:13:17,486 method:org.springframework.web.servlet.handler.AbstractHandlerMethodMapping$MappingRegistry.register(AbstractHandlerMethodMapping.java:534)
+Mapped "{[/t1/singleParams],produces=[application/json;charset=UTF-8]}" onto public java.lang.String com.yc.content.controller.ContentAction.testResponseBodyofSingleParms(java.lang.String,java.lang.String)
+
+
+[INFO ] 2017-06-02 10:13:17,486 method:org.springframework.web.servlet.handler.AbstractHandlerMethodMapping$MappingRegistry.register(AbstractHandlerMethodMapping.java:534)
+Mapped "{[/t1/entityParamTest],methods=[POST],produces=[application/json;charset=UTF-8]}" onto public java.lang.String com.yc.content.controller.ContentAction.testentityParamTest(com.cn.yc.pojo.Person)
+
+
+[INFO ] 2017-06-02 10:13:17,486 method:org.springframework.web.servlet.handler.AbstractHandlerMethodMapping$MappingRegistry.register(AbstractHandlerMethodMapping.java:534)
+Mapped "{[/t1/entityParamsWithArrayTest],methods=[POST],produces=[application/json;charset=UTF-8]}" onto public java.lang.String com.yc.content.controller.ContentAction.testResponseBodyofreceiveEntity(com.cn.yc.pojo.Person)
+
+
+[INFO ] 2017-06-02 10:13:17,741 method:org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.initControllerAdviceCache(RequestMappingHandlerAdapter.java:532)
+Looking for @ControllerAdvice: WebApplicationContext for namespace 'ycCms-content-web-servlet': startup date [Fri Jun 02 10:13:16 CST 2017]; root of context hierarchy
+
+
+[INFO ] 2017-06-02 10:13:17,804 method:org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.initControllerAdviceCache(RequestMappingHandlerAdapter.java:532)
+Looking for @ControllerAdvice: WebApplicationContext for namespace 'ycCms-content-web-servlet': startup date [Fri Jun 02 10:13:16 CST 2017]; root of context hierarchy
+
+
+[INFO ] 2017-06-02 10:13:17,920 method:org.springframework.web.servlet.handler.AbstractUrlHandlerMapping.registerHandler(AbstractUrlHandlerMapping.java:341)
+Mapped URL path [/**] onto handler 'org.springframework.web.servlet.resource.DefaultServletHttpRequestHandler#0'
+
+
+[INFO ] 2017-06-02 10:13:17,997 method:org.springframework.web.servlet.FrameworkServlet.initServletBean(FrameworkServlet.java:507)
+FrameworkServlet 'ycCms-content-web': initialization completed in 1660 ms
+
+
+[INFO ] 2017-06-02 10:18:43,693 method:org.springframework.web.servlet.FrameworkServlet.initServletBean(FrameworkServlet.java:488)
+FrameworkServlet 'ycCms-content-web': initialization started
+
+
+[INFO ] 2017-06-02 10:18:43,712 method:org.springframework.context.support.AbstractApplicationContext.prepareRefresh(AbstractApplicationContext.java:578)
+Refreshing WebApplicationContext for namespace 'ycCms-content-web-servlet': startup date [Fri Jun 02 10:18:43 CST 2017]; root of context hierarchy
+
+
+[INFO ] 2017-06-02 10:18:43,747 method:org.springframework.beans.factory.xml.XmlBeanDefinitionReader.loadBeanDefinitions(XmlBeanDefinitionReader.java:317)
+Loading XML bean definitions from file [C:\Users\IBM_ADMIN\git\cms-content-web\target\classes\spring\springmvc.xml]
+
+
+[INFO ] 2017-06-02 10:18:44,053 method:org.springframework.core.io.support.PropertiesLoaderSupport.loadProperties(PropertiesLoaderSupport.java:172)
+Loading properties file from class path resource [resource/resource.properties]
+
+
+[INFO ] 2017-06-02 10:18:44,057 method:org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor.<init>(AutowiredAnnotationBeanPostProcessor.java:153)
+JSR-330 'javax.inject.Inject' annotation found and supported for autowiring
+
+
+[INFO ] 2017-06-02 10:18:44,311 method:org.springframework.web.servlet.handler.AbstractHandlerMethodMapping$MappingRegistry.register(AbstractHandlerMethodMapping.java:534)
+Mapped "{[/t1/t2]}" onto public org.springframework.web.servlet.ModelAndView com.yc.content.controller.ContentAction.test(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse,org.springframework.ui.Model)
+
+
+[INFO ] 2017-06-02 10:18:44,313 method:org.springframework.web.servlet.handler.AbstractHandlerMethodMapping$MappingRegistry.register(AbstractHandlerMethodMapping.java:534)
+Mapped "{[/t1/t3/{name}/{age}]}" onto public java.lang.String com.yc.content.controller.ContentAction.testPathVariable(java.lang.String,int,java.util.Map<java.lang.String, java.lang.Object>)
+
+
+[INFO ] 2017-06-02 10:18:44,313 method:org.springframework.web.servlet.handler.AbstractHandlerMethodMapping$MappingRegistry.register(AbstractHandlerMethodMapping.java:534)
+Mapped "{[/t1/t4]}" onto public java.lang.String com.yc.content.controller.ContentAction.testRequestParam(java.lang.Integer,float,org.springframework.ui.Model)
+
+
+[INFO ] 2017-06-02 10:18:44,314 method:org.springframework.web.servlet.handler.AbstractHandlerMethodMapping$MappingRegistry.register(AbstractHandlerMethodMapping.java:534)
+Mapped "{[/t1/singleParams],produces=[application/json;charset=UTF-8]}" onto public java.lang.String com.yc.content.controller.ContentAction.testResponseBodyofSingleParms(java.lang.String,java.lang.String)
+
+
+[INFO ] 2017-06-02 10:18:44,314 method:org.springframework.web.servlet.handler.AbstractHandlerMethodMapping$MappingRegistry.register(AbstractHandlerMethodMapping.java:534)
+Mapped "{[/t1/entityParamTest],methods=[POST],produces=[application/json;charset=UTF-8]}" onto public java.lang.String com.yc.content.controller.ContentAction.testentityParamTest(com.cn.yc.pojo.Person)
+
+
+[INFO ] 2017-06-02 10:18:44,314 method:org.springframework.web.servlet.handler.AbstractHandlerMethodMapping$MappingRegistry.register(AbstractHandlerMethodMapping.java:534)
+Mapped "{[/t1/entityParamsWithArrayTest],methods=[POST],produces=[application/json;charset=UTF-8]}" onto public java.lang.String com.yc.content.controller.ContentAction.testResponseBodyofreceiveEntity(com.cn.yc.pojo.Person)
+
+
+[INFO ] 2017-06-02 10:18:44,563 method:org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.initControllerAdviceCache(RequestMappingHandlerAdapter.java:532)
+Looking for @ControllerAdvice: WebApplicationContext for namespace 'ycCms-content-web-servlet': startup date [Fri Jun 02 10:18:43 CST 2017]; root of context hierarchy
+
+
+[INFO ] 2017-06-02 10:18:44,629 method:org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.initControllerAdviceCache(RequestMappingHandlerAdapter.java:532)
+Looking for @ControllerAdvice: WebApplicationContext for namespace 'ycCms-content-web-servlet': startup date [Fri Jun 02 10:18:43 CST 2017]; root of context hierarchy
+
+
+[INFO ] 2017-06-02 10:18:44,748 method:org.springframework.web.servlet.handler.AbstractUrlHandlerMapping.registerHandler(AbstractUrlHandlerMapping.java:341)
+Mapped URL path [/**] onto handler 'org.springframework.web.servlet.resource.DefaultServletHttpRequestHandler#0'
+
+
+[INFO ] 2017-06-02 10:18:44,827 method:org.springframework.web.servlet.FrameworkServlet.initServletBean(FrameworkServlet.java:507)
+FrameworkServlet 'ycCms-content-web': initialization completed in 1132 ms
