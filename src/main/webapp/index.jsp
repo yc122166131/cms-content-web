@@ -14,7 +14,7 @@
 	
 	
 	<h3>springmvc test</h3>
-	<input type="button" value="传无关的参数" id="btn1"/>
+	<input type="button" value="传无关的参数 " id="btn1"/>
 	<br/>
 	<br/>
 	<input type="button" value="传实体映射(不带数组)" id="entity" onclick="javascript:transferEntity();"/> 
