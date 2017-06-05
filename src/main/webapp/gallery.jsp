@@ -1,3 +1,5 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -334,8 +336,8 @@
 			<div id="sidebar-left" class="span2">
 				<div class="nav-collapse sidebar-nav">
 					<ul class="nav nav-tabs nav-stacked main-menu">
-						<li><a href="gallery.html"><i class="icon-picture"></i><span class="hidden-tablet"> Gallery</span></a></li>
-						<li><a href="table.html"><i class="icon-align-justify"></i><span class="hidden-tablet"> Tables</span></a></li>
+						<li><a href="index.jsp"><i class="icon-align-justify"></i><span class="hidden-tablet"> Tables</span></a></li>
+						<li class="active"><a href="gallery.jsp"><i class="icon-picture"></i><span class="hidden-tablet"> Gallery</span></a></li>
 					</ul>
 				</div>
 			</div>
@@ -377,7 +379,7 @@
 						<div class="masonry-gallery">
 							<style>
 								*{padding:0;margin:0;}
-								.exhibit{width:230px;height:260px;box-shadow:1px 0px 10px #111;border-radius:6%;margin-top:20px;
+								.exhibit{width:230px;height:260px;box-shadow:1px 0px 10px #111;border-radius:6%;margin-top:30px;
 								cursor:pointer;position:relative;overflow:hidden;}
 								.exhibit .up_overlay{width:100%;height:35%;
 								background:url(http://js.18183.duoku.com/uploads/pc/index2016/hbg60.png) repeat;
@@ -410,32 +412,18 @@
 								
 								
 								 /*关注 start*/
-								.exhibit  .up_overlay div.p-like{width:56px;height:25px;
-								position:relative;top:-104px;left:172px;line-height: 25px;}
-								.exhibit  .up_overlay div.p-like:hover{width:56px;height:25px;
-								position:relative;line-height: 25px;box-shadow:1px 1px 15px #ccd;
-								background:pink;}
-								.exhibit  .up_overlay div.p-like:hover span{ border:0px;color:red;font-weight:bold;
-								text-shadow:1px 1px 5px red;
-								}
-								
-								.exhibit  .up_overlay div.p-like a{color:#fff;text-decoration:none;}
-								.exhibit  .up_overlay div.p-like a i{ width: 21px; height: 13px;display:inline-block;
-								 background: url(//static.360buyimg.com/devfe/phoenix/3.0.0/css/i/search.ele.png) 
-								 no-repeat 9999px 9999px;}
-								 .exhibit  .up_overlay div.p-like a span{text-shadow:1px 1px 5px #fff;
-								}
-								.exhibit  .up_overlay div.p-like:hover i{
-								  	background-position: 0 -437px;
-								 }
+								.exhibit  .up_overlay div.p-like{width: 80px;height:25px;
+								position:relative;top:-3px;left:151px;line-height: 25px;}
+								.exhibit  .up_overlay div.p-like a img{width:20px;height:18px;}
+								.exhibit  .up_overlay div.p-like a span{color:#fff;}
+								.exhibit  .up_overlay div.p-like a{text-decoration:none;}
+								 /* end  关注*/
+								 
 								 
 								.exhibit   .exhibit_footer{
 								 width:100%;height:66px;background:red;
 								}
 								 
-								 /* end  关注*/
-								
-								
 							   .overlaydownUp{transition:all 0.8s ease; animation:overlaydownUp 0.8s ease forwards;}
 							   .overlayUpdown{transition:all 0.8s ease; animation:overlayUpdown 0.8s ease forwards;}
 								@keyframes  overlaydownUp{
@@ -447,152 +435,290 @@
 									to{height:35%;}
 								}
 								
+								.likefocus{border:7px dotted red;}
 								.masonry-thumb .exhibit a img{height:238px; width:100%;}
+								
 							</style>
 							
 							
 							<div id="" class="masonry-thumb">
 								<div class="exhibit">
-									<a><img src="//img14.360buyimg.com/cms/jfs/t5866/86/2181101596/19193/a4bad0b0/592e5cb6N19d6fe7e.jpg"
-									/></a>
-									<span class="up_overlay">
-										<div class="skuInfo">
-											<div class="p-introduction">
-												2017新款蕾丝网纱薄款外搭防晒披风 裸粉色 2XL
-												 2XL2017新款蕾丝网纱薄款 2XL
-											</div>
-											<p class="p_price">¥4999.00</p>
-											<p class="p_shop">稻草人品牌自营旗舰店</p>
-											<strong>已有
-												<a class="comment" target="_blank" href="//item.jd.com/1550224.html#comment">
-													5700+
-												</a>
-												人评价
-											</strong>
-											<div class="p-buy"><span>加入购物车</span></div>
-											<div class="p-like" onclick="javascript:attention(this);" data-sku="1000100" >
-												<a href="javascript:void(0);" >
-													<i></i><span >关注</span>
-												</a>
-											</div>
-										</div>
-									</span>
-									<div class="exhibit_footer">
-									
+									<div id="sub_exhibit">
+											<a><img src="//img14.360buyimg.com/cms/jfs/t5866/86/2181101596/19193/a4bad0b0/592e5cb6N19d6fe7e.jpg"
+											/></a>
+											<span class="up_overlay">
+												<div class="skuInfo">
+													<div class="p-introduction">
+														2017新款蕾丝网纱薄款外搭防晒披风 裸粉色 2XL
+														 2XL2017新款蕾丝网纱薄款 2XL
+													</div>
+													<p class="p_price">¥4999.00</p>
+													<p class="p_shop">稻草人品牌自营旗舰店</p>
+													<strong>已有
+														<a class="comment" target="_blank" href="//item.jd.com/1550224.html#comment">
+															5700+
+														</a>
+														人评价
+													</strong>
+													<div class="p-buy"><span>加入购物车</span></div>
+													<div class="p-like" onclick="javascript:attention(this);" data-sku="1000100" >
+														<a href="javascript:void(0);" >
+															<img src="img/custom/cancel.png"/><span>关注</span>
+														</a>
+													</div>
+												</div>
+											</span>
+											<div class="exhibit_footer"></div>
+											
 									</div>
 								</div>
 							</div>
 							
 							
-							<div id="" class="masonry-thumb">
+								<div id="" class="masonry-thumb">
 								<div class="exhibit">
-									<a><img src="//img11.360buyimg.com/n8/jfs/t2821/162/2591645690/178214/d845f5b6/576b5d9cN32cd131c.jpg"/></a>
-									<span class="up_overlay">
-										<div class="skuInfo">
-											<div class="p-introduction">
-												2017新款蕾丝网纱薄款外搭防晒披风 裸粉色 2XL
-												 2XL2017新款蕾丝网纱薄款 2XL
-											</div>
-											<p class="p_price">¥4999.00</p>
-											<p class="p_shop">稻草人品牌自营旗舰店</p>
-											<strong>已有
-												<a class="comment" target="_blank" href="//item.jd.com/1550224.html#comment">
-													5700+
-												</a>
-												人评价
-											</strong>
-											<div class="p-buy"><span>加入购物车</span></div>
-											<div class="p-like"  onclick="javascript:attention(this);" data-sku="1000101">
-												<a href="javascript:void(0);" >
-													<i></i><span >关注</span>
-												</a>
-											</div>
-										</div>
-									</span>
-									<div class="exhibit_footer"></div>
+									<div id="sub_exhibit">
+											<a><img src="//img14.360buyimg.com/cms/jfs/t5866/86/2181101596/19193/a4bad0b0/592e5cb6N19d6fe7e.jpg"
+											/></a>
+											<span class="up_overlay">
+												<div class="skuInfo">
+													<div class="p-introduction">
+														2017新款蕾丝网纱薄款外搭防晒披风 裸粉色 2XL
+														 2XL2017新款蕾丝网纱薄款 2XL
+													</div>
+													<p class="p_price">¥4999.00</p>
+													<p class="p_shop">稻草人品牌自营旗舰店</p>
+													<strong>已有
+														<a class="comment" target="_blank" href="//item.jd.com/1550224.html#comment">
+															5700+
+														</a>
+														人评价
+													</strong>
+													<div class="p-buy"><span>加入购物车</span></div>
+													<div class="p-like" onclick="javascript:attention(this);" data-sku="1000100" >
+														<a href="javascript:void(0);" >
+															<img src="img/custom/cancel.png"/><span>关注</span>
+														</a>
+													</div>
+												</div>
+											</span>
+											<div class="exhibit_footer"></div>
+											
+									</div>
 								</div>
 							</div>
 							
 							
+								<div id="" class="masonry-thumb">
+								<div class="exhibit">
+									<div id="sub_exhibit">
+											<a><img src="//img14.360buyimg.com/cms/jfs/t5866/86/2181101596/19193/a4bad0b0/592e5cb6N19d6fe7e.jpg"
+											/></a>
+											<span class="up_overlay">
+												<div class="skuInfo">
+													<div class="p-introduction">
+														2017新款蕾丝网纱薄款外搭防晒披风 裸粉色 2XL
+														 2XL2017新款蕾丝网纱薄款 2XL
+													</div>
+													<p class="p_price">¥4999.00</p>
+													<p class="p_shop">稻草人品牌自营旗舰店</p>
+													<strong>已有
+														<a class="comment" target="_blank" href="//item.jd.com/1550224.html#comment">
+															5700+
+														</a>
+														人评价
+													</strong>
+													<div class="p-buy"><span>加入购物车</span></div>
+													<div class="p-like" onclick="javascript:attention(this);" data-sku="1000100" >
+														<a href="javascript:void(0);" >
+															<img src="img/custom/cancel.png"/><span>关注</span>
+														</a>
+													</div>
+												</div>
+											</span>
+											<div class="exhibit_footer"></div>
+											
+									</div>
+								</div>
+							</div>
 							
 							
+								<div id="" class="masonry-thumb">
+								<div class="exhibit">
+									<div id="sub_exhibit">
+											<a><img src="//img14.360buyimg.com/cms/jfs/t5866/86/2181101596/19193/a4bad0b0/592e5cb6N19d6fe7e.jpg"
+											/></a>
+											<span class="up_overlay">
+												<div class="skuInfo">
+													<div class="p-introduction">
+														2017新款蕾丝网纱薄款外搭防晒披风 裸粉色 2XL
+														 2XL2017新款蕾丝网纱薄款 2XL
+													</div>
+													<p class="p_price">¥4999.00</p>
+													<p class="p_shop">稻草人品牌自营旗舰店</p>
+													<strong>已有
+														<a class="comment" target="_blank" href="//item.jd.com/1550224.html#comment">
+															5700+
+														</a>
+														人评价
+													</strong>
+													<div class="p-buy"><span>加入购物车</span></div>
+													<div class="p-like" onclick="javascript:attention(this);" data-sku="1000100" >
+														<a href="javascript:void(0);" >
+															<img src="img/custom/cancel.png"/><span>关注</span>
+														</a>
+													</div>
+												</div>
+											</span>
+											<div class="exhibit_footer"></div>
+											
+									</div>
+								</div>
+							</div>
 							
-							<div id="" class="masonry-thumb">
+							
+								<div id="" class="masonry-thumb">
 								<div class="exhibit">
-									<a><img src="//img13.360buyimg.com/n7/jfs/t4537/245/4665218087/42126/5b5c2f39/591128e0Nb39b9000.jpg"  /></a>
-									<span class="up_overlay">
-										<div class="skuInfo">
-											<div class="p-introduction">
-												2017新款蕾丝网纱薄款外搭防晒披风 裸粉色 2XL
-												 2XL2017新款蕾丝网纱薄款 2XL
-											</div>
-											<p class="p_price">¥4999.00</p>
-											<p class="p_shop">稻草人品牌自营旗舰店</p>
-											<strong>已有
-												<a class="comment" target="_blank" href="//item.jd.com/1550224.html#comment">
-													5700+
-												</a>
-												人评价
-											</strong>
-											<div class="p-buy"><span>加入购物车</span></div>
-											<div class="p-like">
-												<a href="javascript:void(0);">
-													<i></i><span>关注</span>
-												</a>
-											</div>
-										</div>
-									</span>
-									<div class="exhibit_footer"></div>
+									<div id="sub_exhibit">
+											<a><img src="//img14.360buyimg.com/cms/jfs/t5866/86/2181101596/19193/a4bad0b0/592e5cb6N19d6fe7e.jpg"
+											/></a>
+											<span class="up_overlay">
+												<div class="skuInfo">
+													<div class="p-introduction">
+														2017新款蕾丝网纱薄款外搭防晒披风 裸粉色 2XL
+														 2XL2017新款蕾丝网纱薄款 2XL
+													</div>
+													<p class="p_price">¥4999.00</p>
+													<p class="p_shop">稻草人品牌自营旗舰店</p>
+													<strong>已有
+														<a class="comment" target="_blank" href="//item.jd.com/1550224.html#comment">
+															5700+
+														</a>
+														人评价
+													</strong>
+													<div class="p-buy"><span>加入购物车</span></div>
+													<div class="p-like" onclick="javascript:attention(this);" data-sku="1000100" >
+														<a href="javascript:void(0);" >
+															<img src="img/custom/cancel.png"/><span>关注</span>
+														</a>
+													</div>
+												</div>
+											</span>
+											<div class="exhibit_footer"></div>
+											
+									</div>
 								</div>
 							</div>
-							<div id="" class="masonry-thumb">
+							
+							
+								<div id="" class="masonry-thumb">
 								<div class="exhibit">
-									<a><img src="//img13.360buyimg.com/n7/jfs/t4597/346/2381412997/187732/6d336935/58eec9e9N0185d803.jpg"  /></a>
-									<span class="up_overlay">
-										<div class="skuInfo">
-											<div class="p-introduction">
-												2017新款蕾丝网纱薄款外搭防晒披风 裸粉色 2XL
-												 2XL2017新款蕾丝网纱薄款 2XL
-											</div>
-											<p class="p_price">¥4999.00</p>
-											<p class="p_shop">稻草人品牌自营旗舰店</p>
-											<strong>已有
-												<a class="comment" target="_blank" href="//item.jd.com/1550224.html#comment">
-													5700+
-												</a>
-												人评价
-											</strong>
-											<div class="p-buy"><span>加入购物车</span></div>
-											<div class="p-like">
-												<a href="javascript:void(0);">
-													<i></i><span>关注</span>
-												</a>
-											</div>
-										</div>
-									</span>
-									<div class="exhibit_footer"></div>
+									<div id="sub_exhibit">
+											<a><img src="//img14.360buyimg.com/n8/jfs/t4525/231/853390728/333885/f6f6932b/5909f950N1fc9e594.jpg"
+											/></a>
+											<span class="up_overlay">
+												<div class="skuInfo">
+													<div class="p-introduction">
+														绿筱媚青2017春季新款女士风衣纯色抽绳气质休闲大码女装时尚薄风衣外套女中长款 豆绿色 S95-105斤
+													</div>
+													<p class="p_price">¥4999.00</p>
+													<p class="p_shop">稻草人品牌自营旗舰店</p>
+													<strong>已有
+														<a class="comment" target="_blank" href="//item.jd.com/1550224.html#comment">
+															5700+
+														</a>
+														人评价
+													</strong>
+													<div class="p-buy"><span>加入购物车</span></div>
+													<div class="p-like" onclick="javascript:attention(this);" data-sku="1000100" >
+														<a href="javascript:void(0);" >
+															<img src="img/custom/cancel.png"/><span>关注</span>
+														</a>
+													</div>
+												</div>
+											</span>
+											<div class="exhibit_footer"></div>
+											
+									</div>
 								</div>
 							</div>
-							<div id="" class="masonry-thumb">
+							
+							
+								<div id="" class="masonry-thumb">
 								<div class="exhibit">
-									<a><img src="//img14.360buyimg.com/n7/jfs/t1168/268/702218813/233341/88cfe559/553b5892Nc467d7dc.jpg"  /></a>
-									<span class="">
-										<div class="skuInfo">
-											<p style="color:#fff;">¥4999.00</p>
-										</div>
-									</span>
+									<div id="sub_exhibit">
+											<a><img src="//img11.360buyimg.com/n8/jfs/t5539/45/2386755531/81851/e9905b40/591a5411N74ff1d71.jpg"
+											/></a>
+											<span class="up_overlay">
+												<div class="skuInfo">
+													<div class="p-introduction">
+														海贝春装中长款大衣女 时尚翻领双排扣长款风衣 矿粉蓝 L
+													</div>
+													<p class="p_price">¥4999.00</p>
+													<p class="p_shop">稻草人品牌自营旗舰店</p>
+													<strong>已有
+														<a class="comment" target="_blank" href="//item.jd.com/1550224.html#comment">
+															5700+
+														</a>
+														人评价
+													</strong>
+													<div class="p-buy"><span>加入购物车</span></div>
+													<div class="p-like" onclick="javascript:attention(this);" data-sku="1000100" >
+														<a href="javascript:void(0);" >
+															<img src="img/custom/cancel.png"/><span>关注</span>
+														</a>
+													</div>
+												</div>
+											</span>
+											<div class="exhibit_footer"></div>
+											
+									</div>
 								</div>
 							</div>
-							<div id="" class="masonry-thumb">
+							
+							
+								<div id="" class="masonry-thumb">
 								<div class="exhibit">
-									<a><img src="//img14.360buyimg.com/n7/jfs/t3202/286/7377473823/994380/6cef17d5/58b57c27N05952542.png"  /></a>
-									<span class="">
-										<div class="skuInfo">
-											<p style="color:#fff;">¥4999.00</p>
-										</div>
-									</span>
+									<div id="sub_exhibit">
+											<a><img src="//img14.360buyimg.com/n8/jfs/t2728/316/3980693727/96339/76bf02e9/57a03cfcNf4faa06a.jpg"
+											/></a>
+											<span class="up_overlay">
+												<div class="skuInfo">
+													<div class="p-introduction">
+														吉禾伊嘉风衣外套女2017春装新款女装韩版修身纯色中长款风衣女2601 卡其色 XXL-1
+													</div>
+													<p class="p_price">¥4999.00</p>
+													<p class="p_shop">稻草人品牌自营旗舰店</p>
+													<strong>已有
+														<a class="comment" target="_blank" href="//item.jd.com/1550224.html#comment">
+															5700+
+														</a>
+														人评价
+													</strong>
+													<div class="p-buy"><span>加入购物车</span></div>
+													<div class="p-like" onclick="javascript:attention(this);" data-sku="1000100" >
+														<a href="javascript:void(0);" >
+															<img src="img/custom/cancel.png"/><span>关注</span>
+														</a>
+													</div>
+												</div>
+											</span>
+											<div class="exhibit_footer"></div>
+											
+									</div>
 								</div>
 							</div>
+							
+							
+						
+						
+						
+						
+						
+						
+						
+						
+						
 							
 						</div>
 					</div>
@@ -711,8 +837,16 @@
 		   // 获取关注的 商品skuId
 		   function attention(obj){
 			   var $this = $(obj);
-			   $this.parents("div.exhibit").css("border","7px solid springgreen");
-			   
+			   $this.parents("div#sub_exhibit").toggleClass("likefocus");
+
+			   if($this.parents("div.exhibit").find("div.p-like a img").attr("src").indexOf("focus")!=-1){
+				   $this.parents("div.exhibit").find("div.p-like a")
+				   .html("<img src=\"img/custom/cancel.png\"/><span style=\"color:#fff;\">关注</span>");
+			   }else{
+				   $this.parents("div.exhibit").find("div.p-like a")
+				   .html("<img src=\"img/custom/focus.png\"/><span style=\"color:red;\">取消关注</span>");
+			}
+			  
 			    //border: 10px solid springgreen;
 			  //console.log($(obj).data("sku"));
 		   }
