@@ -205,14 +205,9 @@
 		<div class="row-fluid">
 				
 			<!-- start: Main Menu -->
-			<div id="sidebar-left" class="span2">
-				<div class="nav-collapse sidebar-nav">
-					<ul class="nav nav-tabs nav-stacked main-menu">
-						<li class="active"><a href="index.jsp"><i class="icon-align-justify"></i><span class="hidden-tablet"> Tables</span></a></li>
-						<li><a href="gallery.jsp"><i class="icon-picture"></i><span class="hidden-tablet"> Gallery</span></a></li>
-					</ul>
-				</div>
-			</div>
+			
+			<%@include file="/commons/left_menu.jsp" %>  
+			
 			<!-- end: Main Menu -->
 			
 			<noscript>

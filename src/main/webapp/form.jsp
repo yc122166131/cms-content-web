@@ -6,7 +6,7 @@
 	
 	<!-- start: Meta -->
 	<meta charset="utf-8">
-	<title></title>
+	<title>Bootstrap Metro Dashboard by Dennis Ji for ARM demo</title>
 	<meta name="description" content="Bootstrap Metro Dashboard">
 	<meta name="author" content="Dennis Ji">
 	<meta name="keyword" content="Metro, Metro UI, Dashboard, Bootstrap, Admin, Template, Theme, Responsive, Fluid, Retina">
@@ -21,7 +21,7 @@
 	<link href="css/bootstrap-responsive.min.css" rel="stylesheet">
 	<link id="base-style" href="css/style.css" rel="stylesheet">
 	<link id="base-style-responsive" href="css/style-responsive.css" rel="stylesheet">
-	<!-- <link href='http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800&subset=latin,cyrillic-ext,latin-ext' rel='stylesheet' type='text/css'> -->
+	<link href='http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800&subset=latin,cyrillic-ext,latin-ext' rel='stylesheet' type='text/css'>
 	<!-- end: CSS -->
 	
 
@@ -54,7 +54,7 @@
 					<span class="icon-bar"></span>
 					<span class="icon-bar"></span>
 				</a>
-				<a class="brand" href="index.html"><span>月落晨曦</span></a>
+				<a class="brand" href="index.html"><span>Metro</span></a>
 								
 				<!-- start: Header Menu -->
 				<div class="nav-no-collapse header-nav">
@@ -346,377 +346,333 @@
 			<!-- start: Content -->
 			<div id="content" class="span10">
 			
-						
+			
 			<ul class="breadcrumb">
 				<li>
 					<i class="icon-home"></i>
-					<a href="index.html">Home</a> 
-					<i class="icon-angle-right"></i>
+					<a href="index.html">Home</a>
+					<i class="icon-angle-right"></i> 
 				</li>
-				<li><a href="#">Gallery</a></li>
+				<li>
+					<i class="icon-edit"></i>
+					<a href="#">Forms</a>
+				</li>
 			</ul>
-
+			
 			<div class="row-fluid sortable">
 				<div class="box span12">
 					<div class="box-header" data-original-title>
-						<h2><i class="halflings-icon picture"></i><span class="break"></span> Gallery</h2>
+						<h2><i class="halflings-icon edit"></i><span class="break"></span>Form Elements</h2>
 						<div class="box-icon">
-							<a href="#" id="toggle-fullscreen" class="hidden-phone hidden-tablet"><i class="halflings-icon fullscreen"></i></a>
 							<a href="#" class="btn-setting"><i class="halflings-icon wrench"></i></a>
 							<a href="#" class="btn-minimize"><i class="halflings-icon chevron-up"></i></a>
 							<a href="#" class="btn-close"><i class="halflings-icon remove"></i></a>
 						</div>
 					</div>
-					
 					<div class="box-content">
-						<div class="masonry-gallery">
-							<style>
-								*{padding:0;margin:0;}
-								.exhibit{width:230px;height:260px;box-shadow:1px 0px 10px #111;border-radius:6%;margin-top:30px;
-								cursor:pointer;position:relative;overflow:hidden;}
-								.exhibit .up_overlay{width:100%;height:35%;
-								background:url(http://js.18183.duoku.com/uploads/pc/index2016/hbg60.png) repeat;
-								position:absolute;bottom:0;left:0;}
-								
-								.exhibit  .up_overlay p.p_price{color:#fff;font-size:22px;position:relative;top:8px;
-								left:41px;text-shadow:1px 2px 1px #fff;box-shadow:2px 1px 15px #fff;width:125px;height:50px;
-								text-align:center;line-height:50px;border-radius:5px;}
-								.exhibit  .up_overlay p.p_shop{color:#fff;font-size:16px;position:relative;top:76px;
-								left:6px;font-size: 12px; color: #fff;font-weight: bold;}
-								.exhibit  .up_overlay div.p-introduction{height:103px; width:230px;text-overflow:ellipsis;
-								overflow:hidden;  }
-								.exhibit  .up_overlay div.p-introduction{color:#fff;font-size:14px;
-								position:relative;top:10px;left:0px;font-family:"楷体";
-								font-weight:bold;}
-								.exhibit  .up_overlay strong{color:#ccc;font-size:16px;position:relative;top:24px;
-								left:13px;font-size: 12px;}
-								.exhibit  .up_overlay strong a{color:pink;font-weight: bold;}
-								
-								
-								 /* 加入购物车 start*/
-								.exhibit  .up_overlay div.p-buy{
-									width: 121px;height:26px;background: linear-gradient(pink,yellow);;position:relative;top:-35px;left:45px;
-									line-height: 26px; text-align: center;color:red;
-									border-radius:5px;
-									transition:all 0.3s ease-in-out;
-								}
-								.exhibit  .up_overlay div.p-buy:hover{transform:scale(1.2);transition:all 0.5s ease-in-out;}
-								 /* end 加入购物车  */
-								
-								
-								 /*关注 start*/
-								.exhibit  .up_overlay div.p-like{width: 80px;height:25px;
-								position:relative;top:-3px;left:151px;line-height: 25px;}
-								.exhibit  .up_overlay div.p-like a img{width:20px;height:18px;}
-								.exhibit  .up_overlay div.p-like a span{color:#fff;}
-								.exhibit  .up_overlay div.p-like a{text-decoration:none;}
-								 /* end  关注*/
-								 
-								 
-								.exhibit   .exhibit_footer{
-								 width:100%;height:66px;background:red;
-								}
-								 
-							   .overlaydownUp{transition:all 0.8s ease; animation:overlaydownUp 0.8s ease forwards;}
-							   .overlayUpdown{transition:all 0.8s ease; animation:overlayUpdown 0.8s ease forwards;}
-								@keyframes  overlaydownUp{
-									from{height:35%;}
-									to{height:100%;}
-								}
-								@keyframes  overlayUpdown{
-									from{height:100%;}
-									to{height:35%;}
-								}
-								
-								.likefocus{border:7px dotted red;}
-								.masonry-thumb .exhibit a img{height:238px; width:100%;}
-								
-							</style>
-							
-							
-							<div id="" class="masonry-thumb">
-								<div class="exhibit">
-									<div id="sub_exhibit">
-											<a><img src="//img14.360buyimg.com/cms/jfs/t5866/86/2181101596/19193/a4bad0b0/592e5cb6N19d6fe7e.jpg"
-											/></a>
-											<span class="up_overlay">
-												<div class="skuInfo">
-													<div class="p-introduction">
-														2017新款蕾丝网纱薄款外搭防晒披风 裸粉色 2XL
-														 2XL2017新款蕾丝网纱薄款 2XL
-													</div>
-													<p class="p_price">¥4999.00</p>
-													<p class="p_shop">稻草人品牌自营旗舰店</p>
-													<strong>已有
-														<a class="comment" target="_blank" href="//item.jd.com/1550224.html#comment">
-															5700+
-														</a>
-														人评价
-													</strong>
-													<div class="p-buy"><span>加入购物车</span></div>
-													<div class="p-like" onclick="javascript:attention(this);" data-sku="1000100" >
-														<a href="javascript:void(0);" >
-															<img src="img/custom/cancel.png"/><span>关注</span>
-														</a>
-													</div>
-												</div>
-											</span>
-											<div class="exhibit_footer"></div>
-											
-									</div>
-								</div>
+						<form class="form-horizontal">
+						  <fieldset>
+							<div class="control-group">
+							  <label class="control-label" for="typeahead">Auto complete </label>
+							  <div class="controls">
+								<input type="text" class="span6 typeahead" id="typeahead"  data-provide="typeahead" data-items="4" data-source='["Alabama","Alaska","Arizona","Arkansas","California","Colorado","Connecticut","Delaware","Florida","Georgia","Hawaii","Idaho","Illinois","Indiana","Iowa","Kansas","Kentucky","Louisiana","Maine","Maryland","Massachusetts","Michigan","Minnesota","Mississippi","Missouri","Montana","Nebraska","Nevada","New Hampshire","New Jersey","New Mexico","New York","North Dakota","North Carolina","Ohio","Oklahoma","Oregon","Pennsylvania","Rhode Island","South Carolina","South Dakota","Tennessee","Texas","Utah","Vermont","Virginia","Washington","West Virginia","Wisconsin","Wyoming"]'>
+								<p class="help-block">Start typing to activate auto complete!</p>
+							  </div>
 							</div>
-							
-							
-								<div id="" class="masonry-thumb">
-								<div class="exhibit">
-									<div id="sub_exhibit">
-											<a><img src="//img14.360buyimg.com/cms/jfs/t5866/86/2181101596/19193/a4bad0b0/592e5cb6N19d6fe7e.jpg"
-											/></a>
-											<span class="up_overlay">
-												<div class="skuInfo">
-													<div class="p-introduction">
-														2017新款蕾丝网纱薄款外搭防晒披风 裸粉色 2XL
-														 2XL2017新款蕾丝网纱薄款 2XL
-													</div>
-													<p class="p_price">¥4999.00</p>
-													<p class="p_shop">稻草人品牌自营旗舰店</p>
-													<strong>已有
-														<a class="comment" target="_blank" href="//item.jd.com/1550224.html#comment">
-															5700+
-														</a>
-														人评价
-													</strong>
-													<div class="p-buy"><span>加入购物车</span></div>
-													<div class="p-like" onclick="javascript:attention(this);" data-sku="1000100" >
-														<a href="javascript:void(0);" >
-															<img src="img/custom/cancel.png"/><span>关注</span>
-														</a>
-													</div>
-												</div>
-											</span>
-											<div class="exhibit_footer"></div>
-											
-									</div>
-								</div>
+							<div class="control-group">
+							  <label class="control-label" for="date01">Date input</label>
+							  <div class="controls">
+								<input type="text" class="input-xlarge datepicker" id="date01" value="02/16/12">
+							  </div>
 							</div>
-							
-							
-								<div id="" class="masonry-thumb">
-								<div class="exhibit">
-									<div id="sub_exhibit">
-											<a><img src="//img14.360buyimg.com/cms/jfs/t5866/86/2181101596/19193/a4bad0b0/592e5cb6N19d6fe7e.jpg"
-											/></a>
-											<span class="up_overlay">
-												<div class="skuInfo">
-													<div class="p-introduction">
-														2017新款蕾丝网纱薄款外搭防晒披风 裸粉色 2XL
-														 2XL2017新款蕾丝网纱薄款 2XL
-													</div>
-													<p class="p_price">¥4999.00</p>
-													<p class="p_shop">稻草人品牌自营旗舰店</p>
-													<strong>已有
-														<a class="comment" target="_blank" href="//item.jd.com/1550224.html#comment">
-															5700+
-														</a>
-														人评价
-													</strong>
-													<div class="p-buy"><span>加入购物车</span></div>
-													<div class="p-like" onclick="javascript:attention(this);" data-sku="1000100" >
-														<a href="javascript:void(0);" >
-															<img src="img/custom/cancel.png"/><span>关注</span>
-														</a>
-													</div>
-												</div>
-											</span>
-											<div class="exhibit_footer"></div>
-											
-									</div>
-								</div>
+
+							<div class="control-group">
+							  <label class="control-label" for="fileInput">File input</label>
+							  <div class="controls">
+								<input class="input-file uniform_on" id="fileInput" type="file">
+							  </div>
+							</div>          
+							<div class="control-group hidden-phone">
+							  <label class="control-label" for="textarea2">Textarea WYSIWYG</label>
+							  <div class="controls">
+								<textarea class="cleditor" id="textarea2" rows="3"></textarea>
+							  </div>
 							</div>
-							
-							
-								<div id="" class="masonry-thumb">
-								<div class="exhibit">
-									<div id="sub_exhibit">
-											<a><img src="//img14.360buyimg.com/cms/jfs/t5866/86/2181101596/19193/a4bad0b0/592e5cb6N19d6fe7e.jpg"
-											/></a>
-											<span class="up_overlay">
-												<div class="skuInfo">
-													<div class="p-introduction">
-														2017新款蕾丝网纱薄款外搭防晒披风 裸粉色 2XL
-														 2XL2017新款蕾丝网纱薄款 2XL
-													</div>
-													<p class="p_price">¥4999.00</p>
-													<p class="p_shop">稻草人品牌自营旗舰店</p>
-													<strong>已有
-														<a class="comment" target="_blank" href="//item.jd.com/1550224.html#comment">
-															5700+
-														</a>
-														人评价
-													</strong>
-													<div class="p-buy"><span>加入购物车</span></div>
-													<div class="p-like" onclick="javascript:attention(this);" data-sku="1000100" >
-														<a href="javascript:void(0);" >
-															<img src="img/custom/cancel.png"/><span>关注</span>
-														</a>
-													</div>
-												</div>
-											</span>
-											<div class="exhibit_footer"></div>
-											
-									</div>
-								</div>
+							<div class="form-actions">
+							  <button type="submit" class="btn btn-primary">Save changes</button>
+							  <button type="reset" class="btn">Cancel</button>
 							</div>
-							
-							
-								<div id="" class="masonry-thumb">
-								<div class="exhibit">
-									<div id="sub_exhibit">
-											<a><img src="//img14.360buyimg.com/cms/jfs/t5866/86/2181101596/19193/a4bad0b0/592e5cb6N19d6fe7e.jpg"
-											/></a>
-											<span class="up_overlay">
-												<div class="skuInfo">
-													<div class="p-introduction">
-														2017新款蕾丝网纱薄款外搭防晒披风 裸粉色 2XL
-														 2XL2017新款蕾丝网纱薄款 2XL
-													</div>
-													<p class="p_price">¥4999.00</p>
-													<p class="p_shop">稻草人品牌自营旗舰店</p>
-													<strong>已有
-														<a class="comment" target="_blank" href="//item.jd.com/1550224.html#comment">
-															5700+
-														</a>
-														人评价
-													</strong>
-													<div class="p-buy"><span>加入购物车</span></div>
-													<div class="p-like" onclick="javascript:attention(this);" data-sku="1000100" >
-														<a href="javascript:void(0);" >
-															<img src="img/custom/cancel.png"/><span>关注</span>
-														</a>
-													</div>
-												</div>
-											</span>
-											<div class="exhibit_footer"></div>
-											
-									</div>
-								</div>
-							</div>
-							
-							
-								<div id="" class="masonry-thumb">
-								<div class="exhibit">
-									<div id="sub_exhibit">
-											<a><img src="//img14.360buyimg.com/n8/jfs/t4525/231/853390728/333885/f6f6932b/5909f950N1fc9e594.jpg"
-											/></a>
-											<span class="up_overlay">
-												<div class="skuInfo">
-													<div class="p-introduction">
-														绿筱媚青2017春季新款女士风衣纯色抽绳气质休闲大码女装时尚薄风衣外套女中长款 豆绿色 S95-105斤
-													</div>
-													<p class="p_price">¥4999.00</p>
-													<p class="p_shop">稻草人品牌自营旗舰店</p>
-													<strong>已有
-														<a class="comment" target="_blank" href="//item.jd.com/1550224.html#comment">
-															5700+
-														</a>
-														人评价
-													</strong>
-													<div class="p-buy"><span>加入购物车</span></div>
-													<div class="p-like" onclick="javascript:attention(this);" data-sku="1000100" >
-														<a href="javascript:void(0);" >
-															<img src="img/custom/cancel.png"/><span>关注</span>
-														</a>
-													</div>
-												</div>
-											</span>
-											<div class="exhibit_footer"></div>
-											
-									</div>
-								</div>
-							</div>
-							
-							
-								<div id="" class="masonry-thumb">
-								<div class="exhibit">
-									<div id="sub_exhibit">
-											<a><img src="//img11.360buyimg.com/n8/jfs/t5539/45/2386755531/81851/e9905b40/591a5411N74ff1d71.jpg"
-											/></a>
-											<span class="up_overlay">
-												<div class="skuInfo">
-													<div class="p-introduction">
-														海贝春装中长款大衣女 时尚翻领双排扣长款风衣 矿粉蓝 L
-													</div>
-													<p class="p_price">¥4999.00</p>
-													<p class="p_shop">稻草人品牌自营旗舰店</p>
-													<strong>已有
-														<a class="comment" target="_blank" href="//item.jd.com/1550224.html#comment">
-															5700+
-														</a>
-														人评价
-													</strong>
-													<div class="p-buy"><span>加入购物车</span></div>
-													<div class="p-like" onclick="javascript:attention(this);" data-sku="1000100" >
-														<a href="javascript:void(0);" >
-															<img src="img/custom/cancel.png"/><span>关注</span>
-														</a>
-													</div>
-												</div>
-											</span>
-											<div class="exhibit_footer"></div>
-											
-									</div>
-								</div>
-							</div>
-							
-							
-								<div id="" class="masonry-thumb">
-								<div class="exhibit">
-									<div id="sub_exhibit">
-											<a><img src="//img14.360buyimg.com/n8/jfs/t2728/316/3980693727/96339/76bf02e9/57a03cfcNf4faa06a.jpg"
-											/></a>
-											<span class="up_overlay">
-												<div class="skuInfo">
-													<div class="p-introduction">
-														吉禾伊嘉风衣外套女2017春装新款女装韩版修身纯色中长款风衣女2601 卡其色 XXL-1
-													</div>
-													<p class="p_price">¥4999.00</p>
-													<p class="p_shop">稻草人品牌自营旗舰店</p>
-													<strong>已有
-														<a class="comment" target="_blank" href="//item.jd.com/1550224.html#comment">
-															5700+
-														</a>
-														人评价
-													</strong>
-													<div class="p-buy"><span>加入购物车</span></div>
-													<div class="p-like" onclick="javascript:attention(this);" data-sku="1000100" >
-														<a href="javascript:void(0);" >
-															<img src="img/custom/cancel.png"/><span>关注</span>
-														</a>
-													</div>
-												</div>
-											</span>
-											<div class="exhibit_footer"></div>
-											
-									</div>
-								</div>
-							</div>
-							
-							
-						
-						
-						
-						
-						
-						
-						
-						
-						
-							
+						  </fieldset>
+						</form>   
+
+					</div>
+				</div><!--/span-->
+
+			</div><!--/row-->
+
+			<div class="row-fluid sortable">
+				<div class="box span12">
+					<div class="box-header" data-original-title>
+						<h2><i class="halflings-icon edit"></i><span class="break"></span>Form Elements</h2>
+						<div class="box-icon">
+							<a href="#" class="btn-setting"><i class="halflings-icon wrench"></i></a>
+							<a href="#" class="btn-minimize"><i class="halflings-icon chevron-up"></i></a>
+							<a href="#" class="btn-close"><i class="halflings-icon remove"></i></a>
 						</div>
+					</div>
+					<div class="box-content">
+						<form class="form-horizontal">
+							<fieldset>
+							  <div class="control-group">
+								<label class="control-label" for="focusedInput">Focused input</label>
+								<div class="controls">
+								  <input class="input-xlarge focused" id="focusedInput" type="text" value="This is focusedâ¦">
+								</div>
+							  </div>
+							  <div class="control-group">
+								<label class="control-label">Uneditable input</label>
+								<div class="controls">
+								  <span class="input-xlarge uneditable-input">Some value here</span>
+								</div>
+							  </div>
+							  <div class="control-group">
+								<label class="control-label" for="disabledInput">Disabled input</label>
+								<div class="controls">
+								  <input class="input-xlarge disabled" id="disabledInput" type="text" placeholder="Disabled input hereâ¦" disabled="">
+								</div>
+							  </div>
+							  <div class="control-group">
+								<label class="control-label" for="optionsCheckbox2">Disabled checkbox</label>
+								<div class="controls">
+								  <label class="checkbox">
+									<input type="checkbox" id="optionsCheckbox2" value="option1" disabled="">
+									This is a disabled checkbox
+								  </label>
+								</div>
+							  </div>
+							  <div class="control-group warning">
+								<label class="control-label" for="inputWarning">Input with warning</label>
+								<div class="controls">
+								  <input type="text" id="inputWarning">
+								  <span class="help-inline">Something may have gone wrong</span>
+								</div>
+							  </div>
+							  <div class="control-group error">
+								<label class="control-label" for="inputError">Input with error</label>
+								<div class="controls">
+								  <input type="text" id="inputError">
+								  <span class="help-inline">Please correct the error</span>
+								</div>
+							  </div>
+							  <div class="control-group success">
+								<label class="control-label" for="inputSuccess">Input with success</label>
+								<div class="controls">
+								  <input type="text" id="inputSuccess">
+								  <span class="help-inline">Woohoo!</span>
+								</div>
+							  </div>
+							  <div class="control-group">
+								<label class="control-label" for="selectError3">Plain Select</label>
+								<div class="controls">
+								  <select id="selectError3">
+									<option>Option 1</option>
+									<option>Option 2</option>
+									<option>Option 3</option>
+									<option>Option 4</option>
+									<option>Option 5</option>
+								  </select>
+								</div>
+							  </div>
+							  <div class="control-group">
+								<label class="control-label" for="selectError">Modern Select</label>
+								<div class="controls">
+								  <select id="selectError" data-rel="chosen">
+									<option>Option 1</option>
+									<option>Option 2</option>
+									<option>Option 3</option>
+									<option>Option 4</option>
+									<option>Option 5</option>
+								  </select>
+								</div>
+							  </div>
+							  <div class="control-group">
+								<label class="control-label" for="selectError1">Multiple Select / Tags</label>
+								<div class="controls">
+								  <select id="selectError1" multiple data-rel="chosen">
+									<option>Option 1</option>
+									<option selected>Option 2</option>
+									<option>Option 3</option>
+									<option>Option 4</option>
+									<option>Option 5</option>
+								  </select>
+								</div>
+							  </div>
+							  <div class="control-group">
+								<label class="control-label" for="selectError2">Group Select</label>
+								<div class="controls">
+									<select data-placeholder="Your Favorite Football Team" id="selectError2" data-rel="chosen">
+										<option value=""></option>
+										<optgroup label="NFC EAST">
+										  <option>Dallas Cowboys</option>
+										  <option>New York Giants</option>
+										  <option>Philadelphia Eagles</option>
+										  <option>Washington Redskins</option>
+										</optgroup>
+										<optgroup label="NFC NORTH">
+										  <option>Chicago Bears</option>
+										  <option>Detroit Lions</option>
+										  <option>Green Bay Packers</option>
+										  <option>Minnesota Vikings</option>
+										</optgroup>
+										<optgroup label="NFC SOUTH">
+										  <option>Atlanta Falcons</option>
+										  <option>Carolina Panthers</option>
+										  <option>New Orleans Saints</option>
+										  <option>Tampa Bay Buccaneers</option>
+										</optgroup>
+										<optgroup label="NFC WEST">
+										  <option>Arizona Cardinals</option>
+										  <option>St. Louis Rams</option>
+										  <option>San Francisco 49ers</option>
+										  <option>Seattle Seahawks</option>
+										</optgroup>
+										<optgroup label="AFC EAST">
+										  <option>Buffalo Dennis Jis</option>
+										  <option>Miami Dolphins</option>
+										  <option>New England Patriots</option>
+										  <option>New York Jets</option>
+										</optgroup>
+										<optgroup label="AFC NORTH">
+										  <option>Baltimore Ravens</option>
+										  <option>Cincinnati Bengals</option>
+										  <option>Cleveland Browns</option>
+										  <option>Pittsburgh Steelers</option>
+										</optgroup>
+										<optgroup label="AFC SOUTH">
+										  <option>Houston Texans</option>
+										  <option>Indianapolis Colts</option>
+										  <option>Jacksonville Jaguars</option>
+										  <option>Tennessee Titans</option>
+										</optgroup>
+										<optgroup label="AFC WEST">
+										  <option>Denver Broncos</option>
+										  <option>Kansas City Chiefs</option>
+										  <option>Oakland Raiders</option>
+										  <option>San Diego Chargers</option>
+										</optgroup>
+								  </select>
+								</div>
+							  </div>
+							  <div class="form-actions">
+								<button type="submit" class="btn btn-primary">Save changes</button>
+								<button class="btn">Cancel</button>
+							  </div>
+							</fieldset>
+						  </form>
+					
 					</div>
 				</div><!--/span-->
 			
+			</div><!--/row-->
+			
+			<div class="row-fluid sortable">
+				<div class="box span12">
+					<div class="box-header" data-original-title>
+						<h2><i class="halflings-icon edit"></i><span class="break"></span>Form Elements</h2>
+						<div class="box-icon">
+							<a href="#" class="btn-setting"><i class="halflings-icon wrench"></i></a>
+							<a href="#" class="btn-minimize"><i class="halflings-icon chevron-up"></i></a>
+							<a href="#" class="btn-close"><i class="halflings-icon remove"></i></a>
+						</div>
+					</div>
+					<div class="box-content">
+						<form class="form-horizontal">
+							<fieldset>
+							  <div class="control-group">
+								<label class="control-label" for="prependedInput">Prepended text</label>
+								<div class="controls">
+								  <div class="input-prepend">
+									<span class="add-on">@</span><input id="prependedInput" size="16" type="text">
+								  </div>
+								  <p class="help-block">Here's some help text</p>
+								</div>
+							  </div>
+							  <div class="control-group">
+								<label class="control-label" for="appendedInput">Appended text</label>
+								<div class="controls">
+								  <div class="input-append">
+									<input id="appendedInput" size="16" type="text"><span class="add-on">.00</span>
+								  </div>
+								  <span class="help-inline">Here's more help text</span>
+								</div>
+							  </div>
+							  <div class="control-group">
+								<label class="control-label" for="appendedPrependedInput">Append and prepend</label>
+								<div class="controls">
+								  <div class="input-prepend input-append">
+									<span class="add-on">$</span><input id="appendedPrependedInput" size="16" type="text"><span class="add-on">.00</span>
+								  </div>
+								</div>
+							  </div>
+							  <div class="control-group">
+								<label class="control-label" for="appendedInputButton">Append with button</label>
+								<div class="controls">
+								  <div class="input-append">
+									<input id="appendedInputButton" size="16" type="text"><button class="btn" type="button">Go!</button>
+								  </div>
+								</div>
+							  </div>
+							  <div class="control-group">
+								<label class="control-label" for="appendedInputButtons">Two-button append</label>
+								<div class="controls">
+								  <div class="input-append">
+									<input id="appendedInputButtons" size="16" type="text"><button class="btn" type="button">Search</button><button class="btn" type="button">Options</button>
+								  </div>
+								</div>
+							  </div>
+							  <div class="control-group">
+								<label class="control-label">Checkboxes</label>
+								<div class="controls">
+								  <label class="checkbox inline">
+									<input type="checkbox" id="inlineCheckbox1" value="option1"> Option 1
+								  </label>
+								  <label class="checkbox inline">
+									<input type="checkbox" id="inlineCheckbox2" value="option2"> Option 2
+								  </label>
+								  <label class="checkbox inline">
+									<input type="checkbox" id="inlineCheckbox3" value="option3"> Option 3
+								  </label>
+								</div>
+							  </div>
+							  <div class="control-group">
+								<label class="control-label">File Upload</label>
+								<div class="controls">
+								  <input type="file">
+								</div>
+							  </div>
+							  <div class="control-group">
+								<label class="control-label">Radio buttons</label>
+								<div class="controls">
+								  <label class="radio">
+									<input type="radio" name="optionsRadios" id="optionsRadios1" value="option1" checked="">
+									Option one is this and thatâbe sure to include why it's great
+								  </label>
+								  <div style="clear:both"></div>
+								  <label class="radio">
+									<input type="radio" name="optionsRadios" id="optionsRadios2" value="option2">
+									Option two can be something else and selecting it will deselect option one
+								  </label>
+								</div>
+							  </div>
+							  <div class="form-actions">
+								<button type="submit" class="btn btn-primary">Save changes</button>
+								<button class="btn">Cancel</button>
+							  </div>
+							</fieldset>
+						</form>
+					</div>
+				</div><!--/span-->
+
 			</div><!--/row-->
     
 
@@ -728,7 +684,7 @@
 		
 	<div class="modal hide fade" id="myModal">
 		<div class="modal-header">
-			<button type="button" class="close" data-dismiss="modal">×</button>
+			<button type="button" class="close" data-dismiss="modal">Ã</button>
 			<h3>Settings</h3>
 		</div>
 		<div class="modal-body">
@@ -808,45 +764,6 @@
 
 		<script src="js/custom.js"></script>
 	<!-- end: JavaScript-->
-	
-	<script type="text/javascript">
-
-			
-		   $(function(){
-			   
-			   $(".masonry-gallery .masonry-thumb").hover(function(){
-				    $(this).find("span.up_overlay").removeClass("overlayUpdown");
-					$(this).find("span.up_overlay").addClass("overlaydownUp");
-				},function(){
-					$(this).find("span.up_overlay").addClass("overlayUpdown");
-					$(this).find("span.up_overlay").removeClass("overlaydownUp");
-				});
-			   
-			   
-			   
-		   });
-			
-		   
-		   // 获取关注的 商品skuId
-		   function attention(obj){
-			   var $this = $(obj);
-			   $this.parents("div#sub_exhibit").toggleClass("likefocus");
-
-			   if($this.parents("div.exhibit").find("div.p-like a img").attr("src").indexOf("focus")!=-1){
-				   $this.parents("div.exhibit").find("div.p-like a")
-				   .html("<img src=\"img/custom/cancel.png\"/><span style=\"color:#fff;\">关注</span>");
-			   }else{
-				   $this.parents("div.exhibit").find("div.p-like a")
-				   .html("<img src=\"img/custom/focus.png\"/><span style=\"color:red;\">取消关注</span>");
-			}
-			  
-			    //border: 10px solid springgreen;
-			  //console.log($(obj).data("sku"));
-		   }
-			
-	
-	
-	</script>
 	
 </body>
 </html>
