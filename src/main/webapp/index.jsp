@@ -62,29 +62,11 @@
 				<div class="nav-no-collapse header-nav">
 					<ul class="nav pull-right">
 						<li class="dropdown hidden-phone">
-							<a class="btn dropdown-toggle" data-toggle="dropdown" href="#">
-								<i class="halflings-icon white warning-sign"></i>
+							<a href="/index.jsp" class="btn dropdown-toggle">
+								<span style="font-family:'楷体';
+								font-weight:bold;font-size:16px;">商城首页</span>
 							</a>
-							<ul class="dropdown-menu notifications">
-								<li class="dropdown-menu-title">
- 									<span>You have 11 notifications</span>
-									<a href="#refresh"><i class="icon-repeat"></i></a>
-								</li>	
-                            	<li>
-                                    <a href="#">
-										<span class="icon blue"><i class="icon-user"></i></span>
-										<span class="message">New user registration</span>
-										<span class="time">1 min</span> 
-                                    </a>
-                                </li>
-								<li>
-                                    <a href="#">
-										<span class="icon green"><i class="icon-comment-alt"></i></span>
-										<span class="message">New comment</span>
-										<span class="time">7 min</span> 
-                                    </a>
-                                </li>
-							</ul>
+							
 						</li>
 						<!-- start: Notifications Dropdown -->
 						<li class="dropdown hidden-phone">
@@ -201,7 +183,7 @@
 	</div>
 	<!-- start: Header -->
 	
-		<div class="container-fluid-full">
+		<div class="">
 		<div class="row-fluid">
 				
 			<!-- start: Main Menu -->
@@ -210,405 +192,98 @@
 			
 			<!-- end: Main Menu -->
 			
-			<noscript>
-				<div class="alert alert-block span10">
-					<h4 class="alert-heading">Warning!</h4>
-					<p>You need to have <a href="http://en.wikipedia.org/wiki/JavaScript" target="_blank">JavaScript</a> enabled to use this site.</p>
-				</div>
-			</noscript>
 			
 			<!-- start: Content -->
 			<div id="content" class="span10">
 			
+				<div id="myCarousel" class="carousel slide" style="width:66%;float:left;margin-right:30px;">
+								<!-- 轮播（Carousel）指标 -->
+								<ol class="carousel-indicators" style="left:50%;top:90%;">
+									<li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+									<li data-target="#myCarousel" data-slide-to="1"></li>
+									<li data-target="#myCarousel" data-slide-to="2"></li>
+								</ol>   
+								<!-- 轮播（Carousel）项目 -->
+								<div class="carousel-inner">
+									<div class="item active">
+										<img width="100%" src="//img1.360buyimg.com/da/jfs/t6295/260/343558823/111033/acf5d3d1/593e10a1N8eb59bfc.jpg" alt="First slide">
+									</div>
+									<div class="item">
+										<img width="100%"  src="//img1.360buyimg.com/da/jfs/t5584/94/3304049023/127106/6f353f26/593a1369Nde71be10.jpg" alt="Second slide">
+									</div>
+									<div class="item">
+										<img width="100%"  src="//img1.360buyimg.com/da/jfs/t5731/306/3163790300/203377/54e3c1b3/59379933N9b6e5536.jpg" alt="Third slide">
+									</div>
+								</div>
+								<!-- 轮播（Carousel）导航 -->
+								<a class="carousel-control left" href="#myCarousel" 
+								   data-slide="prev">&lsaquo;</a>
+								<a class="carousel-control right" href="#myCarousel" 
+								   data-slide="next">&rsaquo;</a>
+			</div>        
 			
-			<ul class="breadcrumb">
-				<li>
-					<i class="icon-home"></i>
-					<a href="index.html">Home</a> 
-					<i class="icon-angle-right"></i>
-				</li>
-				<li><a href="#">Tables</a></li>
-			</ul>
-
+			<div id="myCarousel1" class="carousel slide" style="width:25%;float:left;">
+								<!-- 轮播（Carousel）指标 -->
+								<ol class="carousel-indicators" style="left:50%;top:90%;">
+									<li data-target="#myCarousel1" data-slide-to="0" class="active"></li>
+									<li data-target="#myCarousel1" data-slide-to="1"></li>
+									<li data-target="#myCarousel1" data-slide-to="2"></li>
+								</ol>   
+								<!-- 轮播（Carousel）项目 -->
+								<div class="carousel-inner">
+									<div class="item active">
+										<img width="100%" src="https://img.alicdn.com/simba/img/TB1QyLsQVXXXXaoXpXXSutbFXXX.jpg" alt="First slide">
+									</div>
+									<div class="item">
+										<img width="100%"  src="https://aecpm.alicdn.com/tfscom/TB1iWBJRFXXXXXtaXXXXXXXXXXX.jpg" alt="Second slide">
+									</div>
+									<div class="item">
+										<img width="100%"  src="//img.alicdn.com/tfs/TB1_.iPRFXXXXXsXVXXXXXXXXXX-520-280.jpg_q90_.webp" alt="Third slide">
+									</div>
+								</div>
+								<!-- 轮播（Carousel）导航 -->
+								<a class="carousel-control left" href="#myCarousel1" 
+								   data-slide="prev">&lsaquo;</a>
+								<a class="carousel-control right" href="#myCarousel1" 
+								   data-slide="next">&rsaquo;</a>
+			</div>        
+			
+			<div id="myCarousel2" class="carousel slide" style="width:25%;float:left;">
+								<!-- 轮播（Carousel）指标 -->
+								<ol class="carousel-indicators" style="left:50%;top:90%;">
+									<li data-target="#myCarousel2" data-slide-to="0" class="active"></li>
+									<li data-target="#myCarousel2" data-slide-to="1"></li>
+									<li data-target="#myCarousel2" data-slide-to="2"></li>
+								</ol>   
+								<!-- 轮播（Carousel）项目 -->
+								<div class="carousel-inner">
+									<div class="item active">
+										<img width="100%" src="https://img.alicdn.com/simba/img/TB1QyLsQVXXXXaoXpXXSutbFXXX.jpg" alt="First slide">
+									</div>
+									<div class="item">
+										<img width="100%"  src="https://aecpm.alicdn.com/tfscom/TB1iWBJRFXXXXXtaXXXXXXXXXXX.jpg" alt="Second slide">
+									</div>
+									<div class="item">
+										<img width="100%"  src="//img.alicdn.com/tfs/TB1_.iPRFXXXXXsXVXXXXXXXXXX-520-280.jpg_q90_.webp" alt="Third slide">
+									</div>
+								</div>
+								<!-- 轮播（Carousel）导航 -->
+								<a class="carousel-control left" href="#myCarousel2" 
+								   data-slide="prev">&lsaquo;</a>
+								<a class="carousel-control right" href="#myCarousel2" 
+								   data-slide="next">&rsaquo;</a>
+			</div>        
 			<div class="row-fluid sortable">		
 				<div class="box span12">
 					<div class="box-header" data-original-title>
-						<h2><i class="halflings-icon user"></i><span class="break"></span>Members</h2>
-						<div class="box-icon">
-							<a href="#" class="btn-setting"><i class="halflings-icon wrench"></i></a>
-							<a href="#" class="btn-minimize"><i class="halflings-icon chevron-up"></i></a>
-							<a href="#" class="btn-close"><i class="halflings-icon remove"></i></a>
-						</div>
 					</div>
 					<div class="box-content">
-						<table class="table table-striped table-bordered bootstrap-datatable datatable table-hover">
-						  <thead>
-							  <tr>
-								  <th>Username</th>
-								  <th>Date registered</th>
-								  <th>Role</th>
-								  <th>Status</th>
-								  <th>Actions</th>
-							  </tr>
-						  </thead>   
-						  <tbody>
-							<tr>
-								<td>Dennis Ji</td>
-								<td class="center">2012/01/01</td>
-								<td class="center">Member</td>
-								<td class="center">
-									<span class="label label-success">Active</span>
-								</td>
-								<td class="center">
-									<a class="btn btn-success" href="#">
-										<i class="halflings-icon white zoom-in"></i>  
-									</a>
-									<a class="btn btn-info" href="#">
-										<i class="halflings-icon white edit"></i>  
-									</a>
-									<a class="btn btn-danger" href="#">
-										<i class="halflings-icon white trash"></i> 
-									</a>
-								</td>
-							</tr>
-							<tr>
-								<td>Dennis Ji</td>
-								<td class="center">2012/01/01</td>
-								<td class="center">Member</td>
-								<td class="center">
-									<span class="label label-success">Active</span>
-								</td>
-								<td class="center">
-									<a class="btn btn-success" href="#">
-										<i class="halflings-icon white zoom-in"></i>  
-									</a>
-									<a class="btn btn-info" href="#">
-										<i class="halflings-icon white edit"></i>  
-									</a>
-									<a class="btn btn-danger" href="#">
-										<i class="halflings-icon white trash"></i> 
-									</a>
-								</td>
-							</tr>
-						  </tbody>
-					  </table>            
+						  
 					</div>
 				</div><!--/span-->
 			
 			</div><!--/row-->
 
-			<div class="row-fluid sortable">
-				<div class="box span6">
-					<div class="box-header">
-						<h2><i class="halflings-icon align-justify"></i><span class="break"></span>Simple Table</h2>
-						<div class="box-icon">
-							<a href="#" class="btn-setting"><i class="halflings-icon wrench"></i></a>
-							<a href="#" class="btn-minimize"><i class="halflings-icon chevron-up"></i></a>
-							<a href="#" class="btn-close"><i class="halflings-icon remove"></i></a>
-						</div>
-					</div>
-					<div class="box-content">
-						<table class="table">
-							  <thead>
-								  <tr>
-									  <th>Username</th>
-									  <th>Date registered</th>
-									  <th>Role</th>
-									  <th>Status</th>                                          
-								  </tr>
-							  </thead>   
-							  <tbody>
-								<tr>
-									<td>Dennis Ji</td>
-									<td class="center">2012/01/01</td>
-									<td class="center">Member</td>
-									<td class="center">
-										<span class="label label-success">Active</span>
-									</td>                                       
-								</tr>
-								<tr>
-									<td>Dennis Ji</td>
-									<td class="center">2012/02/01</td>
-									<td class="center">Staff</td>
-									<td class="center">
-										<span class="label label-important">Banned</span>
-									</td>                                       
-								</tr>
-								<tr>
-									<td>Dennis Ji</td>
-									<td class="center">2012/02/01</td>
-									<td class="center">Admin</td>
-									<td class="center">
-										<span class="label">Inactive</span>
-									</td>                                        
-								</tr>
-								<tr>
-									<td>Dennis Ji</td>
-									<td class="center">2012/03/01</td>
-									<td class="center">Member</td>
-									<td class="center">
-										<span class="label label-warning">Pending</span>
-									</td>                                       
-								</tr>
-								<tr>
-									<td>Dennis Ji</td>
-									<td class="center">2012/01/21</td>
-									<td class="center">Staff</td>
-									<td class="center">
-										<span class="label label-success">Active</span>
-									</td>                                        
-								</tr>                                   
-							  </tbody>
-						 </table>  
-						 <div class="pagination pagination-centered">
-						  <ul>
-							<li><a href="#">Prev</a></li>
-							<li class="active">
-							  <a href="#">1</a>
-							</li>
-							<li><a href="#">2</a></li>
-							<li><a href="#">3</a></li>
-							<li><a href="#">4</a></li>
-							<li><a href="#">Next</a></li>
-						  </ul>
-						</div>     
-					</div>
-				</div><!--/span-->
-				
-				<div class="box span6">
-					<div class="box-header">
-						<h2><i class="halflings-icon align-justify"></i><span class="break"></span>Striped Table</h2>
-						<div class="box-icon">
-							<a href="#" class="btn-setting"><i class="halflings-icon wrench"></i></a>
-							<a href="#" class="btn-minimize"><i class="halflings-icon chevron-up"></i></a>
-							<a href="#" class="btn-close"><i class="halflings-icon remove"></i></a>
-						</div>
-					</div>
-					<div class="box-content">
-						<table class="table table-striped">
-							  <thead>
-								  <tr>
-									  <th>Username</th>
-									  <th>Date registered</th>
-									  <th>Role</th>
-									  <th>Status</th>                                          
-								  </tr>
-							  </thead>   
-							  <tbody>
-								<tr>
-									<td>Dennis Ji</td>
-									<td class="center">2012/01/01</td>
-									<td class="center">Member</td>
-									<td class="center">
-										<span class="label label-success">Active</span>
-									</td>                                       
-								</tr>
-								<tr>
-									<td>Dennis Ji</td>
-									<td class="center">2012/02/01</td>
-									<td class="center">Staff</td>
-									<td class="center">
-										<span class="label label-important">Banned</span>
-									</td>                                       
-								</tr>
-								<tr>
-									<td>Dennis Ji</td>
-									<td class="center">2012/02/01</td>
-									<td class="center">Admin</td>
-									<td class="center">
-										<span class="label">Inactive</span>
-									</td>                                        
-								</tr>
-								<tr>
-									<td>Dennis Ji</td>
-									<td class="center">2012/03/01</td>
-									<td class="center">Member</td>
-									<td class="center">
-										<span class="label label-warning">Pending</span>
-									</td>                                       
-								</tr>
-								<tr>
-									<td>Dennis Ji</td>
-									<td class="center">2012/01/21</td>
-									<td class="center">Staff</td>
-									<td class="center">
-										<span class="label label-success">Active</span>
-									</td>                                        
-								</tr>                                   
-							  </tbody>
-						 </table>  
-						 <div class="pagination pagination-centered">
-						  <ul>
-							<li><a href="#">Prev</a></li>
-							<li class="active">
-							  <a href="#">1</a>
-							</li>
-							<li><a href="#">2</a></li>
-							<li><a href="#">3</a></li>
-							<li><a href="#">4</a></li>
-							<li><a href="#">Next</a></li>
-						  </ul>
-						</div>     
-					</div>
-				</div><!--/span-->
-			</div><!--/row-->
-			
-			<div class="row-fluid sortable">	
-				<div class="box span6">
-					<div class="box-header">
-						<h2><i class="halflings-icon align-justify"></i><span class="break"></span>Bordered Table</h2>
-						<div class="box-icon">
-							<a href="#" class="btn-setting"><i class="halflings-icon wrench"></i></a>
-							<a href="#" class="btn-minimize"><i class="halflings-icon chevron-up"></i></a>
-							<a href="#" class="btn-close"><i class="halflings-icon remove"></i></a>
-						</div>
-					</div>
-					<div class="box-content">
-						<table class="table table-bordered">
-							  <thead>
-								  <tr>
-									  <th>Username</th>
-									  <th>Date registered</th>
-									  <th>Role</th>
-									  <th>Status</th>                                          
-								  </tr>
-							  </thead>   
-							  <tbody>
-								<tr>
-									<td>Dennis Ji</td>
-									<td class="center">2012/01/01</td>
-									<td class="center">Member</td>
-									<td class="center">
-										<span class="label label-success">Active</span>
-									</td>                                       
-								</tr>
-								<tr>
-									<td>Dennis Ji</td>
-									<td class="center">2012/02/01</td>
-									<td class="center">Staff</td>
-									<td class="center">
-										<span class="label label-important">Banned</span>
-									</td>                                       
-								</tr>
-								<tr>
-									<td>Dennis Ji</td>
-									<td class="center">2012/02/01</td>
-									<td class="center">Admin</td>
-									<td class="center">
-										<span class="label">Inactive</span>
-									</td>                                        
-								</tr>
-								<tr>
-									<td>Dennis Ji</td>
-									<td class="center">2012/03/01</td>
-									<td class="center">Member</td>
-									<td class="center">
-										<span class="label label-warning">Pending</span>
-									</td>                                       
-								</tr>
-								<tr>
-									<td>Dennis Ji</td>
-									<td class="center">2012/01/21</td>
-									<td class="center">Staff</td>
-									<td class="center">
-										<span class="label label-success">Active</span>
-									</td>                                        
-								</tr>                                   
-							  </tbody>
-						 </table>  
-						 <div class="pagination pagination-centered">
-						  <ul>
-							<li><a href="#">Prev</a></li>
-							<li class="active">
-							  <a href="#">1</a>
-							</li>
-							<li><a href="#">2</a></li>
-							<li><a href="#">3</a></li>
-							<li><a href="#">4</a></li>
-							<li><a href="#">Next</a></li>
-						  </ul>
-						</div>     
-					</div>
-				</div><!--/span-->
-				
-				<div class="box span6">
-					<div class="box-header">
-						<h2><i class="halflings-icon align-justify"></i><span class="break"></span>Condensed Table</h2>
-						<div class="box-icon">
-							<a href="#" class="btn-setting"><i class="halflings-icon wrench"></i></a>
-							<a href="#" class="btn-minimize"><i class="halflings-icon chevron-up"></i></a>
-							<a href="#" class="btn-close"><i class="halflings-icon remove"></i></a>
-						</div>
-					</div>
-					<div class="box-content">
-						<table class="table table-condensed">
-							  <thead>
-								  <tr>
-									  <th>Username</th>
-									  <th>Date registered</th>
-									  <th>Role</th>
-									  <th>Status</th>                                          
-								  </tr>
-							  </thead>   
-							  <tbody>
-								<tr>
-									<td>Dennis Ji</td>
-									<td class="center">2012/01/01</td>
-									<td class="center">Member</td>
-									<td class="center">
-										<span class="label label-success">Active</span>
-									</td>                                       
-								</tr>
-								<tr>
-									<td>Dennis Ji</td>
-									<td class="center">2012/02/01</td>
-									<td class="center">Staff</td>
-									<td class="center">
-										<span class="label label-important">Banned</span>
-									</td>                                       
-								</tr>
-								<tr>
-									<td>Dennis Ji</td>
-									<td class="center">2012/02/01</td>
-									<td class="center">Admin</td>
-									<td class="center">
-										<span class="label">Inactive</span>
-									</td>                                        
-								</tr>
-								<tr>
-									<td>Dennis Ji</td>
-									<td class="center">2012/03/01</td>
-									<td class="center">Member</td>
-									<td class="center">
-										<span class="label label-warning">Pending</span>
-									</td>                                       
-								</tr>
-								<tr>
-									<td>Dennis Ji</td>
-									<td class="center">2012/01/21</td>
-									<td class="center">Staff</td>
-									<td class="center">
-										<span class="label label-success">Active</span>
-									</td>                                        
-								</tr>                                   
-							  </tbody>
-						 </table>  
-						 <div class="pagination pagination-centered">
-						  <ul>
-							<li><a href="#">Prev</a></li>
-							<li class="active">
-							  <a href="#">1</a>
-							</li>
-							<li><a href="#">2</a></li>
-							<li><a href="#">3</a></li>
-							<li><a href="#">4</a></li>
-							<li><a href="#">Next</a></li>
-						  </ul>
-						</div>     
-					</div>
-				</div><!--/span-->
-			
-			</div><!--/row-->
 			
 			<div class="row-fluid sortable">	
 				<div class="box span12">
@@ -631,38 +306,6 @@
 								  </tr>
 							  </thead>   
 							  <tbody>
-								<tr>
-									<td>Dennis Ji</td>
-									<td class="center">2012/01/01</td>
-									<td class="center">Member</td>
-									<td class="center">
-										<span class="label label-success">Active</span>
-									</td>                                       
-								</tr>
-								<tr>
-									<td>Dennis Ji</td>
-									<td class="center">2012/02/01</td>
-									<td class="center">Staff</td>
-									<td class="center">
-										<span class="label label-important">Banned</span>
-									</td>                                       
-								</tr>
-								<tr>
-									<td>Dennis Ji</td>
-									<td class="center">2012/02/01</td>
-									<td class="center">Admin</td>
-									<td class="center">
-										<span class="label">Inactive</span>
-									</td>                                        
-								</tr>
-								<tr>
-									<td>Dennis Ji</td>
-									<td class="center">2012/03/01</td>
-									<td class="center">Member</td>
-									<td class="center">
-										<span class="label label-warning">Pending</span>
-									</td>                                       
-								</tr>
 								<tr>
 									<td>Dennis Ji</td>
 									<td class="center">2012/01/21</td>
