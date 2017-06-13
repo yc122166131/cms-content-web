@@ -18,6 +18,14 @@
 			<artifactId>cms-common</artifactId>
 			<version>0.0.1-SNAPSHOT</version>
 		</dependency>
+		
+		<dependency>
+			<groupId>cms-content-interface</groupId>
+			<artifactId>cms-content-interface</artifactId>
+			<version>0.0.1-SNAPSHOT</version>
+		</dependency>
+		
+		
  		<!-- Spring -->
  		<dependency>
 				<groupId>org.springframework</groupId>
@@ -77,7 +85,7 @@
 		
 		
  		<!-- dubbo相关的jar包 -->
-		<!-- <dependency>
+		<dependency>
 			<groupId>com.alibaba</groupId>
 			<artifactId>dubbo</artifactId>
 			<exclusions>
@@ -98,7 +106,7 @@
 		<dependency>
 			<groupId>com.github.sgroschupf</groupId>
 			<artifactId>zkclient</artifactId>
-		</dependency> -->
+		</dependency> 
 		
 		
 		<dependency>
