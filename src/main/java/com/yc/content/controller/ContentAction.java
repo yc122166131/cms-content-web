@@ -7,7 +7,7 @@ import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 
 import com.yc.content.service.ContentService;
-import com.yc.pojo.JDProduction;
+import com.yc.pojo.product.JDProduction;
 
 
 @Controller

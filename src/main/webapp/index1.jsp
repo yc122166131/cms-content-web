@@ -206,7 +206,7 @@
 				
 			<!-- start: Main Menu -->
 			
-			<%@include file="/commons/left_menu.jsp" %>  
+			<%@include file="/commons/left_menu_product.jsp" %>  
 			
 			<!-- end: Main Menu -->
 			

@@ -41,8 +41,6 @@
 		<style>
 		
 		</style>
-		
-		
 </head>
 
 <body>
@@ -187,7 +185,7 @@
 				
 			<!-- start: Main Menu -->
 			
-			<%@include file="/commons/left_menu.jsp" %>  
+			<%@include file="/commons/left_menu_product.jsp" %>  
 			
 			<!-- end: Main Menu -->
 			
@@ -442,7 +440,22 @@
 			},function(){
 				$(this).find("a").css("display","none");
 			});
-		
+			
+			
+			
+			var params = {};
+			$.ajax({
+				url:"${basePath}/",
+				type:"post",
+				data:params,
+				success:function(data){
+					console.log(data);
+				},
+				error:function(msg){
+					alert(msg);
+				}
+				
+			});
 			
 		});
 	
