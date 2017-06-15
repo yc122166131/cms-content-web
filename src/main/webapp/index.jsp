@@ -283,6 +283,7 @@
 					</div>
 					<div class="box-content">
 						<a href="/content/getproduct.action">点点测试一下</a>
+						<a onclick="javascript:getLeftMenu();">左菜单</a>
 					</div>
 				</div><!--/span-->
 			
@@ -430,7 +431,6 @@
 	
 		$(function(){
 			
-			
 			var $caroursel = $("div[id^='myCarousel']");
 			$caroursel.hover(function(){
 				var $this = $(this);
@@ -445,11 +445,19 @@
 			
 			var params = {};
 			$.ajax({
-				url:"${basePath}/",
+				url:"${basePath}/content/productLeftMenuInfo.action",
 				type:"post",
 				data:params,
 				success:function(data){
 					console.log(data);
+					$("#LMenu").html(data);
+					
+					//这个要重新绑定事件,因为是动态生成的 原先custom.js 中定义的 只加载一次(即需要写死的情况下)
+				   	$('.dropmenu').click(function(e){
+						e.preventDefault();
+						$(this).parent("li").find('ul').slideDown().end().siblings("li").find("ul").slideUp();
+					}); 
+					
 				},
 				error:function(msg){
 					alert(msg);
@@ -458,6 +466,20 @@
 			});
 			
 		});
+		
+		
+		function getmenuId(obj){
+			var $this = $(obj);
+			//alert($this.data("id"));
+			$.ajax({
+				
+				type:"post",
+				url:"${basePath}/content/"
+				
+			});
+			
+		}
+		
 	
 	</script>
 	

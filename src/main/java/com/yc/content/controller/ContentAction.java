@@ -4,9 +4,12 @@ import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.ResponseBody;
 
 import com.yc.content.service.ContentService;
+import com.yc.pojo.dto.ProductLeftMenuDto;
 import com.yc.pojo.product.JDProduction;
 
 
@@ -22,10 +25,32 @@ public class ContentAction {
 		 
 		 List<JDProduction> list =  productService.getProductInfo();
 		 System.out.println(list);
-		 
 		 return null;
 	 }
 	
-	
-	
+	 /**
+	  * forward   "left menu template" 
+	  * @param model
+	  * @return
+	  */
+	 @RequestMapping("/productLeftMenuInfo")
+	 public String getLeftMenuInfo(Model model){
+		 List<ProductLeftMenuDto> leftMenulist =  productService.getLeftMenuInfo();
+		 //System.out.println(leftMenulist);
+		 model.addAttribute("leftMenulist", leftMenulist);
+		 return "components/menu/leftMenuTemplate";
+	 }
+	 
+	 
+	 
+	 @RequestMapping("/getProductInfoByTypeId")
+	 @ResponseBody
+	 public List<JDProduction>  getProductInfoById(Long id){
+		 List<JDProduction>  jdProductList = productService.getProductInfoByProductTypeId(id);
+		 
+		 return jdProductList;
+		 
+	 }
+	 
+	 
 }
