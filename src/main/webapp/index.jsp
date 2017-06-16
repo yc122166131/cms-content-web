@@ -161,7 +161,7 @@
 								    cursor:pointer;
 								    background: #fe6fa6;
 								    color:#fff;
-								    text-shadow:1px 1px 1px #fff
+								    text-shadow:1px 1px 1px #fff;
 								    font-weight:bold;
 								    transition: all 1s ease;
 								}
@@ -584,7 +584,7 @@
 				data:params,
 				success:function(data){
 					console.log(data);
-					//$("#LMenu").html(data);
+					$("#LMenu").html(data);
 					
 					//这个要重新绑定事件,因为是动态生成的 原先custom.js 中定义的 只加载一次(即需要写死的情况下)
 				   	$('.dropmenu').click(function(e){
@@ -636,13 +636,23 @@
 		});
 		
 		
+		//first time 
 		function getmenuId(obj){
+			
 			var $this = $(obj);
+			var params = {};
+			params.id = $this.data("id");
 			//alert($this.data("id"));
 			$.ajax({
-				
 				type:"post",
-				url:"${basePath}/content/"
+				data:params,
+				url:"${basePath}/content/getProductInfoByTypeId",
+				success:function(data){
+					alert(data)
+				},
+				error:function(){
+					
+				}
 				
 			});
 			

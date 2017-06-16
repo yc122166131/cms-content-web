@@ -7,6 +7,7 @@ import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
 
+import com.cn.yc.pojo.Pagination;
 import com.yc.content.service.ContentService;
 import com.yc.pojo.dto.ProductLeftMenuDto;
 import com.yc.pojo.product.JDProduction;
@@ -43,7 +44,7 @@ public class ContentAction {
 	 
 	 
 	 @RequestMapping("/getProductInfoByTypeId")
-	 public String  getProductInfoById(Model model,Long id){
+	 public String  getProductInfoById(Model model,Long id,Pagination p1){
 		 List<JDProduction> p_InfoList =  productService.getProductInfoByProductTypeId(id);
 		 model.addAttribute("subInfoList", p_InfoList);
 		 return "components/product/subInfoTemplate";
