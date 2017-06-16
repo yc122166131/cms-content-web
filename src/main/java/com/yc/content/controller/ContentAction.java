@@ -6,7 +6,6 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.ResponseBody;
 
 import com.yc.content.service.ContentService;
 import com.yc.pojo.dto.ProductLeftMenuDto;
@@ -44,13 +43,12 @@ public class ContentAction {
 	 
 	 
 	 @RequestMapping("/getProductInfoByTypeId")
-	 @ResponseBody
-	 public List<JDProduction>  getProductInfoById(Long id){
-		 List<JDProduction>  jdProductList = productService.getProductInfoByProductTypeId(id);
-		 
-		 return jdProductList;
-		 
+	 public String  getProductInfoById(Model model,Long id){
+		 List<JDProduction> p_InfoList =  productService.getProductInfoByProductTypeId(id);
+		 model.addAttribute("subInfoList", p_InfoList);
+		 return "components/product/subInfoTemplate";
 	 }
+	 
 	 
 	 
 }

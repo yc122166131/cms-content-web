@@ -23,7 +23,7 @@
 					</ul>	
 				</li> -->
 				
-			
+				<li><a href="gallery.jsp"><i class="icon-picture"></i><span class="hidden-tablet"> Gallery</span></a></li>
 			</ul>
 		</div>
 </div>

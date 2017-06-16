@@ -13,7 +13,7 @@
 						<a class="dropmenu" href="javascript:void(0);" data-id="${p_menu.supCateId }" ><i class="icon-folder-close-alt"></i><span class="hidden-tablet"> ${p_menu.supCateName }</span>&nbsp;<span class="label label-important"> 3 </span></a>
 						<ul>
 							<c:forEach items="${p_menu.childType }" var="c_menu" >
-								<li><a class="submenu" href="javascript:void(0);" data-id="${c_menu.subCateId }" onclick="getmenuId(this);"><i class="icon-file-alt"></i><span class="hidden-tablet"> ${c_menu.subCateName }</span></a></li>
+								<li><a class="submenu" href="javascript:void(0);" data-id="${c_menu.subCateId }" onclick="getmenuId(this);"><i class="icon-plus"></i><span class="hidden-tablet"> ${c_menu.subCateName }</span></a></li>
 							</c:forEach>
 						</ul>	
 					</li>

@@ -200,8 +200,8 @@ function chart(){
 function init_masonry(){
     var $container = $('.masonry-gallery');
 
-    var gutter = 6;
-    var min_width = 250;
+    var gutter = 8;
+    var min_width = 230;
     $container.imagesLoaded( function(){
         $container.masonry({
             itemSelector : '.masonry-thumb',
