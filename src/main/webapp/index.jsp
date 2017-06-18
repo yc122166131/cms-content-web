@@ -39,9 +39,7 @@
 	<link rel="shortcut icon" href="img/favicon.ico">
 	<!-- end: Favicon -->
 	
-		<style>
 		
-		</style>
 </head>
 
 							<style>
@@ -131,23 +129,26 @@
 								 /* end  热销区  */
 							
 									
-								  /*  用户信息区   start */
+								/*  用户信息区   start */
+								
 							    .avatar-wrap{width:100%;height:326px;float:left;position:relative;}
 								.avatarImg{position:absolute;top:45px ;left:133px;width:130px;height:130px;
 								animation:avatarImgMove 3s ease-in alternate  infinite;}
 								.avatarImg img{ border-radius:50%;background:#666;box-shadow:1px 5px 1.5em #111;}
-								.loginArea{width:100%;height:50px;top:173px ;left:0px;position:absolute;}	
+								.userInfoDiv{width:100%;height:50px;top:173px ;left:0px;position:absolute;}	
 								.avatar-wrap .honorWords{
 									    margin-top: 18px;
 									    font-weight: bold;
-									    color: #a718a7;
+									    color: blue;
 									    margin-left:-10px;
-									    top: 130px;
-									    left: 137px;
+									    top: 136px;
+									    left: 90px;
 									    position: absolute;
+									    font-family:"楷体";
+									    font-size:16px;
 								}
 								
-								.loginArea .btnCommon{
+								.userInfoDiv .btnCommon{
 									width: 152px;
 								    height: 30px;
 								    padding: 3px;
@@ -173,7 +174,7 @@
 							     }
 							     
 						        @media (max-width: 1530px) {  /* 小于1367px 时会触发下面的 */
-							     	.loginArea .btnCommon{
+							     	.userInfoDiv .btnCommon{
 											width: 152px;
 										    height: 30px;
 										    padding: 3px;
@@ -203,12 +204,11 @@
 						     }
 						     
 						     
-						     
-						     
-						     .loginArea .btnCommon:hover{transform:scale(1.1);transition: all 1s ease;}
+						     .userInfoDiv .btnCommon:hover{transform:scale(1.1);transition: all 1s ease;}
 							 /* end  用户信息区  */
 								 
-								
+							
+							 
 							
 							
 							</style>
@@ -235,13 +235,40 @@
 			
 			<!-- end: Left Menu -->
 			
-			
 			<!-- start: Content -->
 			<div id="content"  class="span10">
-					
-					
-					
-			
+						
+						
+						<style>
+							.form-group{}
+							span.cartShow{width:220px;
+								height:30px;display:inline-block;
+								margin-left: 20px;
+							    text-align: center;
+							    line-height: 30px;
+							    border-radius: 10px;
+							    box-shadow: 0px 0px 5px #666;
+							    cursor:pointer;}
+							 .cartShow a{color:red;text-decoration:none;} 
+							 .favList{    
+							    width: 80px;
+							    height: 45px;
+							    display: block;
+							    line-height: 45px;
+							    cursor:pointer;
+							    font-size:16px;
+							 }
+							 .favList a{color:red;font-family:"楷体";font-weight:bold;}
+						</style>
+						
+					 <div class="form-group " style=" margin-bottom: 6px; text-align: center;" >
+					    <input type="text" class="form-control" style="margin-top: 10px;width: 300px;"  autocomplete="off"  id="" placeholder="">
+					    <button type="button" class="btn btn-info btn-sm">查  询</button>    
+					    <span class="cartShow">
+					   		 <a>我的购物车</a> 
+					    </span>
+					 </div>
+					 
 					<div class="row-fluid">
 					        <div class="row-fluid">
 					            <div class="span8" id="productBanner">
@@ -254,12 +281,20 @@
 					            			width="86px" height="86px" />
 					            		</div>
 					            		<p class="honorWords">
-					            				Mr [月落晨曦]  您好
+					            				Hi [月落晨曦], 欢迎光临 
 					            		<p>
-					            		<div class="loginArea">
-					            					<div class="btnCommon">登  录</div>
-					            					<div class="btnCommon">注  册</div>
+					            		<div class="userInfoDiv">
+						            		<div class="unloginArea" style="display:none;">
+						            					<div class="btnCommon">登  录</div>
+						            					<div class="btnCommon">注  册</div>
+						            		</div>
+						            		<!--  -->
+						            		<div class="loginedArea">
+					            					<div class="btnCommon">日常签到</div>
+					            					<div class="btnCommon">退出登录</div>
+						            		</div> 
 					            		</div>
+					            		
 					            	</div>
 					            </div>
 					        </div>
@@ -276,7 +311,8 @@
 								<h2 style="position:absolute;top:11px;left:52px;transition:all 1s ease;" class="hotAreaHeaderDynamic1">热卖商品推荐</h2>
 							</div>
 							<div class="box-content">
-								<a href="/content/getproduct.action">点点测试一下</a>
+							<!-- 	<a href="/content/getproduct.action">点点测试一下</a>
+								<input  type="button" id="tbtn" value="diandian"/> -->
 								
 							<div id="" class="masonry">
 								<div class="exhibit">
@@ -408,8 +444,44 @@
 								</div>
 							</div>
 							
+							<style>
+								.exhibitFav{
+								    width: 189px;
+								    height: 250px;
+								    box-shadow: 0px 0px 11px green;
+								    border-radius: 6%;
+								    margin-top: -5px;
+								    cursor: pointer;
+								    position: relative;
+								 }
+								 .exhibitFav .img-list{float:left;margin:10px;}
 							
-						
+							</style>
+							<div class="favList masonry">
+								 <div>
+									 关注列表
+								 </div>
+								 <div class="exhibitFav">
+								 	<div class="img-list">
+								 		<img src="http://s2.mogucdn.com/mlcdn/c45406/170616_5ejj895gl88k881df018gk673j7bi_250x250.jpg_200x9999.v1c7E.70.webp" width="66px" height="66px"/>
+								 	</div>
+								 	<div class="img-list">
+								 		<img src="http://s3.mogucdn.com/mlcdn/c45406/170615_7b9bb6aa85h545ghiaa2ifa9fjhig_250x250.jpg_200x9999.v1c7E.70.webp" width="66px" height="66px"/>
+								 	</div>
+								 	<div class="img-list">
+								 		<img src="http://s3.mogucdn.com/mlcdn/c45406/170616_54aaag6j19ebejhjla4iii235d4c1_250x250.jpg_200x9999.v1c7E.70.webp" width="66px" height="66px"/>
+								 	</div>
+								 	<div class="img-list">
+								 		<img src="http://s2.mogucdn.com/mlcdn/c45406/170616_5ejj895gl88k881df018gk673j7bi_250x250.jpg_200x9999.v1c7E.70.webp" width="66px" height="66px"/>
+								 	</div>
+								 		<div class="img-list">
+								 		<img src="http://s2.mogucdn.com/mlcdn/c45406/170616_5ejj895gl88k881df018gk673j7bi_250x250.jpg_200x9999.v1c7E.70.webp" width="66px" height="66px"/>
+								 	</div>
+								 	<div class="img-list">
+								 		<img src="http://s2.mogucdn.com/mlcdn/c45406/170616_5ejj895gl88k881df018gk673j7bi_250x250.jpg_200x9999.v1c7E.70.webp" width="66px" height="66px"/>
+								 	</div>
+								 </div>
+							</div> 
 								
 								
 							</div>
@@ -420,60 +492,13 @@
 			<!--/row-->
 
 			
-			<div class="row-fluid sortable">	
-				<div class="box span12">
-					<div class="box-header">
-						<h2><i class="halflings-icon align-justify"></i><span class="break"></span>Combined All Table</h2>
-						<div class="box-icon">
-							<a href="#" class="btn-setting"><i class="halflings-icon wrench"></i></a>
-							<a href="#" class="btn-minimize"><i class="halflings-icon chevron-up"></i></a>
-							<a href="#" class="btn-close"><i class="halflings-icon remove"></i></a>
-						</div>
-					</div>
-					<div class="box-content">
-						<table class="table table-bordered table-striped table-condensed">
-							  <thead>
-								  <tr>
-									  <th>Username</th>
-									  <th>Date registered</th>
-									  <th>Role</th>
-									  <th>Status</th>                                          
-								  </tr>
-							  </thead>   
-							  <tbody>
-								<tr>
-									<td>Dennis Ji</td>
-									<td class="center">2012/01/21</td>
-									<td class="center">Staff</td>
-									<td class="center">
-										<span class="label label-success">Active</span>
-									</td>                                        
-								</tr>                                   
-							  </tbody>
-						 </table>  
-						 <div class="pagination pagination-centered">
-						  <ul>
-							<li><a href="#">Prev</a></li>
-							<li class="active">
-							  <a href="#">1</a>
-							</li>
-							<li><a href="#">2</a></li>
-							<li><a href="#">3</a></li>
-							<li><a href="#">4</a></li>
-							<li><a href="#">Next</a></li>
-						  </ul>
-						</div>     
-					</div>
-				</div><!--/span-->
-			</div><!--/row-->
-    
-
 	</div><!--/.fluid-container-->
 	
 			<!-- end: Content -->
-		</div><!--/#content.span10-->
-		</div><!--/fluid-row-->
-		
+		</div>
+	</div>
+	
+	
 	<div class="modal hide fade" id="myModal">
 		<div class="modal-header">
 			<button type="button" class="close" data-dismiss="modal">×</button>
@@ -584,7 +609,7 @@
 				data:params,
 				success:function(data){
 					console.log(data);
-					$("#LMenu").html(data);
+					//$("#LMenu").html(data);
 					
 					//这个要重新绑定事件,因为是动态生成的 原先custom.js 中定义的 只加载一次(即需要写死的情况下)
 				   	$('.dropmenu').click(function(e){
@@ -651,13 +676,18 @@
 					alert(data)
 				},
 				error:function(){
-					
 				}
 				
 			});
-			
 		}
 		
+		
+		$("#tbtn").click(function(){
+			
+			$(".loginedArea").css("display")=="none" ?$(".loginedArea").css("display","block") : $(".loginedArea").css("display","none");
+			$(".unloginArea").css("display")=="none" ?$(".unloginArea").css("display","block") : $(".unloginArea").css("display","none");
+			
+		})
 	
 	</script>
 	
