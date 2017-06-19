@@ -33,7 +33,7 @@
 			.tb-thumb .tb-selected div{background-color:#FFFFFF;border:medium none;}
 			.tb-thumb li div{border:1px solid #CDCDCD;}
 			.zoomDiv{z-index:999;position:absolute;top:0px;left:0px;width:400px;height:400px;background:#ffffff;border:1px solid #CCCCCC;display:none;text-align:center;overflow:hidden;}
-			.zoomMask{position:absolute;background: url("img/mask.png") repeat scroll 0 0 transparent;cursor:move;z-index:1;}
+			.zoomMask{position:absolute;background: url("img/picZoom/mask.png") repeat scroll 0 0 transparent;cursor:move;z-index:1;}
 			.t1{background:red;height:300px;}
 	</style>
 
@@ -63,28 +63,36 @@
 				  			<div><h2>蕾哈娜同款春款丝带小白鞋女平底单鞋蝴蝶结韩版厚底休闲学生板鞋</h2></div>
 							<div class="box picc" >
 								<div class="tb-booth tb-pic tb-s310">
-									<a href=""><img src="//img13.360buyimg.com//n1/jfs/t6532/231/767161009/261739/a6ac72c1/59450d45Ncbb2183a.jpg" alt="美女" rel="//img13.360buyimg.com//n0/jfs/t6532/231/767161009/261739/a6ac72c1/59450d45Ncbb2183a.jpg" class="jqzoom" /></a>
+									<a href=""><img src="//img10.360buyimg.com/n1/s350x449_jfs/t5875/214/2800460984/154640/edbd5962/593430d5N177abaac.jpg!cc_350x449.jpg" alt="美女" 
+									rel="//img10.360buyimg.com/n1/s800x1026_jfs/t5875/214/2800460984/154640/edbd5962/593430d5N177abaac.jpg!cc_800x1026.jpg" class="jqzoom" /></a>
 								</div>
 								<ul class="tb-thumb" id="thumblist">
-									<li class="tb-selected"><div class="tb-pic tb-s40"><a href="#">
-									<img src="//img13.360buyimg.com/n5/jfs/t6532/231/767161009/261739/a6ac72c1/59450d45Ncbb2183a.jpg" mid="//img13.360buyimg.com/n1/jfs/t6532/231/767161009/261739/a6ac72c1/59450d45Ncbb2183a.jpg" 
-											 big="//img13.360buyimg.com/n0/jfs/t6532/231/767161009/261739/a6ac72c1/59450d45Ncbb2183a.jpg"></a></div></li>
-									<li><div class="tb-pic tb-s40"><a href="#"><img src="//img10.360buyimg.com/n5/jfs/t4192/30/767256882/386766/1b6abc3c/58b9059cN8b140d7f.jpg" mid="//img10.360buyimg.com/n1/jfs/t4192/30/767256882/386766/1b6abc3c/58b9059cN8b140d7f.jpg" 
-										big="//img10.360buyimg.com/n0/jfs/t4192/30/767256882/386766/1b6abc3c/58b9059cN8b140d7f.jpg"></a></div></li>
-									<li><div class="tb-pic tb-s40"><a href="#"><img src="//img10.360buyimg.com/n5/jfs/t3184/75/7637866744/348727/33390824/58b9059dN8e764a2d.jpg" mid="//img10.360buyimg.com/n1/jfs/t3184/75/7637866744/348727/33390824/58b9059dN8e764a2d.jpg" 
-										big="//img10.360buyimg.com/n0/jfs/t3184/75/7637866744/348727/33390824/58b9059dN8e764a2d.jpg"></a></div></li>
-									<li><div class="tb-pic tb-s40"><a href="#"><img src="//img14.360buyimg.com/n5/jfs/t5629/70/2590229613/216600/b8255a40/593256e6Nd176780c.jpg" mid="//img14.360buyimg.com/n1/jfs/t5629/70/2590229613/216600/b8255a40/593256e6Nd176780c.jpg"
-										 big="//img14.360buyimg.com/n0/jfs/t5629/70/2590229613/216600/b8255a40/593256e6Nd176780c.jpg"></a></div></li>
-									<li><div class="tb-pic tb-s40"><a href="#"><img src="//img10.360buyimg.com/n5/jfs/t3106/315/7647116128/489054/d3e56b17/58b9059fNb7ad9aac.jpg" mid="//img10.360buyimg.com/n1/jfs/t3106/315/7647116128/489054/d3e56b17/58b9059fNb7ad9aac.jpg" 
-										big="//img10.360buyimg.com/n0/jfs/t3106/315/7647116128/489054/d3e56b17/58b9059fNb7ad9aac.jpg"></a></div></li>
+									<li class="tb-selected">
+										<div class="tb-pic tb-s40">
+											<a href="#">
+												<img src="//img10.360buyimg.com/n5/s50x64_jfs/t5875/214/2800460984/154640/edbd5962/593430d5N177abaac.jpg!cc_50x64.jpg"
+												 mid="//img10.360buyimg.com/n1/s350x449_jfs/t5875/214/2800460984/154640/edbd5962/593430d5N177abaac.jpg!cc_350x449.jpg" 
+												 big="//img10.360buyimg.com/n1/s800x1026_jfs/t5875/214/2800460984/154640/edbd5962/593430d5N177abaac.jpg!cc_800x1026.jpg">
+											 </a>
+										</div>
+									</li>
+									<li>
+										<div class="tb-pic tb-s40">
+											<a href="#">
+												<img src="//img12.360buyimg.com/n5/s50x64_jfs/t2872/25/1046863171/170885/e7b32928/57319feaN7c7de57b.jpg!cc_50x64.jpg"
+												 mid="//img12.360buyimg.com/n1/s50x64_jfs/t2872/25/1046863171/170885/e7b32928/57319feaN7c7de57b.jpg!cc_50x64.jpg" 
+												 big="//img12.360buyimg.com/n0/s50x64_jfs/t2872/25/1046863171/170885/e7b32928/57319feaN7c7de57b.jpg!cc_50x64.jpg">
+											 </a>
+										</div>
+									</li>
 								</ul>
 							</div>
 							<div class="pInfo">
-								<p>品牌： 夜愿</p>
-								<p>商品名称：夜愿三点式蕾丝开裆丁字</p>
+								<p>品牌：1啊啊</p>
+								<p>商品名称：aaaa</p>
 								<p>商品编号：11039054473</p>
-								<p>类型：情趣内衣</p>
-								<p>分类：内衣套装</p>
+								<p>类型：电脑</p>
+								<p>分类：衣服内饰</p>
 								<p>商品评价：12W+</p>
 							</div>
 							<div class="price" style="position:absolute;left: 30px;top: 561px">
@@ -98,16 +106,6 @@
 		
 			</div>
 				
-				
-				
-				
-				
-				
-				
-				
-			
-		
-		
 		
 		
 		

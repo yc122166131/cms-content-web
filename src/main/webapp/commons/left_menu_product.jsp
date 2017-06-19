@@ -24,7 +24,7 @@
 				</li> -->
 				
 				<li><a href="gallery.jsp"><i class="icon-picture"></i><span class="hidden-tablet"> Gallery</span></a></li>
-				<li><a href="pic.jsp"><i class="icon-picture"></i><span class="hidden-tablet">pic</span></a></li>
+				<li><a href="cart.jsp"><i class="icon-picture"></i><span class="hidden-tablet">pic</span></a></li>
 			</ul>
 		</div>
 </div>

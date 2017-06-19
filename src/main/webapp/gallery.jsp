@@ -330,7 +330,8 @@
 							*{padding:0;margin:0;}
 							body{font-family: 'Open Sans', sans-serif;font-weight: 400;}
 						    em,i{font-style: normal;}
-						   .exhibit{width: 228px; box-shadow: 0px 0px 20px #111;position: relative; border-radius: 3%;}
+						   .exhibit{width: 228px; box-shadow: 0px 0px 2em #d9534f; 
+						   position: relative; border-radius: 6%;overflow:hidden;cursor:pointer;}
 						   .exhibit .p-price{padding:3px;}
 						   .exhibit .p-price strong{color: #e4393c; font-size: 20px;}
 						   .exhibit .p-name{overflow:hidden;height: auto;padding:2px;}
@@ -344,12 +345,58 @@
 						   .exhibit .p-name, .p-commit a:hover a em {
 							    color: #C81623;
 							}
-							
+							.exhibit .p-img{position:relative;}
+							.exhibit .p-img img{transition:all 0.5s ease-in-out;}
+							.exhibit .p-img .buyDiv{    
+								position: absolute;
+							    top: 0px;
+							    left: 0;
+							    top: 42%;
+							    left: -100%;
+							    background: deeppink;
+							    transition:all 1s ease;
+							    box-shadow: 0px 5px 1em lightgoldenrodyellow;
+							    border-top-right-radius: 2em;
+							    border-bottom-right-radius: 2em;
+							    width: 160px;
+							    height: 30px;
+							    text-align: center;
+							    line-height: 28px;
+							    cursor: pointer;
+							    z-index:6;
+    					    }
+
+    					    .exhibit .p-img .buyDiv a{
+    					    	color:#ccc;
+    					    	text-shadow:1px 1px 2px #fff;
+    					    	text-decoration:none;
+    					    	font-weight:bold;
+    					    }
+    					    
+    					    .exhibit .p-img .buyDiv:hover{transform:scale(1.2);
+    					    	background:purple;
+    					    	transition:all 1s ease;}
+    					    
+    					    
+    					   .exhibit .p-img  .img_overlay{
+    					   		position:absolute;
+    					   		top:0;
+    					   		left:0;
+    					   		width:228px;
+    					   		height:305px;
+    					   		background:#000;
+    					   		filter:alpha(opacity=21);opacity:0.21;
+    					   		display:none;
+    					   		z-index:3;
+    					   }
+    					    
+    					    
 							.exhibit .p-focus{
 								  bottom: 27px;
 								  left: 165px;
     						      position: relative;
     						      visiblity:hidden;
+    						      z-index:6;
 							}
 							   
 							.exhibit .p-focus a{
@@ -376,6 +423,7 @@
 								    height: 18px;
 								    background: url(/img/custom/search.ele.png) no-repeat  0 -413px; /* 9999px 9999px ;*/
 						}
+						
 						
 						</style>
 		
@@ -426,8 +474,12 @@
 								<div class="exhibit">
 									<div class="p-img">
 										<a target="_blank" href="www.baidu.com"></a>
-										<img width="228" height="282" data-img=""  src="//img12.360buyimg.com/n8/jfs/t3838/222/2507110491/538660/8ded4baa/585e1154Nc1c8632c.jpg" />
+										<img width="228" height="282" data-img=""  src="//img12.360buyimg.com/n8/jfs/t6583/327/388116870/295044/84d080e8/593eb372N38485ef3.jpg" />
 										<div class="p-focus"><a class="J_focus" data-sku="3346992" href="javascript:;"><i></i>关注</a></div>
+										<div class="buyDiv">
+											<a>加入购物车</a>
+										</div>
+										<div class="img_overlay"></div>
 									</div>
 									<div class="p-price">
 						              <strong class="J_price"><em>¥</em><i>259.00</i></strong>
@@ -458,6 +510,10 @@
 										<a target="_blank" href="www.baidu.com"></a>
 										<img width="228" height="282" data-img=""  src="//img13.360buyimg.com/n8/jfs/t5218/316/1045335198/47225/744bd83b/590abc16Ndb0b0e35.jpg" />
 										 <div class="p-focus"><a class="J_focus" data-sku="3346992" href="javascript:;"><i></i>关注</a></div>
+										<div class="buyDiv">
+											<a>加入购物车</a>
+										  </div>
+										  <div class="img_overlay"></div>
 									</div>
 									<div class="p-price">
 						              <strong class="J_price"><em>¥</em><i>259.00</i></strong>
@@ -488,6 +544,10 @@
 										<a target="_blank" href="www.baidu.com"></a>
 										<img width="228" height="282" data-img=""  src="//img12.360buyimg.com/n8/jfs/t2872/25/1046863171/170885/e7b32928/57319feaN7c7de57b.jpg" />
 										 <div class="p-focus"><a class="J_focus" data-sku="3346992" href="javascript:;"><i></i>关注</a></div>
+										 <div class="buyDiv">
+											<a>加入购物车</a>
+										  </div>
+										  <div class="img_overlay"></div>
 									</div>
 									<div class="p-price">
 						              <strong class="J_price"><em>¥</em><i>259.00</i></strong>
@@ -519,6 +579,10 @@
 										<a target="_blank" href="www.baidu.com"></a>
 										<img width="228" height="282" data-img=""  src="//img13.360buyimg.com/n8/jfs/t6604/309/542318293/156479/cc568b1c/59411934Nf4dbc83f.jpg" />
 									    <div class="p-focus"><a class="J_focus" data-sku="3346992" href="javascript:;"><i></i>关注</a></div>
+										  <div class="buyDiv">
+											<a>加入购物车</a>
+										  </div>
+										  <div class="img_overlay"></div>
 									</div>
 									<div class="p-price">
 						              <strong class="J_price"><em>¥</em><i>259.00</i></strong>
@@ -529,6 +593,10 @@
 						                  <em>初语（TOYOUTH）女士简约宽松中长款风衣8630622805 卡其 S</em>
 						                  <i class="promo-words">【京东自营】极速达，更享满减直降超低价，尖货推荐戳我进入低价品质生活</i>
 						                </a>
+						          		  <div class="buyDiv">
+											<a>加入购物车</a>
+										  </div>
+										   <div class="img_overlay"></div>
 						            </div>
 						            <div class="p-commit">
 						            	<strong>已有
@@ -550,6 +618,10 @@
 										<a target="_blank" href="www.baidu.com"></a>
 										<img width="228" height="282" data-img=""  src="//img14.360buyimg.com/n8/jfs/t4111/45/1167748297/352062/c050b6cd/5868725aN63e454f5.jpg" />
 										 <div class="p-focus"><a class="J_focus" data-sku="3346992" href="javascript:;"><i></i>关注</a></div>
+											<div class="buyDiv">
+											<a>加入购物车</a>
+										  </div>
+										    <div class="img_overlay"></div>
 									</div>
 									<div class="p-price">
 						              <strong class="J_price"><em>¥</em><i>259.00</i></strong>
@@ -585,6 +657,10 @@
 										<a target="_blank" href="www.baidu.com"></a>
 										<img width="228" height="282" data-img=""  src="//img12.360buyimg.com/n8/jfs/t3838/222/2507110491/538660/8ded4baa/585e1154Nc1c8632c.jpg" />
 										 <div class="p-focus"><a class="J_focus" data-sku="3346992" href="javascript:;"><i></i>关注</a></div>
+											<div class="buyDiv">
+											<a>加入购物车</a>
+										  </div>
+										    <div class="img_overlay"></div>
 									</div>
 									<div class="p-price">
 						              <strong class="J_price"><em>¥</em><i>259.00</i></strong>
@@ -617,8 +693,12 @@
 								<div class="exhibit">
 									<div class="p-img">
 										<a target="_blank" href="www.baidu.com"></a>
-										<img width="228" height="282" data-img=""  src="//img12.360buyimg.com/n8/jfs/t3838/222/2507110491/538660/8ded4baa/585e1154Nc1c8632c.jpg" />
+										<img width="228" height="282" data-img=""  src="//img11.360buyimg.com/n8/jfs/t6106/333/2392046590/378557/6ae5d22/593ff152N4f7d188c.jpg" />
 										 <div class="p-focus"><a class="J_focus" data-sku="3346992" href="javascript:;"><i></i>关注</a></div>
+											<div class="buyDiv">
+											<a>加入购物车</a>
+										  </div>
+										    <div class="img_overlay"></div>
 									</div>
 									<div class="p-price">
 						              <strong class="J_price"><em>¥</em><i>259.00</i></strong>
@@ -651,8 +731,12 @@
 								<div class="exhibit">
 									<div class="p-img">
 										<a target="_blank" href="www.baidu.com"></a>
-										<img width="228" height="282" data-img=""  src="//img12.360buyimg.com/n8/jfs/t3838/222/2507110491/538660/8ded4baa/585e1154Nc1c8632c.jpg" />
+										<img width="228" height="282" data-img=""  src="//img10.360buyimg.com/n8/jfs/t4273/162/1989094819/238731/f576eaba/58c95e95Ncba2985d.jpg" />
 									    <div class="p-focus"><a class="J_focus" data-sku="3346992" href="javascript:;"><i></i>关注</a></div>
+											<div class="buyDiv">
+											<a>加入购物车</a>
+										  </div>
+										    <div class="img_overlay"></div>
 									</div>
 									<div class="p-price">
 						              <strong class="J_price"><em>¥</em><i>259.00</i></strong>
@@ -688,8 +772,12 @@
 								<div class="exhibit">
 									<div class="p-img">
 										<a target="_blank" href="www.baidu.com"></a>
-										<img width="228" height="282" data-img=""  src="//img12.360buyimg.com/n8/jfs/t3838/222/2507110491/538660/8ded4baa/585e1154Nc1c8632c.jpg" />
+										<img width="228" height="282" data-img=""  src="//img12.360buyimg.com/n8/jfs/t4933/108/1463515326/372032/1d33feb2/58f0bf1aN9cd7a9f4.jpg" />
 										 <div class="p-focus"><a class="J_focus" data-sku="3346992" href="javascript:;"><i></i>关注</a></div>
+											<div class="buyDiv">
+											<a>加入购物车</a>
+										  </div>
+										    <div class="img_overlay"></div>
 									</div>
 									<div class="p-price">
 						              <strong class="J_price"><em>¥</em><i>259.00</i></strong>
@@ -714,6 +802,47 @@
 									</div>
 								</div>
 							</div>
+							
+							
+							
+							<div id="" class="masonry-thumb" style="margin-top: 20px;">
+								<div class="exhibit">
+									<div class="p-img">
+										<a target="_blank" href="www.baidu.com"></a>
+										<img width="228" height="282" data-img=""  src="//img12.360buyimg.com/n8/jfs/t4828/177/1324816623/118681/78f23648/58ef9a70N8def0d2f.jpg" />
+										 <div class="p-focus"><a class="J_focus" data-sku="3346992" href="javascript:;"><i></i>关注</a></div>
+											<div class="buyDiv">
+											<a>加入购物车</a>
+										  </div>
+										    <div class="img_overlay"></div>
+									</div>
+									<div class="p-price">
+						              <strong class="J_price"><em>¥</em><i>259.00</i></strong>
+						             </div>
+						            
+						            <div class="p-name">
+						                <a target="_blank" title="" href="//item.jd.com/3346992.html">
+						                  <em>初语（TOYOUTH）女士简约宽松中长款风衣8630622805 卡其 S</em>
+						                </a>
+						            </div>
+						            <div class="p-commit">
+						            	<strong>已有
+						            	<a class="comment" target="_blank" href="//item.jd.com/3346992.html#comment">
+						            	20+</a>
+						            	人评价
+						            	</strong>
+						            </div>
+						            <div class="p-shop" data-shop_name="初语自营旗舰店">
+										<span>
+											<a href="//mall.jd.com/index-1000015303.html" target="_blank" title="初语自营旗舰店">初语自营旗舰店  </a>
+										</span>
+									</div>
+								</div>
+							</div>
+							
+							
+							
+							
 						
 						</div>
 					</div>
@@ -839,6 +968,19 @@
 		<script src="js/custom.js"></script>
 	<!-- end: JavaScript-->
 	
+	<style>
+		.imgLarge{transform:scale(1.12);transition:all 0.6s ease-in-out;}
+		.imgMoveIn{animation:imgMoveIn  0.7s ease forwards alternate;}
+		@keyframes imgMoveIn{
+				from{left:-100%;}
+				to{left:15%;}
+		}
+		.imgMoveOut{animation:imgMoveOut  0.9s ease-in-out forwards alternate;}
+		@keyframes imgMoveOut{
+				from{left:15%;}
+				to{left:-100%;}
+		}
+	</style>
 	<script type="text/javascript">
 
 			
@@ -855,9 +997,19 @@
 			   $(".masonry-thumb").addClass("animated rotateInDownRight");
 			   
 			   $(".masonry-thumb").hover(function(){
-				   $(this).find("div.p-img div.p-focus").css("visibility","visible");
+				   $(this).find(".exhibit .p-img img").addClass("imgLarge")
+				   			.end().find("div.p-img div.p-focus").css("visibility","visible")
+				   			.end().find(".exhibit .p-img .buyDiv").removeClass("imgMoveOut").addClass("imgMoveIn")
+				   			.end().find(".exhibit").css("boxShadow","0px 0px 3em red");
+				   $(this).find(".exhibit .p-img  .img_overlay").stop(true,true).toggle(333);
+				   
 			   },function(){
-				   $(this).find("div.p-img div.p-focus").css("visibility","hidden");
+				   $(this).find(".exhibit .p-img img").removeClass("imgLarge")
+				   			.end().find("div.p-img div.p-focus").css("visibility","hidden")
+				   			.end().find(".exhibit .p-img .buyDiv").removeClass("imgMoveIn").addClass("imgMoveOut")
+				   			.end().find(".exhibit").css("boxShadow","0px 0px 2em #d9534f");
+				   $(this).find(".exhibit .p-img  .img_overlay").stop(true,true).toggle(333);
+				  
 			   })
 			   
 			   
