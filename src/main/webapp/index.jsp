@@ -30,13 +30,130 @@
 
 	<style>
 		.menu_top{min-width:1200px;margin-bottom: 20px;}
-		.yc_content{width:1581px;height:800px;background:#c6c6c6;position:relative;}
+		.yc_content{width:100%;height:860px;position:relative;}
 		
-		.yc_content .siderbar_main{min-width:230px;height:100%;position:absolute;top:0px;left:0px;}
-		.yc_content .yc_exhibitArea{width: 1350px;height:100%;background:red;position:relative;top:0px;left:230px;}
-		.queryDiv{width:800px;height:66px;background:purple;margin:3px auto;} 
-		.banner{width:900px;height:395px;background:green;margin:10px 10px 10px 20px;float:left;}
-		.loginDiv{width:405px;height:395px;background:green;float:left;}
+		.yc_content .siderbar_main{13.6%;height:100%;position:absolute;top:0px;left:0px;}
+		.yc_content .yc_exhibitArea{width: 86.4%;height:100%;position:relative;top:0px;left:230px;}
+		.queryDiv{width:800px;height:66px;margin:3px auto;} 
+		.Div1{width:100%;height:339px;overflow:hidden;}
+		.banner{width: 750px;height:323px;box-shadow: 0px 0px 2em #000;
+		position: relative;
+		margin:10px 10px 10px 20px;float:left;transition:all 0.5s ease;}
+		.loginDiv{width:370px;height:316px;float:left;border-radius: 98px;box-shadow:1px 0px 2em #000;
+		background: pink;margin: 8px 20px;}
+		
+		
+		
+		
+		
+		
+		/*  用户信息区   start */
+								
+							    .avatar-wrap{width:100%;height:326px;float:left;position:relative;}
+								.avatarImg{position:absolute;top:45px ;left:133px;width:130px;height:130px;
+								animation:avatarImgMove 3s ease-in alternate  infinite;}
+								.avatarImg img{ border-radius:50%;background:#666;box-shadow:1px 5px 1.5em #111;}
+								.userInfoDiv{width:100%;height:50px;top:173px ;left:0px;position:absolute;}	
+								.avatar-wrap .honorWords{
+									    margin-top: 18px;
+									    font-weight: bold;
+									    color: blue;
+									    margin-left:-10px;
+									    top: 136px;
+									    left: 90px;
+									    position: absolute;
+									    font-family:"楷体";
+									    font-size:16px;
+								}
+								
+								.userInfoDiv .btnCommon{
+									width: 152px;
+								    height: 30px;
+								    padding: 3px;
+								    margin-left: 18px;
+								    margin-top: 52px;
+								    float: left;
+								    line-height: 30px;
+								    text-align: center;
+								    box-shadow: 3px 3px 1em #111;;
+								    border-radius:10px;
+								    cursor:pointer;
+								    background: #fe6fa6;
+								    color:#fff;
+								    text-shadow:1px 1px 1px #fff;
+								    font-weight:bold;
+								    transition: all 1s ease;
+								}
+								
+								 /* 响应式 */
+								 
+								 
+								 @media screen and (max-width: 1398px){ 
+									.loginDiv{width: 269px;background: linear-gradient(#3f4224,#00c3cc);margin: 8px 20px;}
+									.loginDiv .avatar-wrap{left: -44px;}
+							     } 
+								 
+								 
+								  @media screen and (max-width: 1348px){ 
+									.loginDiv{width: 269px;background: linear-gradient(#3f4224,#00c3cc);margin: 8px 20px;}
+									.loginDiv .avatar-wrap{left: -44px;}
+							     } 
+								 
+								 
+								 @media screen and (max-width: 1325px){ 
+									.loginDiv{width: 269px;background: linear-gradient(#3f4224,#00c3cc);margin: 8px 20px;}
+									.loginDiv .avatar-wrap{left: -44px;}
+							     } 
+							     
+							      @media screen and (max-width: 1260px){ 
+									 .loginDiv{display:none;} 
+							         .banner{left:112px;transition:all 0.6s ease;}
+							     } 
+							    
+							     @media screen and (max-width: 1234px){ 
+							         .loginDiv{display:none;} 
+							         .banner{left:112px;transition:all 0.6s ease;}
+							     } 
+							     
+							     
+							 
+							      @media (max-width: 1530px) {  /* 小于1367px 时会触发下面的 */
+							     	.userInfoDiv .btnCommon{
+											width: 152px;
+										    height: 30px;
+										    padding: 3px;
+										    margin-left: 96px;
+										    margin-top: 10px;
+										    float: left;
+										    line-height: 30px;
+										    text-align: center;
+										    box-shadow:3px 3px 1em #333;
+										    border-radius:5px;
+										    cursor:pointer;
+										    background: linear-gradient(#3f4224,#00c3cc);
+										    color: #fff;
+										    font-weight: bold;
+										    text-shadow: 1px 1px 9px yellow;
+										    transition:all 0.5s ease;
+										}
+										.loginDiv{background: linear-gradient(#3f4224,#00c3cc);margin: 8px 20px;}
+						         }
+						     
+						     
+						     
+						     @keyframes avatarImgMove{
+						     	0%{transform:rotate(0deg);transform:scale(1);}
+						     	20%{transform:rotate(20deg);}
+						     	40%{transform:rotate(-10deg);transform:scale(1.2);}
+						     	60%{transform:rotate(30deg);}
+						     	80%{transform:rotate(-20deg);transform:scale(0.8);}
+						     	100%{transform:rotate(30deg);transform:scale(1);}
+						     }
+						     
+						     
+						     .userInfoDiv .btnCommon:hover{transform:scale(1.1);transition: all 1s ease;}
+							 /* end  用户信息区  */
+		
 	</style>
 		
 </head>
@@ -65,32 +182,47 @@
 								 <%@include file="/commons/product/query_common.jsp" %>  
 						</div> 
 						
-						 <div class="banner" id="productBanner">
-					            	 <jsp:include page="/WEB-INF/jsp/components/product/myCarousel.jsp"  flush="true"  /> 
-					     </div>
-				         <div class="loginDiv">
-				            	<div class="avatar-wrap">
-				            		<div class="avatarImg" >
-				            			<img  src="https://ss0.bdstatic.com/70cFuHSh_Q1YnxGkpoWK1HF6hhy/it/u=4040444576,2094888024&fm=26&gp=0.jpg" 
-				            			width="86px" height="86px" />
-				            		</div>
-				            		<p class="honorWords">
-				            				Hi [月落晨曦], 欢迎光临 
-				            		<p>
-				            		<div class="userInfoDiv">
-					            		<div class="unloginArea" style="display:none;">
-					            					<div class="btnCommon">登  录</div>
-					            					<div class="btnCommon">注  册</div>
-					            		</div>
-					            		<!--  -->
-					            		<div class="loginedArea">
-				            					<div class="btnCommon">日常签到</div>
-				            					<div class="btnCommon">退出登录</div>
-					            		</div> 
-				            		</div>
-				            		
-				            	</div>
-				            </div>
+						
+						<div class="Div1">
+								 <div class="banner" id="productBanner">
+							            	 <jsp:include page="/WEB-INF/jsp/components/product/myCarousel.jsp"  flush="true"  /> 
+							     </div>
+						         <div class="loginDiv">
+						            	<div class="avatar-wrap">
+						            		<div class="avatarImg" >
+						            			<img  src="https://ss0.bdstatic.com/70cFuHSh_Q1YnxGkpoWK1HF6hhy/it/u=4040444576,2094888024&fm=26&gp=0.jpg" 
+						            			width="86px" height="86px" />
+						            		</div>
+						            		<p class="honorWords">
+						            				Hi [月落晨曦], 欢迎光临 
+						            		<p>
+						            		<div class="userInfoDiv">
+							            		<div class="unloginArea" style="display:none;">
+							            					<div class="btnCommon">登  录</div>
+							            					<div class="btnCommon">注  册</div>
+							            		</div>
+							            		<!--  -->
+							            		<div class="loginedArea">
+						            					<div class="btnCommon">日常签到</div>
+						            					<div class="btnCommon">退出登录</div>
+							            		</div> 
+						            		</div>
+						            		
+						            	</div>
+						            </div>
+					        </div>
+					        
+					        
+					        
+					        <style>
+					        	.a{width:100%;height:500px;background:red;}
+					        
+					        </style>
+					        <div class="a">
+					        
+					        	
+					        
+					        </div>
 				
 				</div>
 				
