@@ -7,10 +7,10 @@
 	
 	<!-- start: Meta -->
 	<meta charset="utf-8">
-	<title>Bootstrap Metro Dashboard by Dennis Ji for ARM demo</title>
-	<meta name="description" content="Bootstrap Metro Dashboard">
-	<meta name="author" content="Dennis Ji">
-	<meta name="keyword" content="Metro, Metro UI, Dashboard, Bootstrap, Admin, Template, Theme, Responsive, Fluid, Retina">
+	<title>月落晨曦</title>
+	<meta name="description" content="">
+	<meta name="author" content="">
+	<meta name="keyword" content="">
 	<!-- end: Meta -->
 	
 	<!-- start: Mobile Specific -->
@@ -22,6 +22,13 @@
 	<link href="css/bootstrap-responsive.min.css" rel="stylesheet">
 	<link id="base-style" href="css/style.css" rel="stylesheet">
 	<link id="base-style-responsive" href="css/style-responsive.css" rel="stylesheet">
+	<link  href="css/yc_common/yc_common.css"  rel="stylesheet">
+	<link  href="http://at.alicdn.com/t/font_97un6m698u1pp66r.css" rel="stylesheet">
+	
+	
+	
+	
+	
 	<!-- end: CSS -->
 	
 
@@ -35,10 +42,6 @@
 		<link id="ie9style" href="css/ie9.css" rel="stylesheet">
 	<![endif]-->
 		
-	<!-- start: Favicon -->
-	<link rel="shortcut icon" href="img/favicon.ico">
-	<!-- end: Favicon -->
-	
 		
 </head>
 
@@ -239,40 +242,12 @@
 			<div id="content"  class="span10">
 						
 						
-						<style>
-							.form-group{}
-							span.cartShow{width:220px;
-								height:30px;display:inline-block;
-								margin-left: 20px;
-							    text-align: center;
-							    line-height: 30px;
-							    border-radius: 10px;
-							    box-shadow: 0px 0px 5px #666;
-							    cursor:pointer;}
-							 .cartShow a{color:red;text-decoration:none;} 
-							 .favList{    
-							    width: 80px;
-							    height: 45px;
-							    display: block;
-							    line-height: 45px;
-							    cursor:pointer;
-							    font-size:16px;
-							 }
-							 .favList a{color:red;font-family:"楷体";font-weight:bold;}
-						</style>
-						
-					 <div class="form-group " style=" margin-bottom: 6px; text-align: center;" >
-					    <input type="text" class="form-control" style="margin-top: 10px;width: 300px;"  autocomplete="off"  id="" placeholder="">
-					    <button type="button" class="btn btn-info btn-sm">查  询</button>    
-					    <span class="cartShow">
-					   		 <a>我的购物车</a> 
-					    </span>
-					 </div>
+					 <%@include file="/commons/product/query_common.jsp" %>  
 					 
 					<div class="row-fluid">
 					        <div class="row-fluid">
 					            <div class="span8" id="productBanner">
-					            	<jsp:include page="/WEB-INF/jsp/components/product/myCarousel.jsp"  flush="true"  />
+					            	 <jsp:include page="/WEB-INF/jsp/components/product/myCarousel.jsp"  flush="true"  /> 
 					            </div>
 					            <div class="span4">
 					            	<div class="avatar-wrap">
