@@ -26,477 +26,103 @@
 	<link  href="http://at.alicdn.com/t/font_97un6m698u1pp66r.css" rel="stylesheet">
 	
 	
-	
-	
-	
-	<!-- end: CSS -->
-	
 
-	<!-- The HTML5 shim, for IE6-8 support of HTML5 elements -->
-	<!--[if lt IE 9]>
-	  	<script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
-		<link id="ie-style" href="css/ie.css" rel="stylesheet">
-	<![endif]-->
-	
-	<!--[if IE 9]>
-		<link id="ie9style" href="css/ie9.css" rel="stylesheet">
-	<![endif]-->
+
+	<style>
+		.menu_top{min-width:1200px;margin-bottom: 20px;}
+		.yc_content{width:1581px;height:800px;background:#c6c6c6;position:relative;}
 		
+		.yc_content .siderbar_main{min-width:230px;height:100%;position:absolute;top:0px;left:0px;}
+		.yc_content .yc_exhibitArea{width: 1350px;height:100%;background:red;position:relative;top:0px;left:230px;}
+		.queryDiv{width:800px;height:66px;background:purple;margin:3px auto;} 
+		.banner{width:900px;height:395px;background:green;margin:10px 10px 10px 20px;float:left;}
+		.loginDiv{width:405px;height:395px;background:green;float:left;}
+	</style>
 		
 </head>
 
-							<style>
-								*{padding:0;margin:0;}
-								.exhibit{width:230px;height:260px;box-shadow:1px 0px 10px #111;border-radius:6%;margin-top:30px;
-								cursor:pointer;position:relative;overflow:hidden;}
-								.exhibit .up_overlay{width:100%;height:35%;
-								background:url(http://js.18183.duoku.com/uploads/pc/index2016/hbg60.png) repeat;
-								position:absolute;bottom:0;left:0;}
-								
-								.exhibit  .up_overlay p.p_price{color:#fff;font-size:22px;position:relative;top:8px;
-								left:41px;text-shadow:1px 2px 1px #fff;box-shadow:2px 1px 15px #fff;width:125px;height:50px;
-								text-align:center;line-height:50px;border-radius:5px;}
-								.exhibit  .up_overlay p.p_shop{color:#fff;font-size:16px;position:relative;top:76px;
-								left:6px;font-size: 12px; color: #fff;font-weight: bold;}
-								.exhibit  .up_overlay div.p-introduction{height:103px; width:230px;text-overflow:ellipsis;
-								overflow:hidden;  }
-								.exhibit  .up_overlay div.p-introduction{color:#fff;font-size:14px;
-								position:relative;top:10px;left:0px;font-family:"楷体";
-								font-weight:bold;}
-								.exhibit  .up_overlay strong{color:#ccc;font-size:16px;position:relative;top:24px;
-								left:13px;font-size: 12px;}
-								.exhibit  .up_overlay strong a{color:pink;font-weight: bold;}
-								
-								
-								 /* 加入购物车 start*/
-								.exhibit  .up_overlay div.p-buy{
-									width: 121px;height:26px;background: linear-gradient(pink,yellow);;position:relative;top:-35px;left:45px;
-									line-height: 26px; text-align: center;color:red;
-									border-radius:5px;
-									transition:all 0.3s ease-in-out;
-								}
-								.exhibit  .up_overlay div.p-buy:hover{transform:scale(1.2);transition:all 0.5s ease-in-out;}
-								 /* end 加入购物车  */
-								
-								
-								 /*关注 start*/
-								.exhibit  .up_overlay div.p-like{width: 80px;height:25px;
-								position:relative;top:-3px;left:151px;line-height: 25px;}
-								.exhibit  .up_overlay div.p-like a img{width:20px;height:18px;}
-								.exhibit  .up_overlay div.p-like a span{color:#fff;}
-								.exhibit  .up_overlay div.p-like a{text-decoration:none;}
-								 /* end  关注*/
-								 
-								 
-								.exhibit   .exhibit_footer{
-									 width:100%;height:66px;background:red;
-								}
-								 
-							   .overlaydownUp{transition:all 0.8s ease; animation:overlaydownUp 0.8s ease forwards;}
-							   .overlayUpdown{transition:all 0.8s ease; animation:overlayUpdown 0.8s ease forwards;}
-								@keyframes  overlaydownUp{
-									from{height:35%;}
-									to{height:100%;}
-								}
-								@keyframes  overlayUpdown{
-									from{height:100%;}
-									to{height:35%;}
-								}
-								
-								.likefocus{border:7px dotted red;}
-								.masonry-thumb .exhibit a img{height:238px; width:100%;}
-								
-								.masonry{float:left;margin-left:38px;}
-								
-								
-								 /* 热销区  start*/
-								.customFixed{min-width:1449px;}
-								.box-header_ext{   
-									 background: #76488e;
-								     background-image: linear-gradient(90deg,#76488e,#662d72);
-								     line-height: 53px;
-								     color: #fff;
-								     height: 21px;
-								     font-weight: bold;
-   									 text-shadow: 1px 1px 1px gold;
-								     position:relative;
-								}
-								
-								 /*  热销 header  特效*/
-								 .hotAreaHeaderDynamic1{transition:all 1.5s ease; animation:hotAreaHeaderDynamic1 1.5s ease alternate infinite;}
-								 @keyframes  hotAreaHeaderDynamic1{
-									1%{transform:translate3d(0px,0px,0px);}
-									100%{transform:translate3d(100px,0px,0px);}
-								 }
-								
-								 /* end  热销区  */
-							
-									
-								/*  用户信息区   start */
-								
-							    .avatar-wrap{width:100%;height:326px;float:left;position:relative;}
-								.avatarImg{position:absolute;top:45px ;left:133px;width:130px;height:130px;
-								animation:avatarImgMove 3s ease-in alternate  infinite;}
-								.avatarImg img{ border-radius:50%;background:#666;box-shadow:1px 5px 1.5em #111;}
-								.userInfoDiv{width:100%;height:50px;top:173px ;left:0px;position:absolute;}	
-								.avatar-wrap .honorWords{
-									    margin-top: 18px;
-									    font-weight: bold;
-									    color: blue;
-									    margin-left:-10px;
-									    top: 136px;
-									    left: 90px;
-									    position: absolute;
-									    font-family:"楷体";
-									    font-size:16px;
-								}
-								
-								.userInfoDiv .btnCommon{
-									width: 152px;
-								    height: 30px;
-								    padding: 3px;
-								    margin-left: 18px;
-								    margin-top: 52px;
-								    float: left;
-								    line-height: 30px;
-								    text-align: center;
-								    box-shadow: 3px 3px 1em #111;;
-								    border-radius:10px;
-								    cursor:pointer;
-								    background: #fe6fa6;
-								    color:#fff;
-								    text-shadow:1px 1px 1px #fff;
-								    font-weight:bold;
-								    transition: all 1s ease;
-								}
-								
-								 /* 响应式 */
-								 @media screen and (max-width: 1200px){ 
-									.avatar-wrap{display:none;}
-									#productBanner{width: 100%;}
-							     }
-							     
-						        @media (max-width: 1530px) {  /* 小于1367px 时会触发下面的 */
-							     	.userInfoDiv .btnCommon{
-											width: 152px;
-										    height: 30px;
-										    padding: 3px;
-										    margin-left: 96px;
-										    margin-top: 10px;
-										    float: left;
-										    line-height: 30px;
-										    text-align: center;
-										    box-shadow:3px 3px 1em #333;
-										    border-radius:5px;
-										    cursor:pointer;
-										    background: linear-gradient(#3f4224,#00c3cc);
-										    color: #fff;
-										    font-weight: bold;
-										    text-shadow: 1px 1px 9px yellow;
-										}
-						       }
-						     
-						     
-						     @keyframes avatarImgMove{
-						     	0%{transform:rotate(0deg);transform:scale(1);}
-						     	20%{transform:rotate(20deg);}
-						     	40%{transform:rotate(-10deg);transform:scale(1.2);}
-						     	60%{transform:rotate(30deg);}
-						     	80%{transform:rotate(-20deg);transform:scale(0.8);}
-						     	100%{transform:rotate(30deg);transform:scale(1);}
-						     }
-						     
-						     
-						     .userInfoDiv .btnCommon:hover{transform:scale(1.1);transition: all 1s ease;}
-							 /* end  用户信息区  */
-								 
-							
-							 
-							
-							
-							</style>
+						
 
 
 	<body>
 		
 		<!-- start: top Menu -->
 		
-		<div class="navbar">
-		 <%@include file="/commons/top_menu_product.jsp" %>  
+		<div class="menu_top">
+			 <%@include file="/commons/top_menu_product.jsp" %>  
 		</div>
 		
 		<!-- end: top Menu -->
 	
 	
-	<div class="">
-		<div class="row-fluid">
+		<div class="yc_content">
+				<div id="siderbar_main" class="siderbar_main">
+					  <%@ include file="/commons/left_menu_product.jsp" %>
+				</div>
+				<div class="yc_exhibitArea">
 				
-			<!-- start: Left Menu -->
-			
-		<%@ include file="/commons/left_menu_product.jsp" %>
-		
-			
-			<!-- end: Left Menu -->
-			
-			<!-- start: Content -->
-			<div id="content"  class="span10">
+						<div class="queryDiv">
+								 <%@include file="/commons/product/query_common.jsp" %>  
+						</div> 
 						
-						
-					 <%@include file="/commons/product/query_common.jsp" %>  
-					 
-					<div class="row-fluid">
-					        <div class="row-fluid">
-					            <div class="span8" id="productBanner">
+						 <div class="banner" id="productBanner">
 					            	 <jsp:include page="/WEB-INF/jsp/components/product/myCarousel.jsp"  flush="true"  /> 
-					            </div>
-					            <div class="span4">
-					            	<div class="avatar-wrap">
-					            		<div class="avatarImg" >
-					            			<img  src="https://ss0.bdstatic.com/70cFuHSh_Q1YnxGkpoWK1HF6hhy/it/u=4040444576,2094888024&fm=26&gp=0.jpg" 
-					            			width="86px" height="86px" />
+					     </div>
+				         <div class="loginDiv">
+				            	<div class="avatar-wrap">
+				            		<div class="avatarImg" >
+				            			<img  src="https://ss0.bdstatic.com/70cFuHSh_Q1YnxGkpoWK1HF6hhy/it/u=4040444576,2094888024&fm=26&gp=0.jpg" 
+				            			width="86px" height="86px" />
+				            		</div>
+				            		<p class="honorWords">
+				            				Hi [月落晨曦], 欢迎光临 
+				            		<p>
+				            		<div class="userInfoDiv">
+					            		<div class="unloginArea" style="display:none;">
+					            					<div class="btnCommon">登  录</div>
+					            					<div class="btnCommon">注  册</div>
 					            		</div>
-					            		<p class="honorWords">
-					            				Hi [月落晨曦], 欢迎光临 
-					            		<p>
-					            		<div class="userInfoDiv">
-						            		<div class="unloginArea" style="display:none;">
-						            					<div class="btnCommon">登  录</div>
-						            					<div class="btnCommon">注  册</div>
-						            		</div>
-						            		<!--  -->
-						            		<div class="loginedArea">
-					            					<div class="btnCommon">日常签到</div>
-					            					<div class="btnCommon">退出登录</div>
-						            		</div> 
-					            		</div>
-					            		
-					            	</div>
-					            </div>
-					        </div>
-					</div>
+					            		<!--  -->
+					            		<div class="loginedArea">
+				            					<div class="btnCommon">日常签到</div>
+				            					<div class="btnCommon">退出登录</div>
+					            		</div> 
+				            		</div>
+				            		
+				            	</div>
+				            </div>
+				
+				</div>
 				
 				
-					
-			
-					<div class="customFixed">		
-						<div class=" span12">
-						
-							<div class="box-header box-header_ext" data-original-title>
-								<h2><i class="halflings-icon picture"></i><span class="break"></span> </h2>
-								<h2 style="position:absolute;top:11px;left:52px;transition:all 1s ease;" class="hotAreaHeaderDynamic1">热卖商品推荐</h2>
-							</div>
-							<div class="box-content">
-							<!-- 	<a href="/content/getproduct.action">点点测试一下</a>
-								<input  type="button" id="tbtn" value="diandian"/> -->
-								
-							<div id="" class="masonry">
-								<div class="exhibit">
-									<div id="sub_exhibit">
-											<a><img src="//img12.360buyimg.com/n8/jfs/t3109/329/1072170868/202121/ef3aac3f/57c505a9N4281576d.jpg"
-											/></a>
-											<span class="up_overlay">
-												<div class="skuInfo">
-													<div class="p-introduction">
-														2017新款蕾丝网纱薄款外搭防晒披风 裸粉色 2XL
-														 2XL2017新款蕾丝网纱薄款 2XL
-													</div>
-													<p class="p_price">¥4999.00</p>
-													<p class="p_shop">稻草人品牌自营旗舰店</p>
-													<strong>已有
-														<a class="comment" target="_blank" href="//item.jd.com/1550224.html#comment">
-															5700+
-														</a>
-														人评价
-													</strong>
-													<div class="p-buy"><span>加入购物车</span></div>
-													<div class="p-like" onclick="javascript:attention(this);" data-sku="1000100" >
-														<a href="javascript:void(0);" >
-															<img src="img/custom/cancel.png"/><span>关注</span>
-														</a>
-													</div>
-												</div>
-											</span>
-											<div class="exhibit_footer"></div>
-											
-									</div>
-								</div>
-							</div>
+				
+				
+				
 		
-							<div id="" class="masonry">
-								<div class="exhibit">
-									<div id="sub_exhibit">
-											<a><img src="//img14.360buyimg.com/cms/jfs/t5866/86/2181101596/19193/a4bad0b0/592e5cb6N19d6fe7e.jpg"
-											/></a>
-											<span class="up_overlay">
-												<div class="skuInfo">
-													<div class="p-introduction">
-														2017新款蕾丝网纱薄款外搭防晒披风 裸粉色 2XL
-														 2XL2017新款蕾丝网纱薄款 2XL
-													</div>
-													<p class="p_price">¥4999.00</p>
-													<p class="p_shop">稻草人品牌自营旗舰店</p>
-													<strong>已有
-														<a class="comment" target="_blank" href="//item.jd.com/1550224.html#comment">
-															5700+
-														</a>
-														人评价
-													</strong>
-													<div class="p-buy"><span>加入购物车</span></div>
-													<div class="p-like" onclick="javascript:attention(this);" data-sku="1000100" >
-														<a href="javascript:void(0);" >
-															<img src="img/custom/cancel.png"/><span>关注</span>
-														</a>
-													</div>
-												</div>
-											</span>
-											<div class="exhibit_footer"></div>
-											
-									</div>
-								</div>
-							</div>
-							
-							<div id="" class="masonry">
-								<div class="exhibit">
-									<div id="sub_exhibit">
-											<a><img src="//img11.360buyimg.com/n8/jfs/t5539/45/2386755531/81851/e9905b40/591a5411N74ff1d71.jpg"
-											/></a>
-											<span class="up_overlay">
-												<div class="skuInfo">
-													<div class="p-introduction">
-														吉禾伊嘉风衣外套女2017春装新款女装韩版修身纯色中长款风衣女2601 卡其色 XXL-1
-													</div>
-													<p class="p_price">¥4999.00</p>
-													<p class="p_shop">稻草人品牌自营旗舰店</p>
-													<strong>已有
-														<a class="comment" target="_blank" href="//item.jd.com/1550224.html#comment">
-															5700+
-														</a>
-														人评价
-													</strong>
-													<div class="p-buy"><span>加入购物车</span></div>
-													<div class="p-like" onclick="javascript:attention(this);" data-sku="1000100" >
-														<a href="javascript:void(0);" >
-															<img src="img/custom/cancel.png"/><span>关注</span>
-														</a>
-													</div>
-												</div>
-											</span>
-											<div class="exhibit_footer"></div>
-											
-									</div>
-								</div>
-							</div>
-							
-							<div id="" class="masonry">
-								<div class="exhibit">
-									<div id="sub_exhibit">
-											<a><img src="//img14.360buyimg.com/n8/jfs/t2728/316/3980693727/96339/76bf02e9/57a03cfcNf4faa06a.jpg"
-											/></a>
-											<span class="up_overlay">
-												<div class="skuInfo">
-													<div class="p-introduction">
-														吉禾伊嘉风衣外套女2017春装新款女装韩版修身纯色中长款风衣女2601 卡其色 XXL-1
-													</div>
-													<p class="p_price">¥4999.00</p>
-													<p class="p_shop">稻草人品牌自营旗舰店</p>
-													<strong>已有
-														<a class="comment" target="_blank" href="//item.jd.com/1550224.html#comment">
-															5700+
-														</a>
-														人评价
-													</strong>
-													<div class="p-buy"><span>加入购物车</span></div>
-													<div class="p-like" onclick="javascript:attention(this);" data-sku="1000100" >
-														<a href="javascript:void(0);" >
-															<img src="img/custom/cancel.png"/><span>关注</span>
-														</a>
-													</div>
-												</div>
-											</span>
-											<div class="exhibit_footer"></div>
-											
-									</div>
-								</div>
-							</div>
-							
-							<style>
-								.exhibitFav{
-								    width: 189px;
-								    height: 250px;
-								    box-shadow: 0px 0px 11px green;
-								    border-radius: 6%;
-								    margin-top: -5px;
-								    cursor: pointer;
-								    position: relative;
-								 }
-								 .exhibitFav .img-list{float:left;margin:10px;}
-							
-							</style>
-							<div class="favList masonry">
-								 <div>
-									 关注列表
-								 </div>
-								 <div class="exhibitFav">
-								 	<div class="img-list">
-								 		<img src="http://s2.mogucdn.com/mlcdn/c45406/170616_5ejj895gl88k881df018gk673j7bi_250x250.jpg_200x9999.v1c7E.70.webp" width="66px" height="66px"/>
-								 	</div>
-								 	<div class="img-list">
-								 		<img src="http://s3.mogucdn.com/mlcdn/c45406/170615_7b9bb6aa85h545ghiaa2ifa9fjhig_250x250.jpg_200x9999.v1c7E.70.webp" width="66px" height="66px"/>
-								 	</div>
-								 	<div class="img-list">
-								 		<img src="http://s3.mogucdn.com/mlcdn/c45406/170616_54aaag6j19ebejhjla4iii235d4c1_250x250.jpg_200x9999.v1c7E.70.webp" width="66px" height="66px"/>
-								 	</div>
-								 	<div class="img-list">
-								 		<img src="http://s2.mogucdn.com/mlcdn/c45406/170616_5ejj895gl88k881df018gk673j7bi_250x250.jpg_200x9999.v1c7E.70.webp" width="66px" height="66px"/>
-								 	</div>
-								 		<div class="img-list">
-								 		<img src="http://s2.mogucdn.com/mlcdn/c45406/170616_5ejj895gl88k881df018gk673j7bi_250x250.jpg_200x9999.v1c7E.70.webp" width="66px" height="66px"/>
-								 	</div>
-								 	<div class="img-list">
-								 		<img src="http://s2.mogucdn.com/mlcdn/c45406/170616_5ejj895gl88k881df018gk673j7bi_250x250.jpg_200x9999.v1c7E.70.webp" width="66px" height="66px"/>
-								 	</div>
-								 </div>
-							</div> 
-								
-								
-							</div>
-						</div>
-					<!--/span-->
-					
-					</div>
-			<!--/row-->
+		
+		</div>
+	
+		
+		
+		
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
 
-			
-	</div><!--/.fluid-container-->
-	
-			<!-- end: Content -->
-		</div>
-	</div>
 	
 	
-	<div class="modal hide fade" id="myModal">
-		<div class="modal-header">
-			<button type="button" class="close" data-dismiss="modal">×</button>
-			<h3>Settings</h3>
-		</div>
-		<div class="modal-body">
-			<p>Here settings can be configured...</p>
-		</div>
-		<div class="modal-footer">
-			<a href="#" class="btn" data-dismiss="modal">Close</a>
-			<a href="#" class="btn btn-primary">Save changes</a>
-		</div>
-	</div>
+	
 	
 	<div class="clearfix"></div>
 	
-	<footer>
-
-		<p>
-			<span style="text-align:left;float:left">&copy; 2017 <a href="" alt="">moonyc</a></span>
-		</p>
-
-	</footer>
+	
 	
 	<!-- start: JavaScript-->
 

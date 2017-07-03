@@ -48,7 +48,7 @@
 	.yCsidebar ul li.leftMenuHoverCss,.yCsidebar ul li ul.l_subUl li.leftMenuHoverCss{background:rebeccapurple;}
 	.ycIcon{font-size: 22px;}
 </style>		
-<div id="sidebar-left" class="span2">
+
 		<div class="yCsidebar">
 			<ul>
 				<li>
@@ -186,4 +186,4 @@
 		</script>
 		
 		
-</div>
+
