@@ -35,16 +35,17 @@
 		.yc_content .siderbar_main{13.6%;height:100%;position:absolute;top:0px;left:0px;}
 		.yc_content .yc_exhibitArea{width: 86.4%;height:100%;position:relative;top:0px;left:230px;}
 		.queryDiv{width:800px;height:66px;margin:3px auto;} 
-		.Div1{width:100%;height:339px;overflow:hidden;}
-		.banner{width: 750px;height:323px;box-shadow: 0px 0px 2em #000;
-		position: relative;
-		margin:10px 10px 10px 20px;float:left;transition:all 0.5s ease;}
-		.loginDiv{width:370px;height:316px;float:left;border-radius: 98px;box-shadow:1px 0px 2em #000;
-		background: pink;margin: 8px 20px;}
-		
-		
-		
-		
+		.Div1{width:1350px;height:368px;overflow:hidden;position:relative;}
+		.loginDiv{  border-radius: 186px;
+				    box-shadow: 0px 4px 2.3em #e74649;
+				    background: linear-gradient(red,#e4e4e4);
+				    width: 370px;
+				    height: 366px;
+				    position: absolute;
+				    right: 24px;
+				    top: 0px;
+	     }
+
 		
 		
 		/*  用户信息区   start */
@@ -53,17 +54,18 @@
 								.avatarImg{position:absolute;top:45px ;left:133px;width:130px;height:130px;
 								animation:avatarImgMove 3s ease-in alternate  infinite;}
 								.avatarImg img{ border-radius:50%;background:#666;box-shadow:1px 5px 1.5em #111;}
-								.userInfoDiv{width:100%;height:50px;top:173px ;left:0px;position:absolute;}	
+								.userInfoDiv{width:100%;height:50px;top:205px ;left:0px;position:absolute;}	
 								.avatar-wrap .honorWords{
-									    margin-top: 18px;
+									    margin-top: 31px;
 									    font-weight: bold;
-									    color: blue;
+									    color: yellow;
 									    margin-left:-10px;
 									    top: 136px;
 									    left: 90px;
 									    position: absolute;
 									    font-family:"楷体";
-									    font-size:16px;
+									    font-size: 19px;
+    									text-shadow: 1px 1px 1px #fff;
 								}
 								
 								.userInfoDiv .btnCommon{
@@ -90,7 +92,9 @@
 								 
 								 @media screen and (max-width: 1398px){ 
 									.loginDiv{width: 269px;background: linear-gradient(#3f4224,#00c3cc);margin: 8px 20px;}
-									.loginDiv .avatar-wrap{left: -44px;}
+									.loginDiv .avatar-wrap{left: -50px;}
+									.loginDiv{right: 126px;}
+									   
 							     } 
 								 
 								 
@@ -107,12 +111,10 @@
 							     
 							      @media screen and (max-width: 1260px){ 
 									 .loginDiv{display:none;} 
-							         .banner{left:112px;transition:all 0.6s ease;}
 							     } 
 							    
 							     @media screen and (max-width: 1234px){ 
 							         .loginDiv{display:none;} 
-							         .banner{left:112px;transition:all 0.6s ease;}
 							     } 
 							     
 							     
@@ -158,8 +160,6 @@
 		
 </head>
 
-						
-
 
 	<body>
 		
@@ -177,52 +177,112 @@
 					  <%@ include file="/commons/left_menu_product.jsp" %>
 				</div>
 				<div class="yc_exhibitArea">
-				
+						
+						<!-- start 查询  -->
 						<div class="queryDiv">
 								 <%@include file="/commons/product/query_common.jsp" %>  
 						</div> 
+						<!--  查询  end -->
 						
 						
-						<div class="Div1">
-								 <div class="banner" id="productBanner">
-							            	 <jsp:include page="/WEB-INF/jsp/components/product/myCarousel.jsp"  flush="true"  /> 
-							     </div>
-						         <div class="loginDiv">
-						            	<div class="avatar-wrap">
-						            		<div class="avatarImg" >
-						            			<img  src="https://ss0.bdstatic.com/70cFuHSh_Q1YnxGkpoWK1HF6hhy/it/u=4040444576,2094888024&fm=26&gp=0.jpg" 
-						            			width="86px" height="86px" />
-						            		</div>
-						            		<p class="honorWords">
-						            				Hi [月落晨曦], 欢迎光临 
-						            		<p>
-						            		<div class="userInfoDiv">
-							            		<div class="unloginArea" style="display:none;">
-							            					<div class="btnCommon">登  录</div>
-							            					<div class="btnCommon">注  册</div>
-							            		</div>
-							            		<!--  -->
-							            		<div class="loginedArea">
-						            					<div class="btnCommon">日常签到</div>
-						            					<div class="btnCommon">退出登录</div>
-							            		</div> 
-						            		</div>
-						            		
-						            	</div>
-						            </div>
+						
+						
+						<style type="text/css" id="css">
+						
+								
+								/*no-repeat 是不要平铺，如果图片很小 就会贴上去很小，所以默认是平铺*/
+								
+								/*box start*/
+								.box{width:900px;height: 360px;position: relative;}
+					
+								#pic_ul{list-style: none;height: 360px;width: 910px;perspective:900px;}
+								#pic_ul li{height: 360px;position: relative;transform:translateZ(-180px);transform-style:preserve-3d;float:left;}
+								#pic_ul li span{position: absolute;height:360px;}
+								#pic_ul li span:nth-child(1){transform:translateZ(180px);}
+								#pic_ul li span:nth-child(2){transform:translateZ(-180px) rotateX(180deg);}
+								#pic_ul li span:nth-child(3){top:-360px;transform-origin:bottom;transform:translateZ(180px) rotateX(90deg);}
+								#pic_ul li span:nth-child(4){top:360px;transform-origin:top;transform:translateZ(180px) rotateX(-90deg);;}
+								#pic_ul .s1{background: url("//img1.360buyimg.com/da/jfs/t6091/118/2254918567/76195/8183cb1c/593e040cN15b8cba4.jpg");background-size: 900px 360px;}
+								#pic_ul .s2{background: url("//img12.360buyimg.com/da/jfs/t6490/203/367582631/92067/21ff3edb/593e57b1N506d0eb7.jpg");background-size: 900px 360px;}
+								#pic_ul .s3{background: url("//img13.360buyimg.com/da/jfs/t6196/104/359419508/197080/bff443fe/593de5b1Nb46be9cb.jpg");background-size: 900px 360px;}
+								#pic_ul .s4{background: url("//img1.360buyimg.com/da/jfs/t5914/159/1898006567/93036/2420a3b/59368307Nfbaf46cb.jpg");background-size: 900px 360px;}
+					
+					
+					
+								.box ol{right:5px;bottom: 5px;position: absolute;}
+								/*text-align, line-height 这俩个配套使用使得li中的数字居中*/
+								.box ol li{color: #fff;background:#000; list-style: none;width:20px;height:20px;float: left;text-align: center;line-height: 20px;margin-left:5px;box-shadow:0 0 10px #fff; border-radius: 10px; font-size: 14px;cursor: pointer;transition:all 2s ease;} 
+					
+					
+								.box ol li:hover{transform:scale(2);}
+								/*end box*/
+								
+						 </style>
+						
+						
+							<div class="Div1">
+											<!--box start -->
+											<div class="box">
+												 <ul id="pic_ul">
+												 </ul>
+												 <ol>	
+													<li>壹</li>
+													<li>贰</li>
+													<li>弎</li>
+													<li>肆</li>
+												 </ol>
+											</div>
+											<!--end box-->
+											
+											
+										   <div class="loginDiv">
+								            	<div class="avatar-wrap">
+								            		<div class="avatarImg" >
+								            			<img  src="https://ss0.bdstatic.com/70cFuHSh_Q1YnxGkpoWK1HF6hhy/it/u=4040444576,2094888024&fm=26&gp=0.jpg" 
+								            			width="86px" height="86px" />
+								            		</div>
+								            		<p class="honorWords">
+								            				Hi [月落晨曦], 欢迎光临 
+								            		<p>
+								            		<div class="userInfoDiv">
+									            		<div class="unloginArea" style="display:none;">
+									            					<div class="btnCommon">登  录</div>
+									            					<div class="btnCommon">注  册</div>
+									            		</div>
+									            		
+									            		<div class="loginedArea">
+								            					<div class="btnCommon">日常签到</div>
+								            					<div class="btnCommon">退出登录</div>
+									            		</div> 
+								            		</div>
+								            		
+								            	</div>
+								            </div>   
+											
+											  
 					        </div>
+					     
+					     
+			           		
+			           		
+			           		<style>
+			           		
+			           				.Div2{width:100%;height:400px;background:red;margin-top:12px;}
+			           		
+			           		
+			           		
+			           		</style>
 					        
 					        
-					        
-					        <style>
-					        	.a{width:100%;height:500px;background:red;}
-					        
-					        </style>
-					        <div class="a">
-					        
+					        <div class="Div2">
+					        	
 					        	
 					        
+					        
 					        </div>
+					      
+					        
+					      
 				
 				</div>
 				
@@ -236,19 +296,6 @@
 	
 		
 		
-		
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-
-	
 	
 	
 	
@@ -315,6 +362,41 @@
 	<!-- end: JavaScript-->
 	
 	<script>
+	
+		
+	
+	function play(x){
+
+		var l_wid = 900 / x;
+		var a_html = "", t_css = "" , z = 0;
+		for(var i = 0 ; i<x ; i++){
+
+			if(i>x/2){
+				z--;
+			}else{
+				z++;
+			}
+			a_html += "<li>"+
+			"               <span class='s1' width='900px'></span>"+
+			"               <span class='s2'></span>"+
+			"               <span class='s3'></span>"+
+			"               <span class='s4'></span>"+
+			"          </li>";
+			t_css += "li:nth-child("+(i+1)+") {transition:1s "+(i*0.05)+"s all;z-index:"+z+";}#pic_ul li:nth-child("+(i+1)+") span{background-position:"+(-l_wid*i)+"px;}"
+		}
+
+		$("#css").append("#pic_ul li{width:"+l_wid+"px;}  #pic_ul li span{width:"+l_wid+"px;}"+t_css);
+		$("#pic_ul").append(a_html);
+	}
+	play(25);
+	$("ol li").click(function(){
+		var a = $(this).index();
+		var b = -a*90 + "deg";
+		$("#pic_ul").find("li").css("transform","translateZ(-180px) rotateX("+b+")");
+	});
+	
+	
+	
 	
 	
 		$(function(){

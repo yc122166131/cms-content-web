@@ -3,8 +3,13 @@
 						<style>
 							.form-group{margin-top:-20px;}
 							.form-group .queryBtn{width:100px;border-radius:10px;}
-							.form-group .querytxt{margin-top:10px;width:300px;height:24px;
-								text-indent:5px;} 
+							.form-group .querytxt{
+								    margin-top: 10px;
+								    width: 337px;
+								    height: 24px;
+								    border-radius: 16px;
+								    text-indent: 5px;
+							} 
 							span.cartShow{width:220px;
 								height:30px;display:inline-block;
 								margin-left: 20px;
@@ -41,7 +46,7 @@
 						
 					 <div class="form-group" style=" margin-bottom: 6px; text-align: center;" >
 					    <input type="text" class="form-control querytxt" autocomplete="off"  id="" placeholder="">
-					    <input type="button" class="btn btn-info btn-sm queryBtn" value="查  询" /> 
+					    <input type="button" class="btn btn-info btn-sm queryBtn" value="查  询"  id="queryBtn"/> 
 					    <span class="cartShow">
 					    	 <i class="iconfont icon-gouwucheman" style="color:red;font-size:18px;"></i>
 					   		 <a href="javascript:void(0);" onclick="javascript:toMyCart();">我的购物车</a> 
@@ -57,5 +62,16 @@
 					 		//window.location.href = "http://localhost:8904/cart.jsp";
 					 		window.open("http://localhost:8904/cart.jsp");
 					 	}
+					 	
+					 	$(function(){
+					 		
+					 		$("#queryBtn").click(function(){
+					 				
+					 			
+					 					
+					 			
+					 		});
+					 		
+					 	})
 					 
 					 </script>

@@ -3,7 +3,7 @@
    <link rel="stylesheet" type="text/css" href="http://at.alicdn.com/t/font_mw4zb3gvexh41jor.css"/>
 <style type="text/css">
 	*{padding: 0;margin: 0;}
-	a{text-decoration: none;}
+	.yCsidebar ul li a{text-decoration: none;}
 	ul li{list-style: none;}
 	.yCsidebar{width:230px;height:100%;background:#111;min-width:230px;}
 	.yCsidebar ul{margin: 0px 0px 10px 0px;}
@@ -45,7 +45,7 @@
 	
 	
 	/* 悬停, 点击 li 时候的 样式  (动态附加)*/
-	.yCsidebar ul li.leftMenuHoverCss,.yCsidebar ul li ul.l_subUl li.leftMenuHoverCss{background:rebeccapurple;}
+	.yCsidebar ul li.leftMenuActive,.yCsidebar ul li ul.l_subUl li.leftMenuActive{background:rebeccapurple;}
 	.ycIcon{font-size: 22px;}
 </style>		
 
@@ -162,10 +162,11 @@
 			
 			$(function(){
 				
+			
 				$(".yCsidebar ul > li ").click(function(){
 					
-					$(this).addClass("leftMenuHoverCss").siblings("li").removeClass("leftMenuHoverCss");
-					$(this).siblings("li").find(".l_subUl").find("li").removeClass("leftMenuHoverCss");
+					$(this).addClass("leftMenuActive").siblings("li").removeClass("leftMenuActive");
+					$(this).siblings("li").find(".l_subUl").find("li").removeClass("leftMenuActive");
 					
 					if($(this).find(".l_subUl").length > 0){ //当有 子元素的时候 我们才  收起相邻的 li
 						$(this).find(".l_subUl").slideDown(339).end().siblings("li").find(".l_subUl").slideUp(339);
@@ -175,7 +176,7 @@
 				
 				$(".yCsidebar ul > li ul.l_subUl li").click(function(){
 					
-					$(this).addClass("leftMenuHoverCss");/*.siblings("li").removeClass("leftMenuHoverCss");*/
+					$(this).addClass("leftMenuActive");/*.siblings("li").removeClass("leftMenuActive");*/
 					
 				});
 				
