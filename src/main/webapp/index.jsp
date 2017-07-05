@@ -632,22 +632,30 @@
 	
 	
 		$(function(){
-			
-			
-			var params = {};
+						
 			$.ajax({
 				url:"${basePath}/content/productLeftMenuInfo.action",
 				type:"post",
-				data:params,
+				data:{},
 				success:function(data){
-					console.log(data);
-					//$("#LMenu").html(data);
 					
-					//这个要重新绑定事件,因为是动态生成的 原先custom.js 中定义的 只加载一次(即需要写死的情况下)
-				   	$('.dropmenu').click(function(e){
-						e.preventDefault();
-						$(this).parent("li").find('ul').slideDown().end().siblings("li").find("ul").slideUp();
-					}); 
+					// 模板 填充 左菜单  
+					$(".yCsidebar").html(data);
+					
+					//重新绑定 click 事件 
+					$(".yCsidebar ul > li ").click(function(){
+						
+						$(this).addClass("leftMenuActive").siblings("li").removeClass("leftMenuActive");
+						$(this).siblings("li").find(".l_subUl").find("li").removeClass("leftMenuActive");
+						
+						if($(this).find(".l_subUl").length > 0){ //当有 子元素的时候 我们才  收起相邻的 li
+							$(this).find(".l_subUl").slideDown(339).end().siblings("li").find(".l_subUl").slideUp(339);
+						}
+					});
+					
+					$(".yCsidebar ul > li ul.l_subUl li").click(function(){
+						$(this).addClass("leftMenuActive");/*.siblings("li").removeClass("leftMenuActive");*/
+					});
 					
 				},
 				error:function(msg){

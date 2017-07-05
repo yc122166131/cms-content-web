@@ -17,15 +17,15 @@
 				padding: 0px 8px;
 				cursor: pointer;
 				border-right:1px dotted #ccc;
-				/*box-shadow: 0px 0px 6px #fff;*/ 
 			}
-			.tMenuBox .tMenuContainer ul li a{color: #fff;}
+			.tMenuBox .tMenuContainer ul li a{color: #fff;text-decoration:none;}
 			.tMenuBox .tMenuContainer ul{float: none;margin-left: -8px;}
-			.tMenuBox .tMenuContainer ul li:hover{background: #006DCC;} 
+			.tMenuBox .tMenuContainer ul li:hover{background: #006DCC;transform:scale(1.04);transition:all 0.5s ease;
+			border-radius:10px;} 
 			.tMenuBox .tMenuContainer ul li:hover ul.subul{display: block;}
 			
 			.tMenuBox .tMenuContainer ul li ul.subul{display: none;}
-			.tMenuBox .tMenuContainer ul li ul.subul li a{color: #fff;}
+			.tMenuBox .tMenuContainer ul li ul.subul li a{color: #fff;text-decoration:none;}
 			
 			.bb{width:300px;height:68px;display:inline-block;float:left;margin-left:0px;}
 		</style>
