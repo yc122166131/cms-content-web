@@ -20,10 +20,12 @@
 	<!-- start: CSS -->
 	<link id="bootstrap-style" href="css/bootstrap.min.css" rel="stylesheet">
 	<link href="css/bootstrap-responsive.min.css" rel="stylesheet">
+	<link id="base-style" href="css/animate.css" rel="stylesheet">
+	<link id="base-style" href="js/sg/css/tz_magic.css" rel="stylesheet">
 	<link id="base-style" href="css/style.css" rel="stylesheet">
 	<link id="base-style-responsive" href="css/style-responsive.css" rel="stylesheet">
 	<link  href="css/yc_common/yc_common.css"  rel="stylesheet">
-	<link  href="http://at.alicdn.com/t/font_97un6m698u1pp66r.css" rel="stylesheet">
+	<link  href="http://at.alicdn.com/t/font_kulv97ebihjgu8fr.css" rel="stylesheet">
 	
 	
 
@@ -35,7 +37,7 @@
 		.yc_content .siderbar_main{13.6%;height:100%;position:absolute;top:0px;left:0px;}
 		.yc_content .yc_exhibitArea{width: 86.4%;height:100%;position:relative;top:0px;left:230px;}
 		.queryDiv{width:800px;height:66px;margin:3px auto;} 
-		.Div1{width:1350px;height:368px;overflow:hidden;position:relative;}
+		.Div1{width:1350px;height:368px;overflow:hidden;position:relative;margin-top: -12px;}
 		.loginDiv{  border-radius: 186px;
 				    box-shadow: 0px 4px 2.3em #e74649;
 				    background: linear-gradient(red,#e4e4e4);
@@ -54,7 +56,7 @@
 								.avatarImg{position:absolute;top:45px ;left:133px;width:130px;height:130px;
 								animation:avatarImgMove 3s ease-in alternate  infinite;}
 								.avatarImg img{ border-radius:50%;background:#666;box-shadow:1px 5px 1.5em #111;}
-								.userInfoDiv{width:100%;height:50px;top:205px ;left:0px;position:absolute;}	
+								.userInfoDiv{width:100%;height:50px;top:182px;left:0px;position:absolute;}	
 								.avatar-wrap .honorWords{
 									    margin-top: 31px;
 									    font-weight: bold;
@@ -94,19 +96,21 @@
 									.loginDiv{width: 269px;background: linear-gradient(#3f4224,#00c3cc);margin: 8px 20px;}
 									.loginDiv .avatar-wrap{left: -50px;}
 									.loginDiv{right: 126px;}
-									   
+									.avatar-wrap .honorWords{font-size: 15px;}
 							     } 
 								 
 								 
 								  @media screen and (max-width: 1348px){ 
 									.loginDiv{width: 269px;background: linear-gradient(#3f4224,#00c3cc);margin: 8px 20px;}
 									.loginDiv .avatar-wrap{left: -44px;}
+									.avatar-wrap .honorWords{font-size: 15px;}
 							     } 
 								 
 								 
 								 @media screen and (max-width: 1325px){ 
 									.loginDiv{width: 269px;background: linear-gradient(#3f4224,#00c3cc);margin: 8px 20px;}
 									.loginDiv .avatar-wrap{left: -44px;}
+									.avatar-wrap .honorWords{font-size: 15px;}
 							     } 
 							     
 							      @media screen and (max-width: 1260px){ 
@@ -139,6 +143,7 @@
 										    transition:all 0.5s ease;
 										}
 										.loginDiv{background: linear-gradient(#3f4224,#00c3cc);margin: 8px 20px;}
+										.userInfoDiv{top:211px;}
 						         }
 						     
 						     
@@ -161,7 +166,7 @@
 </head>
 
 
-	<body>
+	<body style="background:pink;">
 		
 		<!-- start: top Menu -->
 		
@@ -193,9 +198,13 @@
 								/*no-repeat 是不要平铺，如果图片很小 就会贴上去很小，所以默认是平铺*/
 								
 								/*box start*/
-								.box{width:900px;height: 360px;position: relative;}
-					
-								#pic_ul{list-style: none;height: 360px;width: 910px;perspective:900px;}
+								.box{width:900px;height: 360px;position: relative;cursor:pointer;background:#f8f8f8;
+								    box-shadow: 7px 28px 42px #111; overflow: hidden; border-radius: 28px;margin-left: 16px;}
+								.box:hover .bannerLeft{display:block;transition:all 0.7s ease;transform:scale(1.2);}
+								.box:hover .bannerRight{display:block;transition:all 0.7s ease;transform:scale(1.2);}
+								
+								
+								#pic_ul{list-style: none;height: 360px;width: 910px;perspective:900px;margin:0px 0px 10px 0px;}
 								#pic_ul li{height: 360px;position: relative;transform:translateZ(-180px);transform-style:preserve-3d;float:left;}
 								#pic_ul li span{position: absolute;height:360px;}
 								#pic_ul li span:nth-child(1){transform:translateZ(180px);}
@@ -209,12 +218,54 @@
 					
 					
 					
-								.box ol{right:5px;bottom: 5px;position: absolute;}
+								.box ol{right: 39%;bottom: 5px;position: absolute;}
 								/*text-align, line-height 这俩个配套使用使得li中的数字居中*/
-								.box ol li{color: #fff;background:#000; list-style: none;width:20px;height:20px;float: left;text-align: center;line-height: 20px;margin-left:5px;box-shadow:0 0 10px #fff; border-radius: 10px; font-size: 14px;cursor: pointer;transition:all 2s ease;} 
+								.box ol li{color: #fff;background:#000; list-style: none;width:20px;
+								height:20px;float: left;text-align: center;
+								line-height: 20px;margin-left:12px;box-shadow:0 0 10px #fff; 
+								border-radius: 10px; font-size: 14px;
+								cursor: pointer;transition:all 0.8s ease;} 
 					
 					
 								.box ol li:hover{transform:scale(2);}
+								
+								
+								  /* start banner */
+								.bannerArrow{font-size:36px;}
+								.bannerLeft{   
+								    top: 138px;
+								    left: 41px;
+								    z-index: 1;
+								    position:absolute;
+							        color: #fff;
+								    font-weight: bold;
+								    background: rgba(0,0,0,0.5);
+								    height: 69px;
+								    line-height: 69px;
+								    border-radius:10px;
+								    cursor:pointer;
+								    display:none;
+								 }
+								 
+								 .bannerRight{   
+								    right: 10px;
+								    top: 138px;
+								 	position:absolute;
+								 	z-index:1;
+								 	color: #fff;
+								    font-weight: bold;
+								    background: rgba(0,0,0,0.5);
+								    height: 69px;
+								    line-height: 69px;
+								    border-radius:10px;
+								    cursor:pointer;
+								    display:none;
+								 }
+								 
+								 /*  banner  end */
+								 
+								 
+								 
 								/*end box*/
 								
 						 </style>
@@ -223,6 +274,8 @@
 							<div class="Div1">
 											<!--box start -->
 											<div class="box">
+												 <i id="l_banner" class="iconfont icon-bannerxiangzuozhishijiantou bannerArrow bannerLeft"></i>
+												 <i id="r_banner"  class="iconfont icon-bannerxiangyouzhishijiantou bannerArrow bannerRight"></i>
 												 <ul id="pic_ul">
 												 </ul>
 												 <ol>	
@@ -266,18 +319,195 @@
 			           		
 			           		
 			           		<style>
-			           		
-			           				.Div2{width:100%;height:400px;background:red;margin-top:12px;}
-			           		
-			           		
-			           		
+			           				
+			           				
+			           				/* start    jp_title  */
+			           				
+			           				
+			           				.jp_titleMain{margin: 10px;}
+			           				.jp_titleMain{perspective:1200px;transform-style:preserve-3d;}
+			           				.jp_title{width:10%;height:45px;background:linear-gradient(to right,red,yellow);
+			           				line-height: 40px;border-radius:10px;overflow:hidden;
+			           				transform:rotateY(30deg);  animation:jp_titleShowIn 5s ease infinite alternate; }
+			           				.jp_title .title_desc{margin-left:3px;color:#fff;text-shadow:1px 1px 1px yellow;font-family:"楷体";
+			           				font-size:20px;}
+			           				@keyframes jp_titleShowIn{
+			           					 0%{width:10%;background:linear-gradient(to right,red,yellow);}
+			           					30%{width:20%;background:linear-gradient(to right,red,pink);}
+			           					60%{width:30%;background:linear-gradient(to right,red,purple);} 
+			           				}	
+			           				
+			           				/* jp_title end */
+			           				
+			           				
+			           				/**********************************/
+			           				
+			           				
+			           				
+			           				/* start  精品商品展示区 */
+			           				.Div2{width:100%;height:365px;
+			           					margin-top: 3px;background:pink}
+			           				.jp_content{width:1080px;height:360px;margin-left: 115px;cursor:pointer;}
+			           				.jp_content img{width:100%;height:100%;}
+			           				.jp_content .jp_content_left{width:360px;height:360px;float:left;}
+			           				.jp_content .jp_content_left a{width:360px;height:180px;display:block;float:left;position: relative;overflow:hidden;}
+			           				.jp_content .jp_content_left a.min{width:180px;height:180px;display:block;float:left;}
+			           				
+			           				.jp_content .jp_content_center{width:360px;height:360px;background:#111;float:left;position: relative;overflow:hidden;}
+			           				
+			           				.jp_content .jp_content_right{}
+			           				.jp_content .jp_content_right a{width:360px;height:180px;display:block;float:left;position: relative;overflow:hidden;}
+			           				
+			           				.jp_content .layer{position: absolute;
+									    bottom: 0px;
+									    left: 0;
+									    width: 100%;
+									    height: 100%;
+									    background: url(http://js.18183.duoku.com/uploads/pc/index2016/hbg60.png) repeat;
+									}
+			           				
+			           				.jp_content .layer .con{
+			           					position: absolute;
+									    bottom: 15px;
+									    left: 0;
+									    width: 100%;
+									    height: 57px;
+			           				}
+			           				
+			           				.jp_content .layer .icon_add{
+				           				position: absolute;
+									    top: 0;
+									    left: 0;
+									    width: 57px;
+									    height: 57px;
+									    margin: 0 10px;
+									    background: url(http://js.18183.duoku.com/uploads/pc/index2016/icons.png) -150px -290px no-repeat;
+			           				}
+			           				
+			           				
+			           				.jp_content .layer h5{
+			           				
+			           					height: 57px;
+									    line-height: 57px;
+									    font-size: 14px;
+									    color: #fff;
+									    font-weight: lighter;
+									    padding-left: 80px;
+									    white-space: nowrap;
+									    text-overflow: ellipsis;
+									    -o-text-overflow: ellipsis;
+									    overflow: hidden;
+			           				
+			           				}
+			           				 
+			           				 .jp_content .layer p{
+			           				 
+					           			    height: 20px;
+										    line-height: 20px;
+										    font-size: 12px;
+										    color: #fafafa;
+										    font-weight: lighter;
+										    padding-left: 68px;
+										    white-space: nowrap;
+										    text-overflow: ellipsis;
+										    -o-text-overflow: ellipsis;
+										    overflow: hidden;
+			           				 
+			           				 }
+			           				 
+			           				 
+			           				 @keyframes jp_content_showIn{
+			           				 	from{bottom:-352px;}
+			           				 	to{bottom:0px;}
+			           				 }
+			           				 
+			           				 @keyframes jp_content_showOut{
+			           				 	from{bottom:0px;}
+			           				 	to{bottom:-352px;}
+			           				 }
+			           				 
+			           				.jp_content_showIn{animation:jp_content_showIn 0.7s ease forwards; }
+			           				.jp_content_showOut{animation:jp_content_showOut 0.7s ease forwards; }
+			           				 
+			           				 /* 精品商品展示区  end  */
+			           				
 			           		</style>
 					        
-					        
+					        <div class="jp_titleMain">
+					       		 <div class="jp_title"><span class="title_desc">精品商品展示</span></div>
+					        </div>
 					        <div class="Div2">
-					        	
-					        	
-					        
+					        	<div class="jp_content  magictime twisterInUp">
+							        		<div class="jp_content_left">
+							        			<a class="min" style="background:blue;">
+							        				<img src="//img10.360buyimg.com/n8/jfs/t2671/287/3571022046/131070/b2c531b6/579041c3N4ad4c1a7.jpg"/>
+							        				<div class="layer" style="bottom: -352px;">
+														<div class="con">
+															<i class="icon_add"></i>
+															<h5>阳光青春吊带裙子美</h5>
+															<p></p>
+														</div>
+													</div>
+							        			</a>
+							        			<a  class="min" style="background:red;">
+							        				<img src="//img11.360buyimg.com/n8/jfs/t6031/107/3766725120/235908/dea51200/5957864fN340eeec9.jpg"/>
+							        				<div class="layer" style="bottom: -352px;">
+														<div class="con">
+															<i class="icon_add"></i>
+															<h5>阳光青春吊带裙子美</h5>
+															<p></p>
+														</div>
+													</div>
+							        			</a>
+							        			<a style="background:yellow;">
+							        				<img src="http://img.18183.com/uploads/170705/27-1FF5151523394.jpg" />
+							        				<div class="layer" style="bottom: -352px;">
+														<div class="con">
+															<i class="icon_add"></i>
+															<h5>阳光青春吊带裙子美</h5>
+															<p></p>
+														</div>
+													</div>
+							        			
+							        			</a>
+							        		</div>
+							        		<div class="jp_content_center">
+							        			<a>
+							        				<img src="//img14.360buyimg.com/n8/jfs/t5665/205/2810388424/248743/bfa75c8c/5933e05eN3eb64641.jpg"/>
+							        				<div class="layer" style="bottom: -352px;">
+														<div class="con">
+															<i class="icon_add"></i>
+															<h5>阳光青春吊带裙子美</h5>
+															<p></p>
+														</div>
+													</div>
+							        			</a>
+							        		</div>
+							        		<div class="jp_content_right">
+							        			<a style="background:purple;">
+							        				<img  src="http://img.18183.com/uploads/allimg/170705/96-1FF51154100-L.jpg"/>
+							        				<div class="layer" style="bottom: -352px;">
+														<div class="con">
+															<i class="icon_add"></i>
+															<h5>阳光青春吊带裙子美</h5>
+															<p></p>
+														</div>
+													</div>
+							        			
+							        			</a>
+							        			<a style="background:red;">
+							        				<img src="http://img.18183.com/uploads/170705/27-1FF5145I13D.jpg"/>
+							        				<div class="layer" style="bottom: -352px;">
+														<div class="con">
+															<i class="icon_add"></i>
+															<h5>阳光青春吊带裙子美</h5>
+															<p></p>
+														</div>
+													</div>
+							        			
+							        			</a>
+							        		</div>
+					        	</div>
 					        
 					        </div>
 					      
@@ -361,10 +591,11 @@
 		<script src="js/custom.js"></script>
 	<!-- end: JavaScript-->
 	
+	
 	<script>
 	
 		
-	
+	/* start banner 相关js */
 	function play(x){
 
 		var l_wid = 900 / x;
@@ -382,39 +613,25 @@
 			"               <span class='s3'></span>"+
 			"               <span class='s4'></span>"+
 			"          </li>";
-			t_css += "li:nth-child("+(i+1)+") {transition:1s "+(i*0.05)+"s all;z-index:"+z+";}#pic_ul li:nth-child("+(i+1)+") span{background-position:"+(-l_wid*i)+"px;}"
+			t_css += "li:nth-child("+(i+1)+") {transition:1s "+(i*0.03)+"s all;z-index:"+z+";}#pic_ul li:nth-child("+(i+1)+") span{background-position:"+(-l_wid*i)+"px;}"
 		}
 
 		$("#css").append("#pic_ul li{width:"+l_wid+"px;}  #pic_ul li span{width:"+l_wid+"px;}"+t_css);
 		$("#pic_ul").append(a_html);
 	}
-	play(25);
+	play(38);
 	$("ol li").click(function(){
-		var a = $(this).index();
-		var b = -a*90 + "deg";
+		var _index = $(this).index();
+		var b = -_index*90 + "deg";
 		$("#pic_ul").find("li").css("transform","translateZ(-180px) rotateX("+b+")");
 	});
 	
+	/*  banner 相关js  end */
 	
 	
 	
 	
 		$(function(){
-			
-			var $caroursel = $("div[id^='myCarousel']");
-			$caroursel.hover(function(){
-				var $this = $(this);
-				if($this.find("a").hasClass("carousel-control")){
-					$this.find("a").css("display","block");
-				}
-			},function(){
-				$(this).find("a").css("display","none");
-			});
-			
-			$(window).resize(function(){
-				
-				console.log($(window).width());
-			})
 			
 			
 			var params = {};
@@ -438,41 +655,7 @@
 				}
 				
 			});
-			
-			
-			  $(function(){
-				   
-				   $(".customFixed .masonry").hover(function(){
-					    $(this).find("span.up_overlay").removeClass("overlayUpdown");
-						$(this).find("span.up_overlay").addClass("overlaydownUp");
-					},function(){
-						$(this).find("span.up_overlay").addClass("overlayUpdown");
-						$(this).find("span.up_overlay").removeClass("overlaydownUp");
-					});
-				   
-			   });
-				
-			   
-			   // 获取关注的 商品skuId
-			   function attention(obj){
-				   var $this = $(obj);
-				   $this.parents("div#sub_exhibit").toggleClass("likefocus");
-
-				   if($this.parents("div.exhibit").find("div.p-like a img").attr("src").indexOf("focus")!=-1){
-					   $this.parents("div.exhibit").find("div.p-like a")
-					   .html("<img src=\"img/custom/cancel.png\"/><span style=\"color:#fff;\">关注</span>");
-				   }else{
-					   $this.parents("div.exhibit").find("div.p-like a")
-					   .html("<img src=\"img/custom/focus.png\"/><span style=\"color:red;\">取消关注</span>");
-				   }
-				  
-				    //border: 10px solid springgreen;
-				    //console.log($(obj).data("sku"));
-			   }
-				
-			
-			
-			
+		
 		});
 		
 		
@@ -503,6 +686,43 @@
 			$(".unloginArea").css("display")=="none" ?$(".unloginArea").css("display","block") : $(".unloginArea").css("display","none");
 			
 		})
+		
+		
+		var banner = {};
+		banner.index = 0;
+		
+		$("#l_banner").click(function(){
+			
+			banner.index--;
+ 			var b = -banner.index*90 + "deg";
+ 			$("#pic_ul").find("li").css("transform","translateZ(-180px) rotateX("+b+")");
+		});
+		
+		$("#r_banner").click(function(){
+			
+			banner.index++;
+ 			var b = -banner.index*90 + "deg";
+ 			$("#pic_ul").find("li").css("transform","translateZ(-180px) rotateX("+b+")");
+		});
+		
+		
+		/* start  精品展示区 动态特效*/
+		
+		
+		$(".jp_content a").hover(function(){
+			$(this).find(".layer").removeClass("jp_content_showOut").addClass("jp_content_showIn")
+			.end().find("img").css({"transform":"scale(1.2)","transition":"all 0.8s ease"});
+			
+			
+		},function(){
+			$(this).find(".layer").removeClass("jp_content_showIn").addClass("jp_content_showOut")
+			.end().find("img").css({"transform":"scale(1)","transition":"all 0.8s ease"});
+		}
+		
+		);
+		
+		/* 精品展示区 动态特效 end */
+		
 	
 	</script>
 	

@@ -2,7 +2,14 @@
     pageEncoding="UTF-8"%>
 						<style>
 							.form-group{margin-top:-20px;}
-							.form-group .queryBtn{width:100px;border-radius:10px;}
+							.form-group .queryBtn{width:100px;border-radius:10px;
+								background: purple;
+							    border-radius: 29px;
+							    text-shadow: 1px 1px 1px #ddd;
+							    font-size: 19px;
+							    font-weight: bold;
+							    font-family: "楷体";
+							 }
 							.form-group .querytxt{
 								    margin-top: 10px;
 								    width: 337px;
@@ -65,13 +72,19 @@
 					 	
 					 	$(function(){
 					 		
-					 		$("#queryBtn").click(function(){
-					 				
-					 			
-					 					
-					 			
-					 		});
+					 		var _index = 0 ;
+					 		var timer = null;
 					 		
-					 	})
+					 		$(".box").hover(function(){
+					 			clearInterval(timer);
+					 		},function(){
+					 			timer =  setInterval(function(){
+							 			_index++;
+							 			var b = -_index*90 + "deg";
+							 			$("#pic_ul").find("li").css("transform","translateZ(-180px) rotateX("+b+")");
+							 	},5000);
+					 		}); 
+					 		
+					 	});
 					 
 					 </script>

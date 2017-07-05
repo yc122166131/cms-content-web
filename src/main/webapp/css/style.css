@@ -814,7 +814,7 @@ ul.messages li .message {
 
 .box {
 	border: 2px solid #eee;
-	background: #fff !important;
+	background: #fff ;
 	margin-bottom: 28px;	
 }
 
