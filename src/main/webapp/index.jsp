@@ -673,13 +673,13 @@
 			var $this = $(obj);
 			var params = {};
 			params.id = $this.data("id");
-			//alert($this.data("id"));
+			alert($this.data("id"));
 			$.ajax({
 				type:"post",
 				data:params,
 				url:"${basePath}/content/getProductInfoByTypeId",
 				success:function(data){
-					alert(data)
+					console.log(data);
 				},
 				error:function(){
 				}
