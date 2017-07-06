@@ -20,9 +20,9 @@
 	<!-- start: CSS -->
 	<link id="bootstrap-style" href="css/bootstrap.min.css" rel="stylesheet">
 	<link href="css/bootstrap-responsive.min.css" rel="stylesheet">
-	<link id="base-style" href="css/animate.css" rel="stylesheet">
-	<link id="base-style" href="js/sg/css/tz_magic.css" rel="stylesheet">
-	<link id="base-style" href="css/style.css" rel="stylesheet">
+	<link href="css/animate.css" rel="stylesheet">
+	<link href="js/sg/css/tz_magic.css" rel="stylesheet">
+	<link href="css/style.css" rel="stylesheet">
 	<link id="base-style-responsive" href="css/style-responsive.css" rel="stylesheet">
 	<link  href="css/yc_common/yc_common.css"  rel="stylesheet">
 	<link  href="http://at.alicdn.com/t/font_kulv97ebihjgu8fr.css" rel="stylesheet">
