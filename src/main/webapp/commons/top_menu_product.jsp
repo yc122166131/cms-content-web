@@ -6,7 +6,7 @@
 			a{text-decoration: none;}
 			li{list-style: none;;}
 			.tMenu_title{float: left;width: 100px;line-height: 70px;text-align: center;}
-			.tMenuBox{width:100%;height:70px;background: #000;margin: 1px auto;}
+			.tMenuBox{width:100%;height:70px;background: #000;margin: 1px auto;min-width:1000px;}
 			.tMenuBox .tMenuContainer{width: 578px;height:70px;margin: 0px 40px;background:green;float:left;}
 			.tMenuBox .tMenuContainer ul li{
 				float: left;
@@ -40,7 +40,7 @@
 					<div class="tMenu_title"><span></span></div>
 					<ul>
 						<li>
-							<a href="javascript:void(0);">网上商城</a>
+							<a href="http://localhost:8902">网上商城</a>
 							<!-- <ul class="subul">
 								<li><a href="#">随便</a></li>
 								<li><a href="#">随便1</a></li>

@@ -632,39 +632,11 @@
 	
 	
 		$(function(){
-						
-			$.ajax({
-				url:"${basePath}/content/productLeftMenuInfo.action",
-				type:"post",
-				data:{},
-				success:function(data){
-					
-					// 模板 填充 左菜单  
-					$(".yCsidebar").html(data);
-					
-					//重新绑定 click 事件 
-					$(".yCsidebar ul > li ").click(function(){
-						
-						$(this).addClass("leftMenuActive").siblings("li").removeClass("leftMenuActive");
-						$(this).siblings("li").find(".l_subUl").find("li").removeClass("leftMenuActive");
-						
-						if($(this).find(".l_subUl").length > 0){ //当有 子元素的时候 我们才  收起相邻的 li
-							$(this).find(".l_subUl").slideDown(339).end().siblings("li").find(".l_subUl").slideUp(339);
-						}
-					});
-					
-					$(".yCsidebar ul > li ul.l_subUl li").click(function(){
-						$(this).addClass("leftMenuActive");/*.siblings("li").removeClass("leftMenuActive");*/
-					});
-					
-				},
-				error:function(msg){
-					alert(msg);
-				}
-				
-			});
-		
+			
+			//加载 左菜单 
+			loadLeftMenu();
 		});
+	
 		
 		
 		//first time 
@@ -673,8 +645,8 @@
 			var $this = $(obj);
 			var params = {};
 			params.id = $this.data("id");
-			alert($this.data("id"));
-			$.ajax({
+			window.location.href = "${basePath}/content/getProductInfoByTypeId?id="+$this.data("id");
+			/* $.ajax({
 				type:"post",
 				data:params,
 				url:"${basePath}/content/getProductInfoByTypeId",
@@ -684,7 +656,7 @@
 				error:function(){
 				}
 				
-			});
+			}); */
 		}
 		
 		

@@ -47,7 +47,7 @@ public class ContentAction {
 	 public String  getProductInfoById(Model model,Long id,Pagination p1){
 		 List<JDProduction> p_InfoList =  productService.getProductInfoByProductTypeId(id);
 		 model.addAttribute("subInfoList", p_InfoList);
-		 return "components/product/subInfoTemplate";
+		 return "gallery";
 	 }
 	 
 	 

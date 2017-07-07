@@ -1,7 +1,7 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
 						<style>
-							.form-group{margin-top:-20px;}
+							.form-group{margin-top:-20px;min-width:865px;}
 							.form-group .queryBtn{width:100px;border-radius:10px;
 								background: purple;
 							    border-radius: 29px;

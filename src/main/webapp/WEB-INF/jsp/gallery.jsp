@@ -1,5 +1,7 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
+<%@include file="/commons/taglib.jsp" %> 
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -17,29 +19,16 @@
 	<!-- end: Mobile Specific -->
 	
 	<!-- start: CSS -->
-	<link id="bootstrap-style" href="css/bootstrap.min.css" rel="stylesheet">
-	<link href="css/bootstrap-responsive.min.css" rel="stylesheet">
-	<link id="base-style" href="css/style.css" rel="stylesheet">
-	<link id="base-style-responsive" href="css/style-responsive.css" rel="stylesheet">
-	<!-- <link href='http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800&subset=latin,cyrillic-ext,latin-ext' rel='stylesheet' type='text/css'> -->
+	<link id="bootstrap-style" href="/css/bootstrap.min.css" rel="stylesheet">
+	<link href="/css/bootstrap-responsive.min.css" rel="stylesheet">
+	<link id="base-style" href="/css/style.css" rel="stylesheet">
+	<link id="base-style-responsive" href="/css/style-responsive.css" rel="stylesheet">
 	<!-- end: CSS -->
 	
 
-	<!-- The HTML5 shim, for IE6-8 support of HTML5 elements -->
-	<!--[if lt IE 9]>
-	  	<script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
-		<link id="ie-style" href="css/ie.css" rel="stylesheet">
-	<![endif]-->
-	
-	<!--[if IE 9]>
-		<link id="ie9style" href="css/ie9.css" rel="stylesheet">
-	<![endif]-->
-		
-	<!-- start: Favicon -->
-	<link rel="shortcut icon" href="img/favicon.ico">
-	<!-- end: Favicon -->
-	
-	<link type="text/css" href="css/animate.css" rel="stylesheet" />
+	<link type="text/css" href="/css/animate.css" rel="stylesheet" />
+    <link rel="stylesheet" type="text/css" href="/js/sg/css/tz-loading.css">
+	<link rel="stylesheet" type="text/css" href="/js/sg/css/tz-dialog.css">
 </head>
 
 <body>
@@ -61,7 +50,6 @@
 	</div> -->
 	<!-- start: Header -->
 				<style>
-				
 							*{padding:0;margin:0;}
 							body{font-family: 'Open Sans', sans-serif;font-weight: 400;}
 						    em,i{font-style: normal;}
@@ -174,7 +162,7 @@
 		<div class="row-fluid">
 				
 			<!-- start: Main Menu -->
-				<%@include file="/commons/left_menu_product.jsp" %>  
+				 <%@include file="/commons/left_menu_product.jsp" %> 
 			<!-- end: Main Menu -->
 			
 			<noscript>
@@ -185,7 +173,7 @@
 			</noscript>
 			
 			<!-- start: Content -->
-			<div id="content" class="span10">
+			<div id="ycCon" class="span10" style="float: left;margin-top: 32px;">
 			
 						
 			<ul class="breadcrumb">
@@ -202,16 +190,6 @@
 				
 			<div class="row-fluid sortable">
 				<div class="box span12">
-					<!-- <div class="box-header" data-original-title>
-						<h2><i class="halflings-icon picture"></i><span class="break"></span> 服饰内衣</h2>
-						<div class="box-icon">
-							<a href="#" id="toggle-fullscreen" class="hidden-phone hidden-tablet"><i class="halflings-icon fullscreen"></i></a>
-							<a href="#" class="btn-setting"><i class="halflings-icon wrench"></i></a>
-							<a href="#" class="btn-minimize"><i class="halflings-icon chevron-up"></i></a>
-							<a href="#" class="btn-close"><i class="halflings-icon remove"></i></a>
-						</div>
-					</div> -->
-					
 					<div class="box-content">
 						<div class="masonry-gallery">
 							<div id="" class="masonry-thumb" style="margin-top: 20px;">
@@ -219,7 +197,7 @@
 									<div class="p-img">
 										<a target="_blank" href="www.baidu.com"></a>
 										<img width="228" height="282" data-img=""  src="//img12.360buyimg.com/n8/jfs/t6583/327/388116870/295044/84d080e8/593eb372N38485ef3.jpg" />
-										<div class="p-focus"><a class="J_focus" data-sku="3346992" href="javascript:;"><i></i>关注</a></div>
+										<div class="p-focus"><a class="J_focus" data-sku="3346992" href="javascript:attention(this);"><i></i>关注</a></div>
 										<div class="buyDiv">
 											<a>加入购物车</a>
 										</div>
@@ -626,7 +604,10 @@
 		
 		
 		
-	<div class="modal hide fade" id="myModal">
+		
+		
+		
+	???<div class="modal hide fade" id="myModal">
 		<div class="modal-header">
 			<button type="button" class="close" data-dismiss="modal">×</button>
 			<h3>Settings</h3>
@@ -653,60 +634,63 @@
 	
 	<!-- start: JavaScript-->
 
-		<script src="js/jquery-1.9.1.min.js"></script>
-	<script src="js/jquery-migrate-1.0.0.min.js"></script>
-	
-		<script src="js/jquery-ui-1.10.0.custom.min.js"></script>
-	
-		<script src="js/jquery.ui.touch-punch.js"></script>
-	
-		<script src="js/modernizr.js"></script>
-	
-		<script src="js/bootstrap.min.js"></script>
-	
-		<script src="js/jquery.cookie.js"></script>
-	
-		<script src='js/fullcalendar.min.js'></script>
-	
-		<script src='js/jquery.dataTables.min.js'></script>
-
-		<script src="js/excanvas.js"></script>
-		<script src="js/jquery.flot.js"></script>
-		<script src="js/jquery.flot.pie.js"></script>
-		<script src="js/jquery.flot.stack.js"></script>
-		<script src="js/jquery.flot.resize.min.js"></script>
-	
-		<script src="js/jquery.chosen.min.js"></script>
-	
-		<script src="js/jquery.uniform.min.js"></script>
+		<script src="/js/jquery-1.9.1.min.js"></script>
+		<script type="text/javascript" src="/js/sg/sgutil.js"></script>
+		<script type="text/javascript" src="/js/sg/sg.js"></script> 
 		
-		<script src="js/jquery.cleditor.min.js"></script>
+    	<script src="/js/jquery-migrate-1.0.0.min.js"></script>
 	
-		<script src="js/jquery.noty.js"></script>
+		<script src="/js/jquery-ui-1.10.0.custom.min.js"></script>
 	
-		<script src="js/jquery.elfinder.min.js"></script>
+		<script src="/js/jquery.ui.touch-punch.js"></script>
 	
-		<script src="js/jquery.raty.min.js"></script>
+		<script src="/js/modernizr.js"></script>
 	
-		<script src="js/jquery.iphone.toggle.js"></script>
+		<script src="/js/bootstrap.min.js"></script>
 	
-		<script src="js/jquery.uploadify-3.1.min.js"></script>
+		<script src="/js/jquery.cookie.js"></script>
 	
-		<script src="js/jquery.gritter.min.js"></script>
+		<script src='/js/fullcalendar.min.js'></script>
 	
-		<script src="js/jquery.imagesloaded.js"></script>
-	
-		<script src="js/jquery.masonry.min.js"></script>
-	
-		<script src="js/jquery.knob.modified.js"></script>
-	
-		<script src="js/jquery.sparkline.min.js"></script>
-	
-		<script src="js/counter.js"></script>
-	
-		<script src="js/retina.js"></script>
+		<script src='/js/jquery.dataTables.min.js'></script>
 
-		<script src="js/custom.js"></script>
+		<script src="/js/excanvas.js"></script>
+		<script src="/js/jquery.flot.js"></script>
+		<script src="/js/jquery.flot.pie.js"></script>
+		<script src="/js/jquery.flot.stack.js"></script>
+		<script src="/js/jquery.flot.resize.min.js"></script>
+	
+		<script src="/js/jquery.chosen.min.js"></script>
+	
+		<script src="/js/jquery.uniform.min.js"></script>
+		
+		<script src="/js/jquery.cleditor.min.js"></script>
+	
+		<script src="/js/jquery.noty.js"></script>
+	
+		<script src="/js/jquery.elfinder.min.js"></script>
+	
+		<script src="/js/jquery.raty.min.js"></script>
+	
+		<script src="/js/jquery.iphone.toggle.js"></script>
+	
+		<script src="/js/jquery.uploadify-3.1.min.js"></script>
+	
+		<script src="/js/jquery.gritter.min.js"></script>
+	
+		<script src="/js/jquery.imagesloaded.js"></script>
+	
+		<script src="/js/jquery.masonry.min.js"></script>
+	
+		<script src="/js/jquery.knob.modified.js"></script>
+	
+		<script src="/js/jquery.sparkline.min.js"></script>
+	
+		<script src="/js/counter.js"></script>
+	
+		<script src="/js/retina.js"></script>
+
+		<script src="/js/custom.js"></script>
 	<!-- end: JavaScript-->
 	
 	<style>
@@ -724,7 +708,11 @@
 	</style>
 	<script type="text/javascript">
 
-			
+		  $(function(){
+				loadLeftMenu();
+		  });	
+	
+	
 		   $(function(){
 			   
 			   $(".masonry-gallery .masonry-thumb").hover(function(){
@@ -768,17 +756,8 @@
 		   // 获取关注的 商品skuId
 		   function attention(obj){
 			   var $this = $(obj);
-			   $this.parents("div#sub_exhibit").toggleClass("likefocus");
-
-			   if($this.parents("div.exhibit").find("div.p-like a img").attr("src").indexOf("focus")!=-1){
-				   $this.parents("div.exhibit").find("div.p-like a")
-				   .html("<img src=\"img/custom/cancel.png\"/><span style=\"color:#fff;\">关注</span>");
-			   }else{
-				   $this.parents("div.exhibit").find("div.p-like a")
-				   .html("<img src=\"img/custom/focus.png\"/><span style=\"color:red;\">取消关注</span>");
-			   }
-			  
-			  
+			   loading("关注成功!",3);
+			   
 		   }
 	
 	
